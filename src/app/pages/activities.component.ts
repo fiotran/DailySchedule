@@ -16,8 +16,6 @@ export class ActivitiesComponent implements OnInit {
   }
 
   addToPlan(item) {
-    console.log(item);
-    
     this.activitiesService.addToPlan(item);
   }
 

@@ -12,9 +12,8 @@ export class CustomiseComponent implements OnInit {
 
   ngOnInit() {
     this.modelForm = this.fb.group({
-      id: 0,
       name: "",
-      image: ""
+      selectDate: ""
     })
   }
 

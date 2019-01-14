@@ -3,13 +3,13 @@
   <form [formGroup]="modelForm" novalidate (ngSubmit)="onSubmit()">
     <!-- https://angular.io/guide/user-input#get-user-input-from-a-template-reference-variable -->
     <p>
-      <label for="firstName">First name: </label><input type="text" name="firstName">
+      <label for="firstName">Plan name: </label><input type="text" name="name">
     </p>
 
     <!-- https://material.angular.io/components/datepicker -->
 
     <p>
-      <label for="selectDate">Choose a date: </label>
+      <label for="selectDate">Plan date: </label>
       <input type="text" name="selectDate">
     </p>
 
