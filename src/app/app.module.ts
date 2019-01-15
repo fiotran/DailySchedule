@@ -11,17 +11,17 @@ import { ActivitiesComponent } from './pages/activities.component';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { CustomiseComponent } from './pages/components/customise/customise.component';
 import { HeaderComponent } from './pages/components/header/header.component';
-import { CreatePlanComponent } from './pages/components/create-plan/create-plan.component';
 import { ViewPlanComponent } from './pages/components/view-plan/view-plan.component';
+import { ListActivitiesComponent } from './pages/components/list-activities/list-activities.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ActivitiesComponent,
     HeaderComponent,
-    CreatePlanComponent,
     ViewPlanComponent,
-    CustomiseComponent
+    CustomiseComponent,
+    ListActivitiesComponent
   ],
   imports: [
     BrowserModule,

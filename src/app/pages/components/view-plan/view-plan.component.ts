@@ -1,17 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import {CdkDragDrop, moveItemInArray} from '@angular/cdk/drag-drop';
-import { Router } from '@angular/router';
 import { ActivitiesService } from '../../services/activities.service';
+import { ActivityModel } from '../../data/activity.model';
 
 @Component({
   selector: 'app-view-plan',
   templateUrl: './view-plan.component.html'
 })
 export class ViewPlanComponent implements OnInit {
-  currentPlan: any;
+  currentPlan: ActivityModel[];
 
-  constructor(private activitesService: ActivitiesService,
-    private router: Router) { }
+  constructor(private activitesService: ActivitiesService) { }
 
   ngOnInit() {
     this.currentPlan = this.activitesService.getPlan();

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivitiesService } from './services/activities.service';
+import { ActivityModel } from './data/activity.model';
 
 
 @Component({
@@ -7,7 +8,7 @@ import { ActivitiesService } from './services/activities.service';
   templateUrl: './activities.component.html'
 })
 export class ActivitiesComponent implements OnInit {
-  activities: { "id": number; "name": string; "image": string; }[];
+  activities: ActivityModel[];
 
   constructor(private activitiesService: ActivitiesService) { }
 
@@ -15,7 +16,7 @@ export class ActivitiesComponent implements OnInit {
     this.activities = this.activitiesService.getActivities();
   }
 
-  addToPlan(item) {
+  addToPlan(item: ActivityModel) {
     this.activitiesService.addToPlan(item);
   }
 
