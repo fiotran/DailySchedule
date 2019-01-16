@@ -1,18 +1,20 @@
 <section id="customise">
   <h1>Customise</h1>
-  <form [formGroup]="modelForm" novalidate (ngSubmit)="onSubmit()">
+  <form [formGroup]="modelForm" novalidate >
     <!-- https://angular.io/guide/user-input#get-user-input-from-a-template-reference-variable -->
     <p>
-      <label for="firstName">Plan name: </label><input type="text" name="name">
+      <label for="firstName">Plan name: </label>
+      <input type="text" formControlName="name">
     </p>
 
     <!-- https://material.angular.io/components/datepicker -->
 
     <p>
       <label for="selectDate">Plan date: </label>
-      <input type="text" name="selectDate">
+      <input type="text" formControlName="selectDate">
     </p>
 
     <!-- https://material.angularjs.org/1.1.4/demo/colors -->
+
   </form>
 </section>

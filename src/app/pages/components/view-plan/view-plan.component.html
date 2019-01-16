@@ -1,5 +1,5 @@
 <div id="daily-schedule" cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
-  <h1>Today's plan</h1>
+  <h1 *ngIf="planDetails">{{planDetails.name}} plan</h1>
   <p>1st Feb, 2019</p>
   <!--today-->
   <div class="daily-schedule-list" *ngFor="let task of currentPlan" cdkDrag>
@@ -14,3 +14,5 @@
   <button id="btn-share" (click)="print()">Print</button>
   <button id="btn-reset">Reset</button>
 </div>
+
+<app-customise (planDetails)="getPlanDetails($event)"></app-customise>

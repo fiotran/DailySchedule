@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {CdkDragDrop, moveItemInArray} from '@angular/cdk/drag-drop';
+import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 import { ActivitiesService } from '../../services/activities.service';
 import { ActivityModel } from '../../data/activity.model';
 
@@ -9,6 +9,7 @@ import { ActivityModel } from '../../data/activity.model';
 })
 export class ViewPlanComponent implements OnInit {
   currentPlan: ActivityModel[];
+  planDetails: any;
 
   constructor(private activitesService: ActivitiesService) { }
 
@@ -23,7 +24,7 @@ export class ViewPlanComponent implements OnInit {
   print() {
     let printContent, printWindow;
     printContent = document.getElementById('daily-schedule').innerHTML;
-    printWindow  = window.open('', '_blank', 'top=0,left=0,height=100%,width=auto');
+    printWindow = window.open('', '_blank', 'top=0,left=0,height=100%,width=auto');
     printWindow.document.open();
     printWindow.document.write(`
       <html>
@@ -42,4 +43,8 @@ export class ViewPlanComponent implements OnInit {
 
   // https://stackoverflow.com/questions/41379274/print-html-template-in-angular-2-ng-print-in-angular-2
 
+
+  getPlanDetails(plan) {
+    this.planDetails = plan;
+  }
 }
