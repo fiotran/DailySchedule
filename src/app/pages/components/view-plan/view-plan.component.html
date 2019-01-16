@@ -2,17 +2,17 @@
   <h1 *ngIf="planDetails">{{planDetails.name}} plan</h1>
   <p>1st Feb, 2019</p>
   <!--today-->
-  <div class="daily-schedule-list" *ngFor="let task of currentPlan" cdkDrag>
+  <div class="daily-schedule-list" *ngFor="let item of planList" cdkDrag>
     <div class="daily-schedule-item">
-      <h2>{{task.name}}</h2>
+      <h2>{{item.name}}</h2>
       <p><label for="Time-001">Time: </label>
         <input type="text" name="Time-001"></p>
-      <i class="fas {{task.image }} circle-icon"></i>
-      <button class="btn-remove">×</button>
+      <i class="fas {{item.image }} circle-icon"></i>
+      <button class="btn-remove" (click)="deletePlan(item)">×</button>
     </div>
   </div>
   <button id="btn-share" (click)="print()">Print</button>
-  <button id="btn-reset">Reset</button>
+  <button id="btn-reset" (click)="clearPlan()">Reset</button>
 </div>
 
 <app-customise (planDetails)="getPlanDetails($event)"></app-customise>

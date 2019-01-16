@@ -1,5 +1,2 @@
-
-
-<app-view-plan></app-view-plan>
-<!-- <app-customise></app-customise> -->
-<app-list-activities [activities]="activities"></app-list-activities>
+<app-view-plan (reloadActivities)="reload()"></app-view-plan>
+<app-list-activities [activities]="activities" (addPlan)="addToPlan($event)"></app-list-activities>

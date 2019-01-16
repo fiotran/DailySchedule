@@ -13,11 +13,20 @@ export class ActivitiesComponent implements OnInit {
   constructor(private activitiesService: ActivitiesService) { }
 
   ngOnInit() {
-    this.activities = this.activitiesService.getActivities();
+    this.activities = this.getList();
+  }
+
+  getList() {
+    return this.activitiesService.getActivities();
   }
 
   addToPlan(item: ActivityModel) {
     this.activitiesService.addToPlan(item);
+    this.activities = this.activitiesService.removeActivity(item);
+  }
+
+  reload() {
+    this.activities = this.getList();
   }
 
 }

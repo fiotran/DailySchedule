@@ -1,12 +1,12 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-customise',
   templateUrl: './customise.component.html'
 })
 export class CustomiseComponent implements OnInit {
-  modelForm: any;
+  modelForm: FormGroup;
   @Output() planDetails: EventEmitter<any> = new EventEmitter<any>();
 
   constructor(private fb: FormBuilder) { }
@@ -17,8 +17,8 @@ export class CustomiseComponent implements OnInit {
       selectDate: ''
     });
 
-    this.modelForm.valueChanges.subscribe(v => {
-      this.planDetails.emit(v);
+    this.modelForm.valueChanges.subscribe(val => {
+      this.planDetails.emit(val);
     });
   }
 

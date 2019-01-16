@@ -1,24 +1,26 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 import { ActivitiesService } from '../../services/activities.service';
 import { ActivityModel } from '../../data/activity.model';
+import { PlanModel } from '../../data/plan.model';
 
 @Component({
   selector: 'app-view-plan',
   templateUrl: './view-plan.component.html'
 })
 export class ViewPlanComponent implements OnInit {
-  currentPlan: ActivityModel[];
-  planDetails: any;
+  planList: ActivityModel[] = [];
+  planDetails: PlanModel;
+  @Output() reloadActivities: EventEmitter<boolean> = new EventEmitter<boolean>();
 
   constructor(private activitesService: ActivitiesService) { }
 
   ngOnInit() {
-    this.currentPlan = this.activitesService.getPlan();
+    this.planList = this.activitesService.getPlan();
   }
 
   drop(event: CdkDragDrop<any[]>) {
-    moveItemInArray(this.currentPlan, event.previousIndex, event.currentIndex);
+    moveItemInArray(this.planList, event.previousIndex, event.currentIndex);
   }
 
   print() {
@@ -43,8 +45,16 @@ export class ViewPlanComponent implements OnInit {
 
   // https://stackoverflow.com/questions/41379274/print-html-template-in-angular-2-ng-print-in-angular-2
 
-
-  getPlanDetails(plan) {
+  getPlanDetails(plan: PlanModel) {
     this.planDetails = plan;
+  }
+
+  deletePlan(item) {
+    this.planList = this.activitesService.deletePlanItem(item);
+  }
+
+  clearPlan() {
+    this.planList = this.activitesService.clearPlan();
+    this.reloadActivities.emit(true);
   }
 }
