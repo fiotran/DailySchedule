@@ -1,6 +1,10 @@
 <div id="daily-schedule" cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
-  <h1 *ngIf="planDetails">{{planDetails.name}} plan</h1>
-  <p>1st Feb, 2019</p>
+  <h1>Schedule a plan</h1>
+  <div *ngIf="planDetails">
+    <h2>{{planDetails.name}} plan</h2>
+    <p>{{planDetails.selectDate | date: 'MMMM d, y'}}</p>
+  </div>
+
   <!--today-->
   <div class="daily-schedule-list" *ngFor="let item of planList" cdkDrag>
     <div class="daily-schedule-item">

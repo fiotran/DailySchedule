@@ -1,6 +1,6 @@
 <section id="customise">
   <h1>Customise</h1>
-  <form [formGroup]="modelForm" novalidate >
+  <form [formGroup]="modelForm" novalidate>
     <!-- https://angular.io/guide/user-input#get-user-input-from-a-template-reference-variable -->
     <p>
       <label for="firstName">Plan name: </label>
@@ -11,9 +11,10 @@
 
     <p>
       <label for="selectDate">Plan date: </label>
-      <input type="text" formControlName="selectDate">
+        <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="picker" placeholder="Choose a date" formControlName="selectDate">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
     </p>
-
     <!-- https://material.angularjs.org/1.1.4/demo/colors -->
 
   </form>

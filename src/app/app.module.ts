@@ -13,6 +13,7 @@ import { CustomiseComponent } from './pages/components/customise/customise.compo
 import { HeaderComponent } from './pages/components/header/header.component';
 import { ViewPlanComponent } from './pages/components/view-plan/view-plan.component';
 import { ListActivitiesComponent } from './pages/components/list-activities/list-activities.component';
+import { MatDatepickerModule, MatNativeDateModule, MatIconModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,10 @@ import { ListActivitiesComponent } from './pages/components/list-activities/list
     RouterModule.forRoot(APP_ROUTES),
     BrowserAnimationsModule,
     AngularFontAwesomeModule,
-    DragDropModule
+    DragDropModule,
+    MatIconModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
   ],
   providers: [ActivitiesService],
   bootstrap: [AppComponent]

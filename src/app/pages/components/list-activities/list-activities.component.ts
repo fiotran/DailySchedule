@@ -10,10 +10,9 @@ export class ListActivitiesComponent implements OnInit {
   @Input() activities: ActivityModel[];
   @Output() addPlan: EventEmitter<ActivityModel> = new EventEmitter<ActivityModel>();
 
-  constructor(private activitiesService: ActivitiesService) { }
+  constructor() { }
 
   ngOnInit() {
-
   }
 
   addToPlan(activity) {
