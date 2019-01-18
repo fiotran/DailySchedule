@@ -1,5 +1,6 @@
-export class ActivityModel {
-     public id: number;
-     public name: string;
-     public image: string;
+export interface ActivityModel {
+  id: number;
+  name: string;
+  image: string;
+  time?: string;
 }
