@@ -4,5 +4,9 @@ export const APP_ROUTES: Routes = [
   {
     path: '',
     loadChildren: './activities/activities.module#ActivitiesModule'
+  },
+  {
+    path: '**',
+    redirectTo: ''
   }
 ];
