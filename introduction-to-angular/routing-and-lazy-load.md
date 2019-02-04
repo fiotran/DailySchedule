@@ -1,8 +1,8 @@
 # Routing and Lazy Loading
 
-As Angular builds single page application, the concept of lazy loading ensures modules and components are only loaded when the route is activated
+As Angular builds a single page application, the concept of lazy loading ensures modules and components are only loaded when the route is activated
 
-Run the following commands in the command line
+1. Run the following commands in the command line
 
 ```bash
 ng generate module activities
@@ -12,7 +12,7 @@ ng generate module activities
 ng generate component activities/activities
 ```
 
-Manually create activities.routing.ts file 
+2. Manually create activities.routing.ts file and then add the following code. 
 
 ```typescript
 import { ActivitiesComponent } from './activities/activities.component';
@@ -29,13 +29,18 @@ component: ActivitiesComponent
 Here we are creating a constant variable called ACTIVITIES\_ROUTE and setting an empty path and importing the ActivitiesComponent
 {% endhint %}
 
-In activities.module.ts, import into @NgModule imports
+3. In activities.module.ts, import into @NgModule imports
 
 ```typescript
 RouterModule.forChild(ACTIVITIES_ROUTE);
 ```
+4. In the activities.module.ts import the RouterModule
 
-In the app.routing.ts file create a route const but this time load the child route you just created
+```typescript
+import { RouterModule } from '@angular/router';
+```
+
+5. In the app.routing.ts file create a route const but this time load the child route you just created
 
 ```typescript
 import { Routes } from '@angular/router';
@@ -55,6 +60,7 @@ RouterModule.forRoot(APP_ROUTE)
 ```
 
 {% hint style="info" %}
-when working with routing always re serve
+
+when working with routing always re serve
 {% endhint %}
 
