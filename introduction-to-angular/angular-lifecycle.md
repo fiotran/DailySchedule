@@ -1,4 +1,4 @@
-# Angular life cycle
+# Angular Lifecycle
 
 Every component has a life cycle managed by Angular. We have access to key moments such as ngOnChanges\(\) or ngOnInit\(\). For more information, visit the official website
 

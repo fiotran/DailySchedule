@@ -2,7 +2,7 @@
 description: Components are basic building blocks in an angular application
 ---
 
-# Components and modules
+# Components and Modules
 
 > Modules in angular is a place where you can group components, directives, pipes and services which are related in an application.
 

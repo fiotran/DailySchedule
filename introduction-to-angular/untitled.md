@@ -1,4 +1,4 @@
-# Typescript, linting and interfaces
+# Typescript, Linting and Interfaces
 
 > Typescript is a primary language for Angular applications development. It is a superset of JavaScript with design-time support for type safety and tooling.
 

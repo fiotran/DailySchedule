@@ -1,4 +1,4 @@
-# Routing and lazy load
+# Routing and Lazy Loading
 
 As Angular builds single page application, the concept of lazy loading ensures modules and components are only loaded when the route is activated
 
