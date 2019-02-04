@@ -9,7 +9,7 @@ One of the best attributes of Angular is the ability to keep your code component
 {% endhint %}
 
 Let's start by creating a component called header.component.ts
-1. Under the src folder create a new folder called shared. In the shared folder create two new files called header.component.html and header.component.ts. The ts or typescript file holds the logic for the html file. 
+1. Under the src/app folder create a new folder called shared. In the shared folder create two new files called header.component.html and header.component.ts. The ts or typescript file holds the logic for the html file. 
 
 2. In the .ts file paste the following code
 
