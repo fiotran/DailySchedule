@@ -6,11 +6,13 @@ Every component has a life cycle managed by Angular. We have access to key momen
 
 In this section, we are going to use ngOnInit\(\) to set the list of activities
 
+1. Generate the list-activities components
+
 ```text
-ng generate component activites/list-activites
+ng generate component activites/list-activities
 ```
 
-In list-activities.component.ts, add the following code
+2. In list-activities.component.ts add the following code
 
 ```typescript
 import { Component, OnInit } from '@angular/core';
@@ -32,7 +34,7 @@ export class ListActivitiesComponent implements OnInit {
 }
 ```
 
-In list-activities.component.ts, add the following code
+3. In list-activities.component.html add the following code
 
 ```markup
 <section id="activity-list">
@@ -45,7 +47,7 @@ In list-activities.component.ts, add the following code
 </section>
 ```
 
-Now add the app-list-activities selector to the activities.component.html
+4. Now add the app-list-activities selector to the activities.component.html
 
 ```text
 <app-list-activities></app-list-activities> 
