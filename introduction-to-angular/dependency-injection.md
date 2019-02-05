@@ -1,23 +1,49 @@
 # Dependency Injection
 
-## Getting Super Powers
+>Services are something for Fiona to write about
 
-Becoming a super hero is a fairly straight forward process:
+1. Start by creating a service  
 
+```bash
+ng g service activities/services/activities
 ```
-$ give me super-powers
+2.  In the activities service create a function getActivities(), that returns the service list
+
+```typescript
+import { Injectable } from '@angular/core';
+import { ActivitiesConst } from '../../Data/activities';
+
+@Injectable()
+export class ActivitiesService {
+
+  activities: any;
+  constructor() { }
+
+  public getActivities(){
+    return (this.activities = ActivitiesConst)
+  }
+
+}
+```
+3. Add this new service as a dependency in the constructor of the activities.component.ts page
+
+```typescript
+constructor(
+    private activitiesService: ActivitiesService
+  ) {  }
+```
+4. Making sure to import the service
+
+```typescript
+import { ActivitiesService } from './services/activities.service';
 ```
 
-{% hint style="info" %}
- Super-powers are granted randomly so please submit an issue if you're not happy with yours.
-{% endhint %}
+5. Create a new function getList(), in the activities.component.ts page which uses the service to get the list.
 
-Once you're strong enough, save the world:
-
+```typescript
+getList() {
+    return this.activitiesService.getActivities();
+  }
 ```
-// Ain't no code for that yet, sorry
-echo 'You got to trust me on this, I saved the world'
-```
-
 
 
