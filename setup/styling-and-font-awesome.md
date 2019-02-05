@@ -1,4 +1,4 @@
-# Insert Stylesheet and Font Awesome
+# Stylesheet and Font Awesome
 
 > As this project is not about CSS we will copy and paste the below stylesheet and insert the provided styles from Font Awesome for styling
 

@@ -6,11 +6,11 @@
 
 * [Setup and requirements](setup/installation.md)
 * [Angular CLI](setup/angular-cli.md)
-* [Insert Stylesheet and Font Awesome](setup/styling-and-font-awesome.md)
+* [Stylesheet and Font Awesome](setup/styling-and-font-awesome.md)
+* [Typescript, Interfaces and Data](setup/untitled.md)
 
 ## Introduction to Angular
 
-* [Typescript, Linting and Interfaces](introduction-to-angular/untitled.md)
 * [Components and Modules](introduction-to-angular/components-and-modules.md)
 * [Routing and Lazy Loading](introduction-to-angular/routing-and-lazy-load.md)
 * [Angular Lifecycle](introduction-to-angular/angular-lifecycle.md)
