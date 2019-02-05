@@ -6,7 +6,7 @@
 
 * [Setup and requirements](setup/installation.md)
 * [Angular CLI](setup/angular-cli.md)
-* [Styling and Font Awesome](setup/styling-and-font-awesome.md)
+* [Insert Stylesheet and Font Awesome](setup/styling-and-font-awesome.md)
 
 ## Introduction to Angular
 

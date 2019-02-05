@@ -1,7 +1,8 @@
-# Styling and Font Awesome
-> Some text here about styling and font awsome
+# Insert Stylesheet and Font Awesome
 
-Using either a text editor or visual studio code copy the following text into the styles.css file found in the src folder. Notice that the first @import statement is commented out - we will need this later in the project.
+> As this project is not about CSS we will copy and paste the below stylesheet and insert the provided styles from Font Awesome for styling
+
+Using Visual Studio Code or your favorite text editor copy the following text into the styles.css file found in the src folder. Notice that the first @import statement is commented out - we will need this later in the project.
 
 ```css
 /* You can add global styles to this file, and also import other style files */
@@ -232,6 +233,11 @@ i.fa-swimmer {
 .cdk-drop-list-dragging :not(.cdk-drag-placeholder) {
   transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
 }
-
-
 ```
+
+Now add the following link to the index.html on the root directory
+
+```markup
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+```
+

@@ -12,7 +12,8 @@ In angular we use the @ViewChild decorator to get the content of an element. Add
 @ViewChild('dailySchedule') dailySchedule: ElementRef;
 ```
 
-Create a print() function in the view-plan.component.ts file
+Create a print\(\) function in the view-plan.component.ts file
+
 ```typescript
 print() {
     let printContent, printWindow;
@@ -40,16 +41,19 @@ print() {
       </html>`);
     printWindow.document.close();
   }
-
 ```
 
-Add 
+Add
+
 ```typescript
-#dailySchedule 
+#dailySchedule
 ```
-to the first div in the view-plan.component.html page and add 
+
+to the first div in the view-plan.component.html page and add
+
 ```typescript
-class="screen-only" 
-``` 
-where we do not want the text to display in our print 
+class="screen-only"
+```
+
+where we do not want the text to display in our print
 
