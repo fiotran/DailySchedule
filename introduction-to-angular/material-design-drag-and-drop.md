@@ -8,10 +8,6 @@ Import the drag and drop module into the activities.module.ts:
 import { DragDropModule } from '@angular/cdk/drag-drop';
 ```
 
-{% hint style="info" %}
-Super-powers are granted randomly so please submit an issue if you're not happy with yours.
-{% endhint %}
-
 Add the following code to the main div in view-plan.component.html:
 
 ```typescript
