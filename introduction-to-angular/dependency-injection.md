@@ -4,13 +4,13 @@
 >
 > [https://angular.io/guide/architecture-services\#dependency-injection-di](https://angular.io/guide/architecture-services#dependency-injection-di)
 
-For modularity and reusability we will create an ActivitiesService where we will store the logic for our application
+1. For modularity and reusability we will create an ActivitiesService where we will store the logic for our application
 
 ```bash
 ng g service activities/services/activities
 ```
 
-In the activities service create a function getActivities\(\), that returns the service list
+2. In the activities service create a function getActivities\(\), that returns the service list
 
 ```typescript
 import { Injectable } from '@angular/core';
@@ -29,7 +29,7 @@ export class ActivitiesService {
 }
 ```
 
-To use the service as a dependency, add the following to the constructor of the activities.component.ts page
+3. To use the service as a dependency, add the following to the constructor of the activities.component.ts page
 
 ```typescript
 constructor(
@@ -37,13 +37,13 @@ constructor(
   ) {  }
 ```
 
-Making sure to import the service
+4. Making sure to import the service
 
 ```typescript
 import { ActivitiesService } from './services/activities.service';
 ```
 
-To reference the getActivities\(\) function from the service, create a new function getList\(\) in the activities.component.ts page and call the function via the injected service.
+5. To reference the getActivities\(\) function from the service, create a new function getList\(\) in the activities.component.ts page and call the function via the injected service.
 
 ```typescript
 getList() {
