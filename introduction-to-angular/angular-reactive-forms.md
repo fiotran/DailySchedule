@@ -1,14 +1,14 @@
 # Angular Reactive Forms
 
-> lots of text here about forms
+> Provides an observable base API \(async data flow\) to read continuous stream of values inputted to forms that allows more customisation on complex forms.
 
-1. Create a new component 
+Create a new component 
 
 ```bash
 ng g c activities/customise-form
 ```
 
-1. Import the ReactiveFormsModule in the activities.modules.ts file
+Import the ReactiveFormsModule in the activities.modules.ts file
 
 ```typescript
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -22,19 +22,19 @@ imports: [
   ]
 ```
 
-1. In the customise.component.ts page add a modelForm variable with the type formGroup
+In the customise.component.ts page add a modelForm variable with the type formGroup
 
 ```typescript
 modelForm: FormGroup;
 ```
 
-1. Inject formBuilder - making sure to import it from the @angular/forms node-module
+Inject formBuilder - making sure to import it from the @angular/forms node-module
 
 ```typescript
 constructor(private fb: FormBuilder) { }
 ```
 
-1. Add the code to the customise.component.html file
+Add the code to the customise.component.html file
 
 ```markup
 <section id="customise">
@@ -48,7 +48,7 @@ constructor(private fb: FormBuilder) { }
 </section>
 ```
 
-1. In the customise.component.ts file set the formGroup with the formControlName
+In the customise.component.ts file set the formGroup with the formControlName
 
 ```typescript
 constructor(private fb: FormBuilder) { 
@@ -58,7 +58,7 @@ constructor(private fb: FormBuilder) {
   }
 ```
 
-1. Add the selector to view-plan.component.html
+Add the selector to view-plan.component.html
 
 ```markup
 <app-customise-form></app-customise-form>

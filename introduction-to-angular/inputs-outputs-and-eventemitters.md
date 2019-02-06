@@ -4,23 +4,23 @@
 
 Now that we have the activities variable in activities.component.ts we are going to send the data to the child component list-components.ts
 
-1. In the activities.component.html file add activitiesList as an input paramater on the selector 
+In the activities.component.html file add activitiesList as an input paramater on the selector 
 
 ```markup
 <app-list-activities [activities]="activities"></app-list-activities>
 ```
 
-1. To listen to the variable we add an @Input decorator in the list-activities.component.ts file
+To listen to the variable we add an @Input decorator in the list-activities.component.ts file
 
 ```typescript
 @Input() activitiesList: ActivityModel[];
 ```
 
-1. Remove the code from the ngOnInit\(\) function that we added previously - serve the application and check the list is displaying as expected.
+Remove the code from the ngOnInit\(\) function that we added previously - serve the application and check the list is displaying as expected.
 
 > Image of page here ????
 
-1. Back in the activities-list.component.html file add a click event listener to the add button
+Back in the activities-list.component.html file add a click event listener to the add button
 
 ```markup
 <button class="btn-add" (click)="addToPlan(activity)">+ Add</button>

@@ -3,7 +3,7 @@
 > Components are basic building blocks in an angular application. Modules in angular is a place where you can group components, directives, pipes and services which are related in an application.
 
 {% hint style="info" %}
-One of the best attributes of Angular is the ability to keep your code componentised and therefore scalable in big enterprise applications. It also separates the template and the logic.
+One of the best attributes of Angular is the ability to keep your code component based and independent of each other and therefore scalable in big enterprise applications. There is also separation between the template and the logic which we will demonstrate in this section.
 {% endhint %}
 
 Let's start by creating a component called header.component.ts 

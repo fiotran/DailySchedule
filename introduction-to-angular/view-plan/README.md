@@ -2,13 +2,13 @@
 
 > Some text here from fiona
 
-1. Lets create a view-plan component
+Lets create a view-plan component
 
 ```bash
 ng g c activities/view-plan
 ```
 
-1. In the activities.service.ts file create a new public method getPlan\(\) which returns our list of activities.
+In the activities.service.ts file create a new public method getPlan\(\) which returns our list of activities.
 
 ```typescript
 public getPlan(){
@@ -16,19 +16,19 @@ public getPlan(){
 }
 ```
 
-1. Inject the activities service into the view-plan.component.ts by adding it to the constructor
+Inject the activities service into the view-plan.component.ts by adding it to the constructor
 
 ```typescript
 constructor(private activitesService: ActivitiesService) { }
 ```
 
-1. Declare a variable planList of type ActivityModel array
+Declare a variable planList of type ActivityModel array
 
 ```typescript
 planList: ActivityModel[] = [];
 ```
 
-1. In ngOnInit\(\) call the function getPlan\(\) and assign it to planList variable.
+In ngOnInit\(\) call the function getPlan\(\) and assign it to planList variable.
 
 ```typescript
   ngOnInit() {
@@ -36,7 +36,7 @@ planList: ActivityModel[] = [];
   }
 ```
 
-1. In the view-plan.component.html file add 
+In the view-plan.component.html file add 
 
 ```markup
 <div id="daily-schedule">
@@ -56,13 +56,13 @@ planList: ActivityModel[] = [];
 </div>
 ```
 
-1. Add the app-view-plan selector to the activities.component.html
+Add the app-view-plan selector to the activities.component.html
 
 ```markup
 <app-view-plan></app-view-plan>
 ```
 
-1. Add the ListActivitiesComponent to the declarations in the activities.module.ts file
+Add the ListActivitiesComponent to the declarations in the activities.module.ts file
 
 ```typescript
 import { ListActivitiesComponent } from './components/list-activities/list-activities.component';
@@ -77,7 +77,7 @@ import { ListActivitiesComponent } from './components/list-activities/list-activ
   ],
 ```
 
-1. Create a new button which we will use to clear the list in the view-plan.component.html page
+Create a new button which we will use to clear the list in the view-plan.component.html page
 
 ```typescript
 <button id="btn-reset" class="screen-only" (click)="clearPlan()">
@@ -85,7 +85,7 @@ import { ListActivitiesComponent } from './components/list-activities/list-activ
       </button>
 ```
 
-1. Write two functions in the service - one to delete a plan item and one to clear the list
+Write two functions in the service - one to delete a plan item and one to clear the list
 
 ```typescript
 public deletePlanItem(item: ActivityModel) {
@@ -100,7 +100,7 @@ public clearPlan() {
 }
 ```
 
-1. In the view-plan.component.ts file call these new funtions - making sure the function name is the same as the click action on the button
+In the view-plan.component.ts file call these new funtions - making sure the function name is the same as the click action on the button
 
 ```typescript
 deletePlan(item: ActivityModel) {
