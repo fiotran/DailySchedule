@@ -10,7 +10,7 @@
 ng g service activities/services/activities
 ```
 
-2. In the activities service create a function getActivities\(\), that returns the service list
+1. In the activities service create a function getActivities\(\), that returns the service list
 
 ```typescript
 import { Injectable } from '@angular/core';
@@ -29,7 +29,7 @@ export class ActivitiesService {
 }
 ```
 
-3. To use the service as a dependency, add the following to the constructor of the activities.component.ts page
+1. To use the service as a dependency, add the following to the constructor of the activities.component.ts page
 
 ```typescript
 constructor(
@@ -37,13 +37,13 @@ constructor(
   ) {  }
 ```
 
-4. Making sure to import the service
+1. Making sure to import the service
 
 ```typescript
 import { ActivitiesService } from './services/activities.service';
 ```
 
-5. To reference the getActivities\(\) function from the service, create a new function getList\(\) in the activities.component.ts page and call the function via the injected service.
+1. To reference the getActivities\(\) function from the service, create a new function getList\(\) in the activities.component.ts page and call the function via the injected service.
 
 ```typescript
 getList() {

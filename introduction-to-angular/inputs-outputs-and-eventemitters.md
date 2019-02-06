@@ -1,8 +1,8 @@
 # Inputs, Outputs and EventEmitters
 
-> Fiona text - get writing about stuff
+> To communicate between parent and child components Angular offers @Inputs\(\) and @Outputs\(\) decorators with the EventEmitter class
 
-Now that we have the activities variable in activities.component.ts we are going to send it to the child component list-components.ts
+Now that we have the activities variable in activities.component.ts we are going to send the data to the child component list-components.ts
 
 1. In the activities.component.html file add activitiesList as an input paramater on the selector 
 
@@ -30,9 +30,13 @@ Now that we have the activities variable in activities.component.ts we are going
 It is generally a good idea to let the feature component do the job of keeping a record of the list for the plan
 {% endhint %}
 
-> Emitting stuff...
+> To use @Output\(\),  let's add EventEmitter and Output to the Angular core import statement and bind a new instance of the EventEmitter
 
 1. In the list-activities.component.ts file add the following code - this is an emitter and will emit the selected item back to the parent page
+
+```typescript
+import { EventEmitter, Output } from '@angular/core';
+```
 
 ```typescript
 @Output() addPlan: EventEmitter<ActivityModel> = new EventEmitter<ActivityModel>();

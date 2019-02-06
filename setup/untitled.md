@@ -1,10 +1,8 @@
 # Typescript, Interfaces and Data
 
-> Typescript is a primary language for Angular applications development. It is a superset of JavaScript with design-time support for type safety and tooling. [https://angular.io/guide/typescript-configuration](https://angular.io/guide/typescript-configuration)
+> Typescript is a superset of Javascript used to write applications that is type safe which supports cleaner code for higher scalability. It is then compiled into plain Javascript at run time.
 
-In other words, typescript is a superset of Javascript used to write applications that is type safe. It is then compiled to plain Javascript at run time. 
-
-In this section we will create a model for the main activities object so we can be used it to type variables in our application at a later point. We will also pull in a predefined list of activities.
+In this section, we will create a model for the main activities object so it can be used to type variables in our application at a later point. We will also bring in a predefined list of activities for display.
 
 Create a folder called data under src/app and under the data folder create a folder called activity.model.ts with the following interface model
 

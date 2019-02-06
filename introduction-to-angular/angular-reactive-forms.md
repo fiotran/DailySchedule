@@ -8,7 +8,7 @@
 ng g c activities/customise-form
 ```
 
-2. Import the ReactiveFormsModule in the activities.modules.ts file
+1. Import the ReactiveFormsModule in the activities.modules.ts file
 
 ```typescript
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -22,20 +22,21 @@ imports: [
   ]
 ```
 
-3. In the customise.component.ts page add a modelForm variable with the type formGroup
+1. In the customise.component.ts page add a modelForm variable with the type formGroup
 
 ```typescript
 modelForm: FormGroup;
 ```
-4. Inject formBuilder - making sure to import it from the @angular/forms node-module
+
+1. Inject formBuilder - making sure to import it from the @angular/forms node-module
 
 ```typescript
 constructor(private fb: FormBuilder) { }
 ```
 
-5. Add the code to the customise.component.html file
+1. Add the code to the customise.component.html file
 
-```html
+```markup
 <section id="customise">
   <h1>Customise Form</h1>
   <form [formGroup]="modelForm">
@@ -47,7 +48,7 @@ constructor(private fb: FormBuilder) { }
 </section>
 ```
 
-6. In the customise.component.ts file set the formGroup with the formControlName
+1. In the customise.component.ts file set the formGroup with the formControlName
 
 ```typescript
 constructor(private fb: FormBuilder) { 
@@ -55,17 +56,15 @@ constructor(private fb: FormBuilder) {
       name: ''
     });
   }
-
 ```
-7. Add the selector to view-plan.component.html
 
-```html
+1. Add the selector to view-plan.component.html
+
+```markup
 <app-customise-form></app-customise-form>
 ```
 
 {% hint style="info" %}
- Make sure to ng serve --open regularly so you can see your changes.
+Make sure to ng serve --open regularly so you can see your changes.
 {% endhint %}
-
-
 

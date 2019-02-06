@@ -12,7 +12,7 @@ ng generate module activities
 ng generate component activities/activities
 ```
 
-2. Manually create activities.routing.ts file and then add the following code. 
+1. Manually create activities.routing.ts file and then add the following code. 
 
 ```typescript
 import { ActivitiesComponent } from './activities/activities.component';
@@ -29,19 +29,19 @@ component: ActivitiesComponent
 Here we are creating a constant variable called ACTIVITIES\_ROUTE and setting an empty path and importing the ActivitiesComponent
 {% endhint %}
 
-3. In activities.module.ts, import into @NgModule imports
+1. In activities.module.ts, import into @NgModule imports
 
 ```typescript
 RouterModule.forChild(ACTIVITIES_ROUTE);
 ```
 
-4. In the activities.module.ts import the RouterModule
+1. In the activities.module.ts import the RouterModule
 
 ```typescript
 import { RouterModule } from '@angular/router';
 ```
 
-5. In the app.routing.ts file create a route const but this time load the child route you just created
+1. In the app.routing.ts file create a route const but this time load the child route you just created
 
 ```typescript
 import { Routes } from '@angular/router';
@@ -54,7 +54,7 @@ export const APP_ROUTE : Routes = [
 ];
 ```
 
-6. In the app.component.ts file import into @NgModule imports
+1. In the app.component.ts file import into @NgModule imports
 
 ```typescript
 RouterModule.forRoot(APP_ROUTE)
