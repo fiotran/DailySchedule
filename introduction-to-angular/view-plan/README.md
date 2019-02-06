@@ -1,4 +1,4 @@
-# View Plan
+# View Plan and Add Details
 
 > Some text here from fiona
 

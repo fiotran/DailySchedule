@@ -1,4 +1,4 @@
-# nice touch
+# Update Activities List
 
 > when adding an activity to the plan it is removed from the activities list
 

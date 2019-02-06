@@ -1,4 +1,4 @@
-# Some Title Here
+# Recap Output and EventEmmiter
 
 > Lets practice sending a reload message back to the parent to get a new activities list
 
