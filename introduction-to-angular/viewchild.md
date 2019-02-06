@@ -1,4 +1,4 @@
-# ViewChild
+# ViewChild and Print Button
 
 Add a print button to the view-plan.component.html
 

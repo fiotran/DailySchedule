@@ -2,13 +2,13 @@
 
 > Text text text
 
-1. To use the Material Design Date Picker we need to install some additional modules
+To use the Material Design Date Picker we need to install some additional modules
 
 ```bash
 npm install --save @angular/material @angular/cdk
 ```
 
-1. These modules have some depenedencies which need to be added to the app.module.ts
+These modules have some depenedencies which need to be added to the app.module.ts
 
 ```typescript
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -20,13 +20,13 @@ imports: [
   ],
 ```
 
-1. We can now uncomment out the line in the css file - this is a pre-built material theme needed by the material design control
+We can now uncomment out the line in the css file - this is a pre-built material theme needed by the material design control
 
 ```css
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
 ```
 
-1. Import the MatDatepickerModule and the MatNativeDateModule in the activities.module.ts page
+Import the MatDatepickerModule and the MatNativeDateModule in the activities.module.ts page
 
 ```typescript
 import { MatIconModule, MatDatepickerModule, MatNativeDateModule } from '@angular/material';
@@ -44,7 +44,7 @@ import { MatIconModule, MatDatepickerModule, MatNativeDateModule } from '@angula
   ]
 ```
 
-1. Add more code to the customise-form.component.html page - under the name control so we can use the mat-datepicker
+Add more code to the customise-form.component.html page - under the name control so we can use the mat-datepicker
 
 ```markup
 <p>
@@ -55,7 +55,7 @@ import { MatIconModule, MatDatepickerModule, MatNativeDateModule } from '@angula
       </p>
 ```
 
-1. Add the selectDate control to the modelForm in the customise.component.ts file
+Add the selectDate control to the modelForm in the customise.component.ts file
 
 ```typescript
 constructor(private fb: FormBuilder) {

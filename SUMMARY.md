@@ -23,7 +23,7 @@
 * [Material Design Date Picker](introduction-to-angular/material-design-date-picker.md)
 * [Subscribe, Unsubscribe, OnDestroy](introduction-to-angular/subscribe-unsubscribe-ondestroy.md)
 * [Material Design Drag and Drop](introduction-to-angular/material-design-drag-and-drop.md)
-* [ViewChild](introduction-to-angular/viewchild.md)
+* [ViewChild and Print Button](introduction-to-angular/viewchild.md)
 * [Template Driven Form](introduction-to-angular/template-driven-form.md)
 
 ## Resource LInks
