@@ -5,7 +5,7 @@ import { ActivityModel } from '../data/activity.model';
 
 @Injectable()
 export class ActivitiesService {
-    activities: ActivityModel[];
+    activities: ActivityModel[] = [];
     dailySchedule: ActivityModel[] = [];
 
     constructor() {
@@ -22,6 +22,10 @@ export class ActivitiesService {
     public removeActivity(item: ActivityModel) {
         return this.activities = this.activities
             .filter((activity: ActivityModel) => activity !== item);
+    }
+
+    public updateActvitiesList(item: ActivityModel) {
+        return this.activities.push(item);
     }
 
     public getPlan() {

@@ -21,6 +21,7 @@ export class ViewPlanComponent implements OnInit {
   @Output() reloadActivities: EventEmitter<boolean> = new EventEmitter<
     boolean
   >();
+  @Output() updateActivitiesList: EventEmitter<ActivityModel> = new EventEmitter<ActivityModel>();
   @ViewChild('dailySchedule') dailySchedule: ElementRef;
   constructor(private activitesService: ActivitiesService) {}
 
@@ -65,8 +66,11 @@ export class ViewPlanComponent implements OnInit {
     this.planDetails = plan;
   }
 
-  deletePlan(item) {
+  deletePlan(item: ActivityModel) {
     this.planList = this.activitesService.deletePlanItem(item);
+    console.log(item);
+    
+    this.updateActivitiesList.emit(item);
   }
 
   clearPlan() {

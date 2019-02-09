@@ -1,2 +1,2 @@
-<app-view-plan (reloadActivities)="reload()"></app-view-plan>
+<app-view-plan (reloadActivities)="reload()" (updateActivitiesList)="updateActivities($event)"></app-view-plan>
 <app-list-activities [activities]="activities" (addPlan)="addToPlan($event)"></app-list-activities>

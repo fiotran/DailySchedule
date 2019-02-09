@@ -29,4 +29,8 @@ export class ActivitiesComponent implements OnInit {
     this.activities = this.getList();
   }
 
+  updateActivities(item: ActivityModel) {
+   this.activitiesService.updateActvitiesList(item);
+  }
+
 }
