@@ -50,6 +50,16 @@ In list-activities.component.html add the following code
 
 Now add the app-list-activities selector to the activities.component.html
 
+in the app.component.ts
+
+```text
+<activities></activities>
+<main>
+  <router-outlet></router-outlet>
+</main>
+
+```
+
 ```text
 <app-list-activities></app-list-activities>
 ```
