@@ -9,20 +9,25 @@ ng generate module activities
 ```
 
 ```text
-ng generate component activities/activities
+ng generate component activities --routing
 ```
 
 Manually create activities.routing.ts file and then add the following code. 
 
 ```typescript
-import { ActivitiesComponent } from './activities/activities.component';
+import { Routes } from '@angular/router';
 
-export const ACTIVITIES_ROUTE = [
-{
-path: '',
-component: ActivitiesComponent
-}
+export const APP_ROUTES: Routes = [
+  {
+    path: '',
+    loadChildren: './activities/activities.module#ActivitiesModule'
+  },
+  {
+    path: '**',
+    redirectTo: ''
+  }
 ];
+
 ```
 
 {% hint style="info" %}
@@ -32,7 +37,7 @@ Here we are creating a constant variable called ACTIVITIES\_ROUTE and setting an
 In activities.module.ts, import into @NgModule imports
 
 ```typescript
-RouterModule.forChild(ACTIVITIES_ROUTE);
+RouterModule.forChild(ACTIVITIES_ROUTES)
 ```
 
 In the activities.module.ts import the RouterModule

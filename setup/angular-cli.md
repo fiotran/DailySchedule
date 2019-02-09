@@ -2,19 +2,25 @@
 
 > The Angular CLI is the command line interface that comes with commands to help easily create and build Angular applications that work, right out of the box and adhere to standards. To learn more, visit the official CLI Angular IO website [https://cli.angular.io/](https://cli.angular.io/)
 
-1. Open up a command window and change to your working directory.
-2. Type the following into the terminal
+Open up a command window and change to your working directory.
 
-   ```text
-   ng new daily-planner
-   ```
+Type the following into the terminal
 
-3. Answer yes to routing and choose css as the style sheet. This process may take a few minutes to complete.
-4. When complete change into the daily-planner directory and type
+```text
+ng new daily-planner
+```
 
-   ```text
-   ng serve --open
-   ```
+Answer yes to routing and choose css as the style sheet. This process may take a few minutes to complete.
+
+When complete change into the daily-planner directory and type
+
+```text
+cd daily-planner
+```
+
+```text
+ng serve --open
+```
 
 This will build and serve your application then open the url in the default browser.
 
