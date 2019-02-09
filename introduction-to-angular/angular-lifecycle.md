@@ -17,6 +17,7 @@ In list-activities.component.ts add the following code
 ```typescript
 import { Component, OnInit } from '@angular/core';
 import { ActivitiesConst } from '../../Data/activities';
+import { ActivityModel } from 'src/app/data/activity.model';
 
 @Component({
   selector: 'app-list-activities',
@@ -24,9 +25,9 @@ import { ActivitiesConst } from '../../Data/activities';
   styleUrls: ['./list-activities.component.css']
 })
 export class ListActivitiesComponent implements OnInit {
-  activitiesList: ActivitiesModel;
+  activitiesList: ActivityModel[];
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
     this.activitiesList = ActivitiesConst;
@@ -48,6 +49,16 @@ In list-activities.component.html add the following code
 ```
 
 Now add the app-list-activities selector to the activities.component.html
+
+in the app.component.ts
+
+```text
+<activities></activities>
+<main>
+  <router-outlet></router-outlet>
+</main>
+
+```
 
 ```text
 <app-list-activities></app-list-activities>
