@@ -15,7 +15,7 @@ export class ListActivitiesComponent implements OnInit {
   ngOnInit() {
   }
 
-  addToPlan(activity) {
+  addToPlan(activity: ActivityModel) {
     this.addPlan.emit(activity);
   }
 

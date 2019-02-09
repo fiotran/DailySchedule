@@ -5,7 +5,7 @@ import { RouterModule } from '@angular/router';
 import { ActivitiesService } from './activities/services/activities.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { APP_ROUTES } from './app.routing';
-import { HeaderComponent } from './core/header/header.component';
+import { HeaderComponent } from './shared/header/header.component';
 
 @NgModule({
   declarations: [AppComponent, HeaderComponent],
