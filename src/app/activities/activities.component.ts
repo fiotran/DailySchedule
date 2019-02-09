@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivitiesService } from './services/activities.service';
-import { ActivityModel } from './data/activity.model';
+import { ActivitiesService } from '../services/activities.service';
+import { ActivityModel } from '../data/activity.model';
 
 
 @Component({
