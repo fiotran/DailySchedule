@@ -58,6 +58,10 @@ In the view-plan.component.html file add
       </button>
     </div>
   </div>
+    <button id="btn-share" class="screen-only" (click)="print()">Print</button>
+  <button id="btn-reset" class="screen-only" (click)="clearPlan()">
+    Reset
+  </button>
 </div>
 ```
 
