@@ -4,10 +4,35 @@
 
 Now that we have the activities variable in list-activities.component.ts we are going to send the data to the child component list-components.ts
 
+```typescript
+import { Component, OnInit } from '@angular/core';
+import { ActivitiesService } from '../services/activities.service';
+import { ActivityModel } from '../data/activity.model';
+
+
+@Component({
+  selector: 'app-activities',
+  templateUrl: './activities.component.html'
+})
+export class ActivitiesComponent implements OnInit {
+  activities: ActivityModel[];
+
+  constructor(private activitiesService: ActivitiesService) { }
+
+  ngOnInit() {
+    this.activities = this.getList();
+  }
+
+  getList() {
+    return this.activitiesService.getActivities();
+  }
+}
+```
+
 In the activities.component.html file add activitiesList as an input paramater on the selector 
 
 ```markup
-<app-list-activities [activities]="activities"></app-list-activities>
+<app-list-activities [activitiesList]="activities"></app-list-activities>
 ```
 
 To listen to the variable we add an @Input decorator in the list-activities.component.ts file
