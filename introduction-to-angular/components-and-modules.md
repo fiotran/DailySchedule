@@ -44,12 +44,14 @@ To use the header component created above we need to declare it in the app.modul
 ```typescript
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HeaderCmponent } from 'src/app/shared/header/header.component';
  
 import { AppComponent } from './app.component';
  
 @NgModule({
 declarations: [
-AppComponent
+AppComponent,
+HeaderComponent
 ],
 imports: [
 BrowserModule
@@ -60,7 +62,9 @@ bootstrap: [AppComponent]
 export class AppModule { }
 ```
 
-Now replace the existing code from the app.component.html file with the following selector. 
+Now replace the existing code from the app.component.html file with the following code. 
+
+#### ../daily-planner/src/app/app.component.html
 
 ```markup
 <app-header></app-header>
@@ -69,5 +73,5 @@ Now replace the existing code from the app.component.html file with the followin
 </main>
 ```
 
-> CSS selector tells Angular to create and insert an instance of this component wherever it finds the corresponding tag in template HTML. [https://angular.io/guide/architecture-components](https://angular.io/guide/architecture-components)
+> A selector tells Angular to create and insert an instance of this component wherever it finds the corresponding tag in template HTML. [https://angular.io/guide/architecture-components](https://angular.io/guide/architecture-components)
 
