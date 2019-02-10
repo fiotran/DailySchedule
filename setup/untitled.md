@@ -8,10 +8,8 @@ Create a folder called data under src/app and under the data folder create a fol
 
 ```typescript
 export interface ActivityModel {
-    id: number;
     name: string;
     image: string;
-    time?: string;
 }
 ```
 

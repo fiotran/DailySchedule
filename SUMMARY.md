@@ -5,7 +5,7 @@
 ## Setup
 
 * [Setup and requirements](setup/installation.md)
-* [Angular CLI](setup/angular-cli.md)
+* [Setup and Angular CLI](setup/angular-cli.md)
 * [Stylesheet and Font Awesome](setup/styling-and-font-awesome.md)
 * [Typescript, Interfaces and Data](setup/untitled.md)
 
@@ -15,7 +15,7 @@
 * [Routing and Lazy Loading](introduction-to-angular/routing-and-lazy-load.md)
 * [Angular Lifecycle](introduction-to-angular/angular-lifecycle.md)
 * [Dependency Injection](introduction-to-angular/dependency-injection.md)
-* [Inputs, Outputs and EventEmitters](introduction-to-angular/inputs-outputs-and-eventemitters.md)
+* [S1.5 Inputs, Outputs and EventEmitters](introduction-to-angular/inputs-outputs-and-eventemitters.md)
 * [View Plan and Add Details](introduction-to-angular/view-plan/README.md)
   * [Recap Output and EventEmmiter](introduction-to-angular/view-plan/some-title-here.md)
   * [Update Activities List](introduction-to-angular/view-plan/nice-touch.md)

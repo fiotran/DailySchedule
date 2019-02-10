@@ -5,11 +5,11 @@ As Angular builds a single page application, the concept of lazy loading ensures
 Run the following commands in the command line
 
 ```bash
-ng generate module activities
+ng generate module activities --routing
 ```
 
 ```text
-ng generate component activities --routing
+ng generate component activities
 ```
 
 Manually create activities.routing.ts file and then add the following code. 

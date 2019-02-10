@@ -1,4 +1,16 @@
-# Angular CLI
+# Setup and Angular CLI
+
+Visit node.js [https://nodejs.org/en/](https://nodejs.org/en/) and download the recommended LTS version
+
+Optional step - Download Visual Studio Code
+
+> Visual Studio Code is a lightweight but powerful source code editor which runs on your desktop and is available for Windows, macOS and Linux. It comes with built-in support for JavaScript, TypeScript and Node.js and has a rich ecosystem of extensions for other languages \(such as C++, C\#, Java, Python, PHP, Go\) and runtimes \(such as .NET and Unity\). Install visual studio code for your platform from [https://code.visualstudio.com/download](https://code.visualstudio.com/download)
+
+Install the Angular CLI
+
+```text
+npm install -g @angular/cli
+```
 
 > The Angular CLI is the command line interface that comes with commands to help easily create and build Angular applications that work, right out of the box and adhere to standards. To learn more, visit the official CLI Angular IO website [https://cli.angular.io/](https://cli.angular.io/)
 

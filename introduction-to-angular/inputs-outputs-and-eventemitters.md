@@ -1,8 +1,8 @@
-# Inputs, Outputs and EventEmitters
+# S1.5 Inputs, Outputs and EventEmitters
 
 > To communicate between parent and child components Angular offers @Inputs\(\) and @Outputs\(\) decorators with the EventEmitter class
 
-Now that we have the activities variable in activities.component.ts we are going to send the data to the child component list-components.ts
+Now that we have the activities variable in list-activities.component.ts we are going to send the data to the child component list-components.ts
 
 In the activities.component.html file add activitiesList as an input paramater on the selector 
 

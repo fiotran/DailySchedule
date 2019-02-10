@@ -16,8 +16,8 @@ In list-activities.component.ts add the following code
 
 ```typescript
 import { Component, OnInit } from '@angular/core';
-import { ActivitiesConst } from '../../Data/activities';
 import { ActivityModel } from 'src/app/data/activity.model';
+import { ActivitiesConst } from 'src/app/data/activities.model';
 
 @Component({
   selector: 'app-list-activities',
@@ -48,19 +48,9 @@ In list-activities.component.html add the following code
 </section>
 ```
 
-Now add the app-list-activities selector to the activities.component.html
+Now add the &lt;app-list-activities&gt; selector to the activities.component.html
 
-in the app.component.ts
-
-```text
-<activities></activities>
-<main>
-  <router-outlet></router-outlet>
-</main>
-
-```
-
-```text
+```markup
 <app-list-activities></app-list-activities>
 ```
 
