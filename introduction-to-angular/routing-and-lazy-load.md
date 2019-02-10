@@ -55,7 +55,7 @@ const routes: Routes = [{
 export class AppRoutingModule { }
 ```
 
-..\daily-planner\src\app\app.component.html
+..\daily-planner\src\app\app.component.html add the following between the header and the router
 
 ```text
 <h2> Welcome the the daily planner</h2>

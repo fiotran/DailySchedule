@@ -1,6 +1,6 @@
 # Angular Lifecycle
 
-Every component has a lifecycle managed by Angular. We have access to key moments such as ngOnChanges\(\) or ngOnInit\(\). For more information, visit the official website
+Every component has a lifecycle managed by Angular. We have access to key moments with predefined methods such as ngOnChanges\(\) or ngOnInit\(\). For more information, visit the official website
 
 [https://angular.io/guide/lifecycle-hooks](https://angular.io/guide/lifecycle-hooks)
 
@@ -9,7 +9,7 @@ In this section, we are going to use ngOnInit\(\) to set the list of activities
 Generate the list-activities components
 
 ```text
-ng generate component activites/list-activities
+ng generate component activities/list-activities
 ```
 
 In list-activities.component.ts add the following code
