@@ -12,6 +12,8 @@ Under the src/app folder create a new folder called shared - inside this create 
 
 In the .ts file paste the following code
 
+#### ../daily-planner/src/app/data/activity.model.ts
+
 ```typescript
 import { Component } from '@angular/core';
 
@@ -36,11 +38,15 @@ In the html file paste the following
 To use the header component created above we need to declare it in the app.modules.ts found in the src/app folder
 
 ```typescript
+/* Add this line to the top */
 import { HeaderComponent } from './shared/header/header.component';
+....
 
+
+/*Find @NgModule in the middle, add ",HeaderComponent"*/
 @NgModule({
   declarations: [
-    AppComponent, 
+    ... 
     HeaderComponent
   ],
 ```
@@ -49,6 +55,9 @@ Now replace the existing code from the app.component.html file with the followin
 
 ```markup
 <app-header></app-header>
+<main>
+    <router-outlet></router-outlet>
+</main>
 ```
 
 > CSS selector tells Angular to create and insert an instance of this component wherever it finds the corresponding tag in template HTML. [https://angular.io/guide/architecture-components](https://angular.io/guide/architecture-components)
