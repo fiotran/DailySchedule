@@ -1,4 +1,4 @@
-# View Plan and Add Details
+# View Plan Component and Add to Plan
 
 > Some text here from fiona
 
@@ -18,7 +18,7 @@ public getPlan(){
 
 Inject the activities service into the view-plan.component.ts by adding it to the constructor
 
-```text
+```typescript
 import { ActivityModel } from 'src/app/data/activity.model';
 import { ActivitiesService } from 'src/app/services/activities.service';
 ```
@@ -58,8 +58,8 @@ In the view-plan.component.html file add
       </button>
     </div>
   </div>
-    <button id="btn-share" class="screen-only" (click)="print()">Print</button>
-  <button id="btn-reset" class="screen-only" (click)="clearPlan()">
+    <button id="btn-share" class="screen-only">Print</button>
+  <button id="btn-reset" class="screen-only">
     Reset
   </button>
 </div>
@@ -84,42 +84,5 @@ import { ListActivitiesComponent } from './components/list-activities/list-activ
     ViewPlanComponent,
     ListActivitiesComponent
   ],
-```
-
-Create a new button which we will use to clear the list in the view-plan.component.html page
-
-```typescript
-<button id="btn-reset" class="screen-only" (click)="clearPlan()">
-        Reset
-      </button>
-```
-
-Write two functions in the service - one to delete a plan item and one to clear the list
-
-```typescript
-public deletePlanItem(item: ActivityModel) {
-  return this.dailySchedule = this.dailySchedule
-      .filter((activity: ActivityModel) => activity !== item);
-}
-```
-
-```typescript
-public clearPlan() {
-  return this.dailySchedule = [];
-}
-```
-
-In the view-plan.component.ts file call these new funtions - making sure the function name is the same as the click action on the button
-
-```typescript
-deletePlan(item: ActivityModel) {
-    this.planList = this.activitesService.deletePlanItem(item);
-  }
-```
-
-```typescript
-clearPlan() {
-    this.planList = this.activitesService.clearPlan();
-  }
 ```
 

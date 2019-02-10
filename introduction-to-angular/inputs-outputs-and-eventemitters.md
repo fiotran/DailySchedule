@@ -37,7 +37,7 @@ In the activities.component.html file add activitiesList as an input paramater o
 
 To listen to the variable we add an @Input decorator in the list-activities.component.ts file
 
-```text
+```typescript
 import { Input } from '@angular/core';
 ```
 
@@ -52,7 +52,7 @@ Remove the code from the ngOnInit\(\) function that we added previously - serve 
 Back in the list-activities.component.html file add a click event listener to the add button
 
 ```markup
-<button class="btn-add" (click)="addToPlan(activity)">+ Add</button>
+<button class="btn-add" (click)="addToDailySchedule(activity)">+ Add</button>
 ```
 
 {% hint style="info" %}
@@ -61,7 +61,7 @@ It is generally a good idea to let the feature component do the job of keeping a
 
 > To use @Output\(\),  let's add EventEmitter and Output to the Angular core import statement and bind a new instance of the EventEmitter
 
-1. In the list-activities.component.ts file add the following code - this is an emitter and will emit the selected item back to the parent page
+In the list-activities.component.ts file add the following code - this is an emitter and will emit the selected item back to the parent page
 
 ```typescript
 import { EventEmitter, Output } from '@angular/core';
@@ -71,21 +71,21 @@ import { EventEmitter, Output } from '@angular/core';
 @Output() addPlan: EventEmitter<ActivityModel> = new EventEmitter<ActivityModel>();
 ```
 
-1. Add a new function addToPlan\(activity\) in the list-activities.component.ts page 
+Add a new function addToDailySchedule\(activity\) in the list-activities.component.ts page 
 
 ```typescript
-addToPlan(activity) {
+addToDailySchedule(activity) {
     this.addPlan.emit(activity);
-  }
+}
 ```
 
-1. In the activities.component.html file add an output paramater on the selector - the round brackets indicate that we are sending values out of the child component.
+In the activities.component.html file add an output paramater on the selector - the round brackets indicate that we are sending values out of the child component.
 
 ```markup
 <app-list-activities [activitiesList]="activities" (addPlan)="addToPlan($event)"></app-list-activities>
 ```
 
-1. Open the file src/app/services/activities.service.ts and add a dailySchedule array with type ActivityModel\[\] and create an addToPlan function that will push the item into the dailySchedule array
+Open the file src/app/services/activities.service.ts and add a dailySchedule array with type ActivityModel\[\] and create an addToPlan function that will push the item into the dailySchedule array
 
 ```typescript
 dailySchedule: ActivityModel[] = [];
@@ -97,7 +97,9 @@ public addToPlan(item: ActivityModel) {
 }
 ```
 
-1. In the activities.component.ts file create a function to call the function just created
+In the activities.component.ts file create a function to call the function just created
+
+**.../src/app/activities/activities.component.ts**
 
 ```typescript
 addToPlan(item: ActivityModel) {
