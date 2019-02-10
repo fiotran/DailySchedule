@@ -12,7 +12,7 @@ Under the src/app folder create a new folder called shared - inside this create 
 
 In the .ts file paste the following code
 
-#### ../daily-planner/src/app/data/activity.model.ts
+#### ../daily-planner/src/app/shared/header.component.ts
 
 ```typescript
 import { Component } from '@angular/core';
@@ -28,6 +28,8 @@ constructor() { }
 ```
 
 In the html file paste the following
+
+#### ../daily-planner/src/app/shared/header.component.html
 
 ```markup
 <header>

@@ -18,6 +18,8 @@ export interface ActivityModel {
 
 Create a new file in the data folder named activities.ts and assign data to the constant variable ActivitiesConst
 
+#### ../daily-planner/src/app/data/activity.ts
+
 ```typescript
  export const ActivitiesConst = [
         {
