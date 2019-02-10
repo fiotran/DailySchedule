@@ -16,6 +16,12 @@ import ( Component, OnInit, Output, EventEmitter, ViewChild, ElementRef} from '@
 
 and add this.reloadActivities.emit\(true\); to the clearPlan method
 
+```text
+    public clearPlan() {
+        return this.dailySchedule = [];
+    }
+```
+
 ```typescript
 clearPlan() {
     this.planList = this.activitesService.clearPlan();

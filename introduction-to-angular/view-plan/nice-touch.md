@@ -6,7 +6,7 @@ Create a removeActivities\(\) function in the service
 
 ```typescript
 public removeActivity(item: ActivityModel) {
-  return this.activities = this.activities
+  return this.activitiesList = this.activitiesList
       .filter((activity: ActivityModel) => activity !== item);
 }
 ```
@@ -16,7 +16,7 @@ In the activities.component.ts page set the activities list to what is returned 
 ```typescript
 addToPlan(item: ActivityModel) {
     this.activitiesService.addToPlan(item);
-    this.activitiesList = this.activitiesService.removeActivity(item);
+    this.activities = this.activitiesService.removeActivity(item);
   }
 ```
 
