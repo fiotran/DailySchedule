@@ -4,7 +4,6 @@
 
 ## Setup
 
-* [Setup and requirements](setup/installation.md)
 * [Setup and Angular CLI](setup/angular-cli.md)
 * [Stylesheet and Font Awesome](setup/styling-and-font-awesome.md)
 * [Typescript, Interfaces and Data](setup/untitled.md)
