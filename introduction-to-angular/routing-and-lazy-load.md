@@ -37,6 +37,8 @@ Here we are creating a constant variable called ACTIVITIES\_ROUTE and setting an
 
 In the app.routing.ts file create a route const but this time load the child route you just created
 
+..\daily-planner\src\app\app-routing.module.ts
+
 ```typescript
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -48,6 +50,16 @@ const routes: Routes = [{
  
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }
+```
+
+..\daily-planner\src\app\app.component.html
+
+```text
+<h2> Welcome the the daily planner</h2>
+<a routerLink="/activities">click here go the the activities section</a>
 ```
 
 {% hint style="info" %}
