@@ -14,7 +14,7 @@ In the activities service create a function getActivities\(\), that returns the 
 
 ```typescript
 import { Injectable } from '@angular/core';
-import { ActivitiesConst } from '../data/activities.model';
+import { ActivitiesConst } from '../data/activities';
 import { ActivityModel } from '../data/activity.model';
 
 @Injectable({
