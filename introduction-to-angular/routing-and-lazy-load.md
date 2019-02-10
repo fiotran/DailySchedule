@@ -12,57 +12,42 @@ ng generate module activities --routing
 ng generate component activities
 ```
 
-Manually create activities.routing.ts file and then add the following code. 
+...\daily-planner\src\app\activities\activities-routing.module.ts add the following code. 
 
 ```typescript
-import { Routes } from '@angular/router';
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+import { ActivitiesComponent } from './activities.component';
 
-export const APP_ROUTES: Routes = [
-  {
-    path: '',
-    loadChildren: './activities/activities.module#ActivitiesModule'
-  },
-  {
-    path: '**',
-    redirectTo: ''
-  }
-];
+const routes: Routes = [{
+  path: '',
+  component: ActivitiesComponent
+}];
 
+@NgModule({
+  imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule]
+})
+export class ActivitiesRoutingModule { }
 ```
 
 {% hint style="info" %}
 Here we are creating a constant variable called ACTIVITIES\_ROUTE and setting an empty path and importing the ActivitiesComponent
 {% endhint %}
 
-In activities.module.ts, import into @NgModule imports
-
-```typescript
-RouterModule.forChild(ACTIVITIES_ROUTES)
-```
-
-In the activities.module.ts import the RouterModule
-
-```typescript
-import { RouterModule } from '@angular/router';
-```
-
 In the app.routing.ts file create a route const but this time load the child route you just created
 
 ```typescript
-import { Routes } from '@angular/router';
-
-export const APP_ROUTE : Routes = [
-{
- path: 'activities',
- loadChildren:  './activities/activities.module#ActivitiesModule'
-}
-];
-```
-
-In the app.component.ts file import into @NgModule imports
-
-```typescript
-RouterModule.forRoot(APP_ROUTE)
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+ 
+const routes: Routes = [{
+  path: 'activities',
+  loadChildren: './activities/activities.module#ActivitiesModule'
+}];
+ 
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
 ```
 
 {% hint style="info" %}
