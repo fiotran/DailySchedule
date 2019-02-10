@@ -37,6 +37,10 @@ In the activities.component.html file add activitiesList as an input paramater o
 
 To listen to the variable we add an @Input decorator in the list-activities.component.ts file
 
+```text
+import { Input } from '@angular/core';
+```
+
 ```typescript
 @Input() activitiesList: ActivityModel[];
 ```
@@ -45,7 +49,7 @@ Remove the code from the ngOnInit\(\) function that we added previously - serve 
 
 > Image of page here ????
 
-Back in the activities-list.component.html file add a click event listener to the add button
+Back in the list-activities.component.html file add a click event listener to the add button
 
 ```markup
 <button class="btn-add" (click)="addToPlan(activity)">+ Add</button>
@@ -78,10 +82,10 @@ addToPlan(activity) {
 1. In the activities.component.html file add an output paramater on the selector - the round brackets indicate that we are sending values out of the child component.
 
 ```markup
-<app-list-activities [activities]="activities" (addPlan)="addToPlan($event)"></app-list-activities>
+<app-list-activities [activitiesList]="activities" (addPlan)="addToPlan($event)"></app-list-activities>
 ```
 
-1. Open the service and add a dailySchedule array with type ActivityModel\[\] and create an addToPlan function that will push the item into the dailySchedule array
+1. Open the file src/app/services/activities.service.ts and add a dailySchedule array with type ActivityModel\[\] and create an addToPlan function that will push the item into the dailySchedule array
 
 ```typescript
 dailySchedule: ActivityModel[] = [];
