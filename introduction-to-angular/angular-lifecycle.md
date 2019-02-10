@@ -50,6 +50,8 @@ In list-activities.component.html add the following code
 
 Now add the &lt;app-list-activities&gt; selector to the activities.component.html
 
+...\daily-planner\src\app\activities\activities.component.html
+
 ```markup
 <app-list-activities></app-list-activities>
 ```
