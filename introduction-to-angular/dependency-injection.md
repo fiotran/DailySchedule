@@ -42,14 +42,12 @@ constructor(
 Making sure to import the service
 
 ```typescript
-import { ActivitiesService } from './services/activities.service';
+import { ActivitiesService } from 'src/app/services/activities.service';
 ```
 
-To reference the getActivities\(\) function from the service, create a new function getList\(\) in the list-activities.component.ts page and call the function via the injected service.
+To reference the getActivities\(\) function from the service, add the following to the list-activities.component.ts page.
 
 ```typescript
-getList() {
-    return this.activitiesService.getActivities();
-}
+this.activitiesList = this.activitiesService.getActivities();
 ```
 
