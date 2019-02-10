@@ -39,18 +39,25 @@ In the html file paste the following
 
 To use the header component created above we need to declare it in the app.modules.ts found in the src/app folder
 
+#### ../daily-planner/src/app/app.module.ts
+
 ```typescript
-/* Add this line to the top */
-import { HeaderComponent } from './shared/header/header.component';
-....
-
-
-/*Find @NgModule in the middle, add ",HeaderComponent"*/
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+ 
+import { AppComponent } from './app.component';
+ 
 @NgModule({
-  declarations: [
-    ... 
-    HeaderComponent
-  ],
+declarations: [
+AppComponent
+],
+imports: [
+BrowserModule
+],
+providers: [],
+bootstrap: [AppComponent]
+})
+export class AppModule { }
 ```
 
 Now replace the existing code from the app.component.html file with the following selector. 
