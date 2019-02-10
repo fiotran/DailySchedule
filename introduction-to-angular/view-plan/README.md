@@ -19,7 +19,8 @@ public getPlan(){
 Inject the activities service into the view-plan.component.ts by adding it to the constructor
 
 ```text
-import { ActivityModel } from '../data/activity.model';
+import { ActivityModel } from 'src/app/data/activity.model';
+import { ActivitiesService } from 'src/app/services/activities.service';
 ```
 
 ```typescript
