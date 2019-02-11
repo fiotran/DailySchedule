@@ -47,21 +47,21 @@ In the view-plan.component.html file add
 <div id="daily-schedule">
   <h1>Schedule a plan</h1>
   <div *ngIf="planList.length <= 0">
-    The daily schedule is currently empty
+    <p>The daily schedule is currently empty</p>
   </div>
   <div class="daily-schedule-list" *ngFor="let item of planList">
     <div class="daily-schedule-item">
       <h2>{{ item.name }}</h2>
+      <p><label>Time: </label>
+					<input type="text"></p>
       <i class="fas {{ item.image }} circle-icon"></i>
       <button class="btn-remove" (click)="deletePlan(item)">
         ×
       </button>
     </div>
   </div>
-    <button id="btn-share" class="screen-only">Print</button>
-  <button id="btn-reset" class="screen-only">
-    Reset
-  </button>
+  <button id="btn-print" class="screen-only">Print</button>
+  <button id="btn-reset" class="screen-only">Reset</button>
 </div>
 ```
 
