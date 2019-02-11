@@ -4,7 +4,7 @@
 
 Now that we have the activities variable in list-activities.component.ts we are going to send the data to the child component list-components.ts
 
-**...\daily-planner\src\app\activities\list-activities\list-activities.component.ts**
+**...\daily-planner\src\app\activities\activities.component.ts**
 
 ```typescript
 import { Component, OnInit } from '@angular/core';
