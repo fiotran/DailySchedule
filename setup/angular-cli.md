@@ -1,6 +1,6 @@
 # Setup and Angular CLI
 
-Visit node.js [https://nodejs.org/en/](https://nodejs.org/en/) and download the recommended LTS \(Long-Term Support\)version
+Visit node.js [https://nodejs.org/en/](https://nodejs.org/en/) and download the recommended LTS \(Long-Term Support\) version
 
 Optional step - Download Visual Studio Code
 
@@ -8,23 +8,25 @@ Optional step - Download Visual Studio Code
 
 Install the Angular CLI \(Command line interface\)
 
+> The Angular CLI is the command line interface that comes with commands to help easily create and build Angular applications that work, right out of the box and adhere to standards. To learn more, visit the official CLI Angular IO website [https://cli.angular.io/](https://cli.angular.io/)
+
+Open up terminal on a Mac or command on Windows and change to your working directory.
+
+Type the following into the terminal
+
 ```text
 npm install -g @angular/cli
 ```
-
-> The Angular CLI is the command line interface that comes with commands to help easily create and build Angular applications that work, right out of the box and adhere to standards. To learn more, visit the official CLI Angular IO website [https://cli.angular.io/](https://cli.angular.io/)
-
-Open up a command window and change to your working directory.
-
-Type the following into the terminal
 
 ```text
 ng new daily-planner
 ```
 
-Answer yes to routing and choose css as the style sheet. This process may take a few minutes to complete.
+{% hint style="info" %}
+While generating the project with ng new, answer yes to routing and choose css as the style sheet. This process may take a few minutes to complete.
+{% endhint %}
 
-When complete change into the daily-planner directory and type
+When complete, change into the daily-planner directory by typing
 
 ```text
 cd daily-planner
@@ -37,12 +39,10 @@ ng serve --open
 This will build and serve your application then open the url in the default browser.
 
 {% hint style="success" %}
-Congratulations you have just made your first angular application!
+Congratulations you have just made your first angular application with the default Angular template!
 {% endhint %}
 
 To terminate the batch job just type ctrl + c
-
-If using visual studio code, you can open the terminal with the shortcut ctrl + shift + y to open the debug console and select the terminal window. This is where you can type all your commands 
 
 {% hint style="info" %}
 If using visual studio code, you can open the terminal with the shortcut ctrl + shift + y to open the debug console and select the terminal window. This is where you can type all your commands 

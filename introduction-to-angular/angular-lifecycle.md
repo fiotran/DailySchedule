@@ -14,6 +14,8 @@ ng generate component activities/list-activities
 
 In list-activities.component.ts add the following code
 
+**...\daily-planner\src\app\activities\list-activities\list-activities.component.ts**
+
 ```typescript
 import { Component, OnInit } from '@angular/core';
 import { ActivityModel } from 'src/app/data/activity.model';
@@ -37,6 +39,8 @@ export class ListActivitiesComponent implements OnInit {
 
 In list-activities.component.html add the following code
 
+**...\daily-planner\src\app\activities\list-activities\list-activities.component.html**
+
 ```markup
 <section id="activity-list">
   <h1> List of activities</h1>
@@ -50,7 +54,7 @@ In list-activities.component.html add the following code
 
 Now add the &lt;app-list-activities&gt; selector to the activities.component.html
 
-...\daily-planner\src\app\activities\activities.component.html
+**...\daily-planner\src\app\activities\activities.component.html**
 
 ```markup
 <app-list-activities></app-list-activities>

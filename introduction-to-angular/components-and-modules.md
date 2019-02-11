@@ -12,7 +12,7 @@ Under the src/app folder create a new folder called shared - inside this create 
 
 In the .ts file paste the following code
 
-#### ../daily-planner/src/app/shared/header.component.ts
+#### ../daily-planner/src/app/shared/header/header.component.ts
 
 ```typescript
 import { Component } from '@angular/core';
@@ -29,7 +29,7 @@ constructor() { }
 
 In the html file paste the following
 
-#### ../daily-planner/src/app/shared/header.component.html
+#### ../daily-planner/src/app/shared/header/header.component.html
 
 ```markup
 <header>
@@ -44,9 +44,9 @@ To use the header component created above we need to declare it in the app.modul
 ```typescript
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { AppComponent } from './app.component';
 import { HeaderCmponent } from 'src/app/shared/header/header.component';
  
-import { AppComponent } from './app.component';
  
 @NgModule({
 declarations: [
@@ -62,7 +62,7 @@ bootstrap: [AppComponent]
 export class AppModule { }
 ```
 
-Now replace the existing code from the app.component.html file with the following code. 
+Now replace the existing code generated from the app.component.html file with the following code. 
 
 #### ../daily-planner/src/app/app.component.html
 
@@ -74,4 +74,24 @@ Now replace the existing code from the app.component.html file with the followin
 ```
 
 > A selector tells Angular to create and insert an instance of this component wherever it finds the corresponding tag in template HTML. [https://angular.io/guide/architecture-components](https://angular.io/guide/architecture-components)
+
+{% hint style="warning" %}
+if you have compiling errors associated with routing, you may have selected no when given to option of creating your project with routing and will need to create the below file manually
+{% endhint %}
+
+#### ../daily-planner/src/app/app-routing.module.ts
+
+```typescript
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+
+const routes: Routes = [];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }
+
+```
 

@@ -12,6 +12,8 @@ ng g service services/activities
 
 In the activities service create a function getActivities\(\), that returns the service list
 
+**...\daily-planner\src\app\services\activities.service.ts**
+
 ```typescript
 import { Injectable } from '@angular/core';
 import { ActivitiesConst } from '../data/activities';
@@ -33,21 +35,29 @@ export class ActivitiesService {
 
 To use the service as a dependency, add the following to the constructor of the list-activities.component.ts page
 
+**...\daily-planner\src\app\activities\activities.component.ts**
+
+Make sure to import the service
+
+```typescript
+import { ActivitiesService } from 'src/app/services/activities.service';
+```
+
+Inject the service into the constructor
+
 ```typescript
 constructor(
     private activitiesService: ActivitiesService
   ) {  }
 ```
 
-Making sure to import the service
-
-```typescript
-import { ActivitiesService } from 'src/app/services/activities.service';
-```
-
 To reference the getActivities\(\) function from the service, add the following to the list-activities.component.ts page.
+
+**...\daily-planner\src\app\activities\list-activities\list-activities.component.ts**
 
 ```typescript
 this.activitiesList = this.activitiesService.getActivities();
 ```
+
+
 

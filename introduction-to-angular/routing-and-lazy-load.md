@@ -12,7 +12,7 @@ ng generate module activities --routing
 ng generate component activities
 ```
 
-...\daily-planner\src\app\activities\activities-routing.module.ts add the following code. 
+.**..\daily-planner\src\app\activities\activities-routing.module.ts** add the following code. 
 
 ```typescript
 import { NgModule } from '@angular/core';
@@ -35,9 +35,9 @@ export class ActivitiesRoutingModule { }
 Here we are creating a constant variable called ACTIVITIES\_ROUTE and setting an empty path and importing the ActivitiesComponent
 {% endhint %}
 
-In the app.routing.ts file create a route const but this time load the child route you just created
+In the app.routing.ts file, update the const routes with the object as follows
 
-..\daily-planner\src\app\app-routing.module.ts
+**...\daily-planner\src\app\app-routing.module.ts**
 
 ```typescript
 import { NgModule } from '@angular/core';
@@ -55,9 +55,9 @@ const routes: Routes = [{
 export class AppRoutingModule { }
 ```
 
-..\daily-planner\src\app\app.component.html add the following between the header and the router
+**..\daily-planner\src\app\app.component.html** add the following between the header and the router
 
-```text
+```markup
 <h2> Welcome the the daily planner</h2>
 <a routerLink="/activities">click here go the the activities section</a>
 ```
