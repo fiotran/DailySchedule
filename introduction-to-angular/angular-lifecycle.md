@@ -38,14 +38,14 @@ export class ListActivitiesComponent implements OnInit {
 In list-activities.component.html add the following code
 
 ```markup
-<section id="activity-list">
-  <h1> List of activities</h1>
-  <article class="activity-item" *ngFor="let activity of activitiesList">
-    <i class="fas {{activity.image}} circle-icon"></i>
-    <h2>{{activity.name}}</h2>
-    <button class="btn-add">+ Add</button>
-  </article>
-</section>
+<div id="activity-list">
+	<h1> List of activities</h1>
+	<div class="activity-item" *ngFor="let activity of activitiesList">
+		<i class="fas {{activity.image}} circle-icon"></i>
+		<h2>{{activity.name}}</h2>
+		<button class="btn-add">+ Add</button>
+	</div>
+</div>
 ```
 
 Now add the &lt;app-list-activities&gt; selector to the activities.component.html
