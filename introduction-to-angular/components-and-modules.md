@@ -44,22 +44,25 @@ To use the header component created above we need to declare it in the app.modul
 ```typescript
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderCmponent } from 'src/app/shared/header/header.component';
- 
- 
+import { HeaderComponent } from './shared/header.component';
+
 @NgModule({
-declarations: [
-AppComponent,
-HeaderComponent
-],
-imports: [
-BrowserModule
-],
-providers: [],
-bootstrap: [AppComponent]
+  declarations: [
+    AppComponent,
+    HeaderComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
+
 ```
 
 Now replace the existing code generated from the app.component.html file with the following code. 
@@ -93,28 +96,5 @@ const routes: Routes = [];
 })
 export class AppRoutingModule { }
 
-```
-
-#### ../daily-planner/src/app/app.module.ts
-
-```text
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-
-@NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
-})
-export class AppModule { }
 ```
 
