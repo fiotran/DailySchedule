@@ -2,7 +2,7 @@
 
 As Angular builds a single page application, the concept of lazy loading ensures modules and components can be asynchronously loaded when the route is activated. This speeds up the time it takes to load your application to a needs only basis.
 
-Run the following commands in the command line
+Run the following commands in the command line \(cont +c for stop the serve\)
 
 ```bash
 ng generate module activities --routing
@@ -29,13 +29,14 @@ const routes: Routes = [{
   exports: [RouterModule]
 })
 export class ActivitiesRoutingModule { }
+
 ```
 
 {% hint style="info" %}
 Here we are creating a constant variable called ACTIVITIES\_ROUTE and setting an empty path and importing the ActivitiesComponent
 {% endhint %}
 
-In the app.routing.ts file, update the const routes with the object as follows
+In the app-routing.module.ts file, update the const routes with the object as follows
 
 **...\daily-planner\src\app\app-routing.module.ts**
 
@@ -53,6 +54,7 @@ const routes: Routes = [{
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
 ```
 
 **..\daily-planner\src\app\app.component.html** add the following between the header and the router
