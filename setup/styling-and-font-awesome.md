@@ -7,20 +7,12 @@ Using Visual Studio Code or your favorite text editor copy the following text in
    ../daily-planner/src/styles.css
 
 ```css
-/* You can add global styles to this file, and also import other style files */
-/* @import '~@angular/material/prebuilt-themes/indigo-pink.css';*/
-
 body {
   font-family: Georgia, serif;
   font-size: 16px;
   text-align: center;
-}
-
-header,
-main {
-  width: 1000px;
+  max-width: 1000px;
   margin: auto;
-  padding: 20px;
 }
 
 header h1 {
@@ -31,21 +23,20 @@ header h1 {
   font-style: italic;
 }
 
-main {
+#customise, #activity-list {
   text-align: left;
-}
-
-section {
-  display: block;
   margin-bottom: 50px;
-  width: 55%;
+  display: block;
+  overflow: hidden;
 }
 
-section > h1 {
+#customise h1, #activity-list h1 {
   display: block;
+
   padding: 5px;
   border-bottom: 1px solid #ccc;
   font-style: italic;
+
 }
 
 #customise form p label {
@@ -92,6 +83,7 @@ button:hover {
 
 #daily-schedule {
   width: 40%;
+  min-width: 300px;
   margin-left: 5%;
   float: right;
   background-color: #eee;
@@ -118,7 +110,7 @@ button:hover {
 }
 
 .daily-schedule-item > h2,
-.daily-schedule-item > div {
+.daily-schedule-item > p {
   margin: 0.2rem 0.2rem 0.2rem 60px;
   font-size: 1rem;
 }
@@ -137,6 +129,15 @@ button:hover {
   margin: 15px auto;
 }
 
+button.btn-add, button.btn-remove {
+  font-size: 1rem;
+  line-height: 1.3rem;
+  border: solid 1px #888; 
+  background-color: #fff;
+  color: #888;
+}
+
+
 button.btn-remove {
   position: absolute;
   top: 5px;
@@ -148,7 +149,14 @@ button.btn-remove {
   padding: 0;
 }
 
-button#btn-share,
+
+button.btn-add:hover,button.btn-remove:hover  {
+  background-color: #888;
+  color: #fff;
+}
+
+
+button#btn-print,
 button#btn-reset {
   font-size: 1.4rem !important;
   width: 100px;
@@ -156,7 +164,7 @@ button#btn-reset {
   margin: 5px 5px 30px;
   border: 0;
 }
-button#btn-share {
+button#btn-print {
   background-color: orange;
   color: white;
 }
@@ -164,6 +172,13 @@ button#btn-share {
 button#btn-reset {
   background-color: #999;
 }
+
+@media (max-width: 600px){
+  #customise, #activity-list, #daily-schedule {
+    width: 100%;
+  }
+}
+
 
 @media screen {
   .print-only {
@@ -237,7 +252,8 @@ i.fa-swimmer {
 }
 ```
 
-Now add the following link to the index.html on the root directory
+
+Now add the following link to the index.html on the root directory
 
    ../daily-planner/src/index.html
 
