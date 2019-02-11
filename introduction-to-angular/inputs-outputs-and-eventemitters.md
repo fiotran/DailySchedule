@@ -32,6 +32,8 @@ export class ActivitiesComponent implements OnInit {
 
 ```
 
+in the **...\daily-planner\src\app\activities\list-activities\list-activities.component.ts** remove the service call and its injectable
+
 In the activities.component.html file add activities as an input parameter on the selector 
 
 **...\daily-planner\src\app\activities\activities.component.html**
@@ -47,6 +49,8 @@ To listen to the variable we add an @Input decorator in the list-activities.comp
 ```typescript
 import { Input } from '@angular/core';
 ```
+
+just inside the export class add
 
 ```typescript
 @Input() activitiesList: ActivityModel[];
@@ -98,6 +102,16 @@ In the activities.component.html file add an output parameter on the selector - 
 
 Open the file src/app/services/activities.service.ts and add a dailySchedule array with type ActivityModel\[\] and create an addToPlan function that will push the item into the dailySchedule array
 
+In the activities.component.ts file create a function to call the function just created
+
+**.../src/app/activities/activities.component.ts**
+
+```typescript
+addToPlan(item: ActivityModel) {
+    this.activitiesService.addToPlan(item);
+}
+```
+
 **...\daily-planner\src\app\services\activities.service.ts**
 
 ```typescript
@@ -107,16 +121,6 @@ dailySchedule: ActivityModel[] = [];
 ```typescript
 public addToPlan(item: ActivityModel) {
     this.dailySchedule.push(item);
-}
-```
-
-In the activities.component.ts file create a function to call the function just created
-
-**.../src/app/activities/activities.component.ts**
-
-```typescript
-addToPlan(item: ActivityModel) {
-    this.activitiesService.addToPlan(item);
 }
 ```
 
