@@ -35,7 +35,7 @@ export class ActivitiesService {
 
 To use the service as a dependency, add the following to the constructor of the list-activities.component.ts page
 
-**...\daily-planner\src\app\activities\activities.component.ts**
+**...\daily-planner\src\app\activities\list-activities\list-activities.component.ts**
 
 Make sure to import the service
 
