@@ -13,7 +13,7 @@ public removeActivity(item: ActivityModel) {
 }
 
  public updateActvitiesList(item: ActivityModel) {
-     return this.activities.push(item);
+     return this.activitiesList.push(item);
  }
 ```
 
