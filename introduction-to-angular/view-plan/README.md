@@ -79,20 +79,3 @@ Add the app-view-plan selector to the activities.component.html above the existi
 <app-view-plan></app-view-plan>
 ```
 
-Add the ListActivitiesComponent to the declarations in the activities.module.ts file
-
-**...\daily-planner\src\app\activities\activities.module.ts**
-
-```typescript
-import { ViewPlanComponent } from './components/actvities/view-plan/view-plan.component';
-```
-
-```typescript
-@NgModule({
-  declarations: [
-    ActivitiesComponent,
-    ViewPlanComponent,
-    ListActivitiesComponent
-  ],
-```
-
