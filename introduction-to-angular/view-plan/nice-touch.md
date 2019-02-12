@@ -23,8 +23,7 @@ In the activities.component.ts page set the activities list to what is returned 
 
 ```typescript
 addToDailySchedule(item: ActivityModel) {
-    ...
-    
+    this.activitiesService.addToPlan(item);
     this.activities = this.activitiesService.removeActivity(item);
 }
 
@@ -44,9 +43,10 @@ Add on click for the delete button
 </button>
 ```
 
+**.../src/app/activities/view-plan/view-plan.component.html**
+
 ```typescript
 import {
-  ...
   Output,
   EventEmitter,
 } from '@angular/core';
@@ -56,17 +56,19 @@ import {
  @Output() updateActivitiesList: EventEmitter<ActivityModel> = new EventEmitter<ActivityModel>();
 ```
 
+**.../src/app/activities/activities/activities.component.html**
+
 ```markup
-<app-view-plan ... (updateActivitiesList)="updateActivities($event)"></app-view-plan>
+<app-view-plan (updateActivitiesList)="updateActivities($event)"></app-view-plan>
 ```
 
 in the service add
+
+**.../src/app/services/activities.service.ts**
 
 ```typescript
 updateActivities(item: ActivityModel) {
    this.activitiesService.updateActvitiesList(item);
 }
 ```
-
-**.../src/app/services/activities.service.ts**
 
