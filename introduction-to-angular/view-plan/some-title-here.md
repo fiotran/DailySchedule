@@ -19,7 +19,7 @@ then add EventEmitter and Output to the @angular/core import statement
 **.../src/app/activities/view-plan/view-plan.component.ts**
 
 ```typescript
-import ( ... Output, EventEmitter} from '@angular/core';
+import ( Output, EventEmitter} from '@angular/core';
 ```
 
 In the view-plan.component.ts file create a variable for the reload message
@@ -32,7 +32,7 @@ and add this.reloadActivities.emit\(true\); to the clearPlan method
 
 ```typescript
 resetView() {
-    this.planList = this.activitesService.clearPlan();
+    this.planList = this.activitiesService.clearPlan();
     this.reloadActivities.emit(true);
 }
 ```
@@ -49,7 +49,7 @@ public clearPlan() {
 
 Add output parameters to the app-view-plan selector in the activities.component.html
 
-**.../src/app/activities/view-plan/view-plan.component.html**
+**.../src/app/activities/activities.component.html**
 
 ```markup
 <app-view-plan (reloadActivities)="reload()"></app-view-plan>
@@ -61,7 +61,7 @@ then in the activities.component.ts create a reload function and call getlist\(\
 
 ```typescript
 reload() {
-    this.activitiesList = this.getList();
+    this.activities = this.getList();
 }
 ```
 

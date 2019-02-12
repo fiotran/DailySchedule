@@ -21,9 +21,6 @@ public deletePlanItem(item: ActivityModel) {
             .filter((activity: ActivityModel) => activity !== item);
     }
     
-public updateActivities(item: ActivityModel) {
-   this.activitiesService.updateActvitiesList(item);
-}
 ```
 
 In the activities.component.ts page set the activities list to what is returned from our new service in the addToPlan function
@@ -51,6 +48,13 @@ import {
  @Output() updateActivitiesList: EventEmitter<ActivityModel> = new EventEmitter<ActivityModel>();
 ```
 
+```text
+deleteFromDailySchedule(item: ActivityModel) {
+    this.planList = this.activitiesService.deletePlanItem(item);
+    this.updateActivitiesList.emit(item);
+}
+```
+
 **.../src/app/activities/activities.component.ts**
 
 ```typescript
@@ -59,9 +63,8 @@ addToPlan(item: ActivityModel) {
     this.activities = this.activitiesService.removeActivity(item);
 }
 
-deleteFromDailySchedule(item: ActivityModel) {
-    this.planList = this.activitiesService.deletePlanItem(item);
-    this.updateActivitiesList.emit(item);
+updateActivities(item: ActivityModel) {
+   this.activitiesService.updateActvitiesList(item);
 }
 ```
 
