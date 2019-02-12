@@ -2,6 +2,8 @@
 
 After adding the activity to the daily schedule, remove it from the activities list and if it's removed for the daily schedule plan add it back to the activities list.
 
+gsdg
+
 Create a removeActivities\(\) and an updateActivitiesList\(\) function
 
 .**../src/app/services/activities.service.ts**
