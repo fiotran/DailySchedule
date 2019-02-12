@@ -20,23 +20,13 @@ public deletePlanItem(item: ActivityModel) {
     return this.dailySchedule = this.dailySchedule
             .filter((activity: ActivityModel) => activity !== item);
     }
+    
+public updateActivities(item: ActivityModel) {
+   this.activitiesService.updateActvitiesList(item);
+}
 ```
 
 In the activities.component.ts page set the activities list to what is returned from our new service in the addToPlan function
-
-**.../src/app/activities/activities.component.ts**
-
-```typescript
-addToPlan(item: ActivityModel) {
-    this.activitiesService.addToPlan(item);
-    this.activities = this.activitiesService.removeActivity(item);
-}
-
-deleteFromDailySchedule(item: ActivityModel) {
-    this.planList = this.activitiesService.deletePlanItem(item);
-    this.updateActivitiesList.emit(item);
-}
-```
 
 Add on click for the delete button
 
@@ -61,19 +51,23 @@ import {
  @Output() updateActivitiesList: EventEmitter<ActivityModel> = new EventEmitter<ActivityModel>();
 ```
 
+**.../src/app/activities/activities.component.ts**
+
+```typescript
+addToPlan(item: ActivityModel) {
+    this.activitiesService.addToPlan(item);
+    this.activities = this.activitiesService.removeActivity(item);
+}
+
+deleteFromDailySchedule(item: ActivityModel) {
+    this.planList = this.activitiesService.deletePlanItem(item);
+    this.updateActivitiesList.emit(item);
+}
+```
+
 **.../src/app/activities/activities/activities.component.html**
 
 ```markup
 <app-view-plan (updateActivitiesList)="updateActivities($event)"></app-view-plan>
-```
-
-in the service add
-
-**.../src/app/services/activities.service.ts**
-
-```typescript
-updateActivities(item: ActivityModel) {
-   this.activitiesService.updateActvitiesList(item);
-}
 ```
 
