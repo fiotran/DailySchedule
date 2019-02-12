@@ -10,6 +10,8 @@ ng g c activities/view-plan
 
 In the activities.service.ts file create a new public method getPlan\(\) which returns our list of activities.
 
+**...\daily-planner\src\app\services\activities.service.ts**
+
 ```typescript
 public getPlan(){
   return this.dailySchedule;
@@ -17,6 +19,8 @@ public getPlan(){
 ```
 
 Inject the activities service into the view-plan.component.ts by adding it to the constructor
+
+**...\daily-planner\src\app\activities\view-plan\view-plan.component.ts**
 
 ```typescript
 import { ActivityModel } from 'src/app/data/activity.model';
@@ -27,7 +31,7 @@ import { ActivitiesService } from 'src/app/services/activities.service';
 constructor(private activitesService: ActivitiesService) { }
 ```
 
-Declare a variable planList of type ActivityModel array
+Declare a variable planList of type ActivityModel array inside the opening brackets of the export class
 
 ```typescript
 planList: ActivityModel[] = [];
@@ -43,7 +47,7 @@ In ngOnInit\(\) call the function getPlan\(\) and assign it to planList variable
 
 In the view-plan.component.html file add
 
-**.../src/app/activities/view-plan/view-plan.component.html** 
+**...\daily-planner\src\app\activities\view-plan\view-plan.component.html** 
 
 ```markup
 <div id="daily-schedule">
@@ -55,7 +59,7 @@ In the view-plan.component.html file add
     <div class="daily-schedule-item">
       <h2>{{ item.name }}</h2>
       <i class="fas {{ item.image }} circle-icon"></i>
-      <button class="btn-remove" (click)="deletePlan(item)">
+      <button class="btn-remove">
         ×
       </button>
     </div>
@@ -67,7 +71,9 @@ In the view-plan.component.html file add
 </div>
 ```
 
-Add the app-view-plan selector to the activities.component.html
+Add the app-view-plan selector to the activities.component.html above the existing code
+
+**...\daily-planner\src\app\activities\activities.component.html**
 
 ```markup
 <app-view-plan></app-view-plan>
@@ -75,8 +81,10 @@ Add the app-view-plan selector to the activities.component.html
 
 Add the ListActivitiesComponent to the declarations in the activities.module.ts file
 
+**...\daily-planner\src\app\activities\activities.module.ts**
+
 ```typescript
-import { ListActivitiesComponent } from './components/list-activities/list-activities.component';
+import { ViewPlanComponent } from './components/actvities/view-plan/view-plan.component';
 ```
 
 ```typescript

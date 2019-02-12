@@ -10,6 +10,8 @@ ng g c activities/customise-form
 
 Import the ReactiveFormsModule in the activities.modules.ts file
 
+**...\daily-planner\src\app\activities\activities.module.ts**
+
 ```typescript
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
@@ -24,6 +26,8 @@ imports: [
 
 In the customise.component.ts page add a modelForm variable with the type formGroup
 
+**...\daily-planner\src\app\activities\customise\customise.component.ts**
+
 ```typescript
 modelForm: FormGroup;
 ```
@@ -34,7 +38,19 @@ Inject formBuilder - making sure to import it from the @angular/forms node-modul
 constructor(private fb: FormBuilder) { }
 ```
 
+In the customise.component.ts file set the formGroup with the formControlName
+
+```typescript
+constructor(private fb: FormBuilder) { 
+    this.modelForm = this.fb.group({
+      name: ''
+    });
+  }
+```
+
 Add the code to the customise.component.html file
+
+**...\daily-planner\src\app\activities\customise\customise.component.html**
 
 ```markup
 <section id="customise">
@@ -48,17 +64,9 @@ Add the code to the customise.component.html file
 </section>
 ```
 
-In the customise.component.ts file set the formGroup with the formControlName
-
-```typescript
-constructor(private fb: FormBuilder) { 
-    this.modelForm = this.fb.group({
-      name: ''
-    });
-  }
-```
-
 Add the selector to view-plan.component.html
+
+**...\daily-planner\src\app\activities\view-plan\customise.component.ts**
 
 ```markup
 <app-customise-form></app-customise-form>
