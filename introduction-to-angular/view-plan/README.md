@@ -34,7 +34,7 @@ constructor(private activitesService: ActivitiesService) { }
 Declare a variable planList of type ActivityModel array inside the opening brackets of the export class
 
 ```typescript
-planList: ActivityModel[] = [];
+planList: ActivityModel[];
 ```
 
 In ngOnInit\(\) call the function getPlan\(\) and assign it to planList variable.

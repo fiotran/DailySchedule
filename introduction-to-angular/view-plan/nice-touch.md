@@ -12,9 +12,14 @@ public removeActivity(item: ActivityModel) {
       .filter((activity: ActivityModel) => activity !== item);
 }
 
- public updateActvitiesList(item: ActivityModel) {
+public updateActvitiesList(item: ActivityModel) {
      return this.activitiesList.push(item);
  }
+ 
+public deletePlanItem(item: ActivityModel) {
+    return this.dailySchedule = this.dailySchedule
+            .filter((activity: ActivityModel) => activity !== item);
+    }
 ```
 
 In the activities.component.ts page set the activities list to what is returned from our new service in the addToPlan function
@@ -22,13 +27,13 @@ In the activities.component.ts page set the activities list to what is returned 
 **.../src/app/activities/activities.component.ts**
 
 ```typescript
-addToDailySchedule(item: ActivityModel) {
+addToPlan(item: ActivityModel) {
     this.activitiesService.addToPlan(item);
     this.activities = this.activitiesService.removeActivity(item);
 }
 
 deleteFromDailySchedule(item: ActivityModel) {
-    this.planList = this.activitesService.deletePlanItem(item);
+    this.planList = this.activitiesService.deletePlanItem(item);
     this.updateActivitiesList.emit(item);
 }
 ```
@@ -43,7 +48,7 @@ Add on click for the delete button
 </button>
 ```
 
-**.../src/app/activities/view-plan/view-plan.component.html**
+**.../src/app/activities/view-plan/view-plan.component.ts**
 
 ```typescript
 import {
