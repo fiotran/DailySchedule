@@ -48,7 +48,7 @@ export class PlanModel {
 }
 ```
 
-In the view-plan.components.html 
+In the view-plan.components.html above the daily-schedule-list div class
 
 ```markup
 <div *ngIf="customisedValues">
@@ -57,5 +57,5 @@ In the view-plan.components.html
 </div>
 ```
 
-> Explain the angular pipe
+[https://angular.io/guide/pipes](https://angular.io/guide/pipes)
 

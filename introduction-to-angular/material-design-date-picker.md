@@ -53,13 +53,13 @@ Add more code to the customise-form.component.html page - under the name input s
 ```markup
 <p>
       <label for="selectDate">Plan date: </label>
-            <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="picker" placeholder="Choose a date" formControlName="selectDate">
+            <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="picker" placeholder="Choose a date" formControlName="selectedDate">
             <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
             <mat-datepicker #picker></mat-datepicker>
       </p>
 ```
 
-Add the selectDate control to the modelForm in the customise.component.ts file
+Add the selectDate control to the modelForm in the customise-form.component.ts file
 
 ```typescript
 constructor(private fb: FormBuilder) {
