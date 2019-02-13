@@ -30,22 +30,25 @@ We can now uncomment out the line in the css file - this is a pre-built material
 Import the MatDatepickerModule and the MatNativeDateModule in the activities.module.ts page
 
 ```typescript
-import { MatIconModule, MatDatepickerModule, MatNativeDateModule } from '@angular/material';
+import {
+    MatIconModule,
+    MatDatepickerModule,
+    MatNativeDateModule
+} from '@angular/material';
 
- imports: [
+@NgModule({
+imports: [
     CommonModule,
+    ActivitiesRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    AngularFontAwesomeModule,
-    DragDropModule,
     MatIconModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    RouterModule.forChild(ACTIVITIES_ROUTES)
-  ]
+]
 ```
 
-Add more code to the customise-form.component.html page - under the name control so we can use the mat-datepicker
+Add more code to the customise-form.component.html page - under the name input so we can use the mat-datepicker
 
 ```markup
 <p>
@@ -62,7 +65,7 @@ Add the selectDate control to the modelForm in the customise.component.ts file
 constructor(private fb: FormBuilder) {
     this.modelForm = this.fb.group({
       name: '',
-      selectDate: ''
+      selectedDate: ''
     });
   }
 ```
