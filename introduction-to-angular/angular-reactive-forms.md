@@ -19,24 +19,18 @@ imports: [
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    AngularFontAwesomeModule,
-    RouterModule.forChild(ACTIVITIES_ROUTES)
   ]
 ```
 
 In the customise.component.ts page add a modelForm variable with the type formGroup
 
-**...\daily-planner\src\app\activities\customise\customise.component.ts**
+**...\daily-planner\src\app\activities\customise-form\customise-form.component.ts**
 
 ```typescript
 modelForm: FormGroup;
 ```
 
 Inject formBuilder - making sure to import it from the @angular/forms node-module
-
-```typescript
-constructor(private fb: FormBuilder) { }
-```
 
 In the customise.component.ts file set the formGroup with the formControlName
 
@@ -50,7 +44,7 @@ constructor(private fb: FormBuilder) {
 
 Add the code to the customise.component.html file
 
-**...\daily-planner\src\app\activities\customise\customise.component.html**
+**...\daily-planner\src\app\activities\customise-form\customise-form.component.html**
 
 ```markup
 <section id="customise">
@@ -66,7 +60,7 @@ Add the code to the customise.component.html file
 
 Add the selector to view-plan.component.html
 
-**...\daily-planner\src\app\activities\view-plan\customise.component.ts**
+**...\daily-planner\src\app\activities\customise-form\customise-form.component.ts**
 
 ```markup
 <app-customise-form></app-customise-form>
