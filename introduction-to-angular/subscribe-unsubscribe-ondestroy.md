@@ -26,6 +26,12 @@ Add output parameters to the app-customise-form selector in view-plan.compnent.h
 
 Create getPlanDetails\(\) inside view-plan.component.ts 
 
+```text
+import { PlanModel } from 'src/app/data/plan.model';
+
+custonisedVualue: PlanModel;
+```
+
 ```typescript
 getPlanDetails(plan: PlanModel) {
     this.customisedValues = plan;
@@ -38,7 +44,7 @@ Create a plan.model.ts file in the data folder
 export class PlanModel {
     public id: number;
     public name: string;
-    public selectDate: string;
+    public selectedDate: string;
 }
 ```
 
