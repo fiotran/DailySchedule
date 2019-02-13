@@ -1,6 +1,6 @@
 # Material Design Date Picker
 
-> Text text text
+> Component library based on the Google designed provided by the core Google team.
 
 To use the Material Design Date Picker we need to install some additional modules
 
@@ -12,10 +12,11 @@ These modules have some depenedencies which need to be added to the app.module.t
 
 ```typescript
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AppRoutingModule } from 'src/app/app-routing';
 
 imports: [
     BrowserModule,
-    RouterModule.forRoot(APP_ROUTES),
+    AppRoutingModule,
     BrowserAnimationsModule
   ],
 ```
