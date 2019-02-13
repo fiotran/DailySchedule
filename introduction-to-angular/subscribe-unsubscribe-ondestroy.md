@@ -29,7 +29,7 @@ Create getPlanDetails\(\) inside view-plan.component.ts
 ```text
 import { PlanModel } from 'src/app/data/plan.model';
 
-custonisedVualue: PlanModel;
+customisedValue: PlanModel;
 ```
 
 ```typescript
