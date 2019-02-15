@@ -2,7 +2,7 @@
 
 Because Angular is a framework to build a single page application, dynamically loading different parts of the application as needed is a core concept and feature so in this section we'll discuss lazy loading.
 
-Lazy loading ensures modules and components can be asynchronously loaded when the route is activated. This speeds up the time it takes to load your application to a needs only basis.
+Lazy loading is a technique used in Angular that allows JavaScript components to be asynchronously loaded when a specific route is activated. This speeds up the time it takes to load your application to a needs only basis.
 
 Run the following commands in the command line \(CTRL + C for stop the serve\)
 
