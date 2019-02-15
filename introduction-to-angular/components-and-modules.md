@@ -12,24 +12,23 @@ Under the src/app folder create a new folder called shared. Inside the shared fo
 
 In the .ts file paste the following code
 
-## ../daily-planner/src/app/shared/header/header.component.ts
+**../daily-planner/src/app/shared/header/header.component.ts**
 
 ```typescript
 import { Component } from '@angular/core';
 
 @Component({
-selector: 'app-header',
-templateUrl: './header.component.html'
+  selector: 'app-header',
+  templateUrl: './header.component.html'
 })
 export class HeaderComponent {
-
-constructor() { }
 }
+
 ```
 
 In the html file paste the following
 
-## ../daily-planner/src/app/shared/header/header.component.html
+**../daily-planner/src/app/shared/header/header.component.html**
 
 ```markup
 <header>
@@ -39,15 +38,15 @@ In the html file paste the following
 
 To use the header component created above we need to declare it in app.modules.ts found in the src/app folder
 
-## ../daily-planner/src/app/app.module.ts
+**../daily-planner/src/app/app.module.ts**
 
 ```typescript
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
+import { HeaderComponent } from './shared/header/header.component';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './shared/header.component';
 
 @NgModule({
   declarations: [
@@ -66,12 +65,12 @@ export class AppModule { }
 
 Now replace the existing code generated from the app.component.html file with the following code.
 
-## ../daily-planner/src/app/app.component.html
+**../daily-planner/src/app/app.component.html**
 
 ```markup
 <app-header></app-header>
 <main>
-    <router-outlet></router-outlet>
+  <router-outlet></router-outlet>
 </main>
 ```
 
@@ -90,9 +89,10 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+    imports: [RouterModule.forRoot(routes)],
+    exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
 ```
 
