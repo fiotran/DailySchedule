@@ -1,6 +1,6 @@
 # S1.5 Inputs, Outputs and EventEmitters
 
-> To communicate between parent and child components Angular offers @Inputs\(\) and @Outputs\(\) decorators with the EventEmitter class
+> To communicate between parent and child components, Angular offers @Inputs\(\) and @Outputs\(\) decorators with the EventEmitter class.
 
 Now that we have the activities variable in list-activities.component.ts we are going to send the data to the child component list-components.ts
 
@@ -32,7 +32,7 @@ export class ActivitiesComponent implements OnInit {
 
 ```
 
-in the **...\daily-planner\src\app\activities\list-activities\list-activities.component.ts** remove the service call and its injectable
+In the **...\daily-planner\src\app\activities\list-activities\list-activities.component.ts** remove the service call and its injectable
 
 In the activities.component.html file add activities as an input parameter on the selector 
 
