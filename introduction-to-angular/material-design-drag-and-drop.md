@@ -1,6 +1,6 @@
 # Material Design Drag and Drop
 
-A standout for me in the recent release of Angular 7 was the Material Design drag and drop. Let's try it out.
+A standout in the recent release of Angular 7 was the Material Design drag and drop. Let's try it out.
 
 Import the drag and drop module into the activities.module.ts:
 
