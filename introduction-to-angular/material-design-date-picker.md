@@ -1,6 +1,6 @@
 # Material Design Date Picker
 
-> Angular Material is a component library based on Google's Material Design, and is built by the Angular team to integrate seamlessly with Angular.
+> Angular Material is a component library based on Google's Material Design, and is built by the Google team to integrate seamlessly with Angular.
 
 To use the Angular Material Date Picker we need to install some additional modules
 
@@ -8,7 +8,7 @@ To use the Angular Material Date Picker we need to install some additional modul
 npm install --save @angular/material @angular/cdk
 ```
 
-These modules have some depenedencies which need to be added to the app.module.ts
+These modules have some dependencies which need to be added to the app.module.ts
 
 ```typescript
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -59,7 +59,7 @@ Add more code to the customise-form.component.html page - under the name input s
       </p>
 ```
 
-Add the selectDate control to the modelForm in the customise-form.component.ts file
+Add the selectedDate control to the modelForm in the customise-form.component.ts file
 
 ```typescript
 constructor(private fb: FormBuilder) {
