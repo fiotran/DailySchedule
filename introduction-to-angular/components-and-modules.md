@@ -8,7 +8,7 @@ One of the best attributes of Angular is the ability to keep your code component
 
 Let's start by creating a component called header.component.ts
 
-Under the src/app folder create a new folder called shared - inside this create a header folder. In the header folder create two new files called header.component.html and header.component.ts. The ts or typescript file holds the logic for the html file.
+Under the src/app folder create a new folder called shared. Inside the shared folder create a folder called header. In the header folder create two new files called header.component.html and header.component.ts. The ts or typescript file holds the logic for the html file.
 
 In the .ts file paste the following code
 
@@ -37,7 +37,7 @@ In the html file paste the following
 </header>
 ```
 
-To use the header component created above we need to declare it in the app.modules.ts found in the src/app folder
+To use the header component created above we need to declare it in app.modules.ts found in the src/app folder
 
 ## ../daily-planner/src/app/app.module.ts
 
@@ -78,7 +78,7 @@ Now replace the existing code generated from the app.component.html file with th
 > A selector tells Angular to create and insert an instance of this component wherever it finds the corresponding tag in template HTML. [https://angular.io/guide/architecture-components](https://angular.io/guide/architecture-components)
 
 {% hint style="warning" %}
-if you have compiling errors associated with routing, you may have selected no when given to option of creating your project with routing and will need to create the below file manually
+If you have compiling errors associated with routing, you may have selected no when given the option of creating your project with routing and will need to create the below file manually.
 {% endhint %}
 
 ## ../daily-planner/src/app/app-routing.module.ts
