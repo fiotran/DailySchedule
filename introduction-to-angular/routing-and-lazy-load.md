@@ -14,7 +14,7 @@ ng generate module activities --routing
 ng generate component activities
 ```
 
-.**..\daily-planner\src\app\activities\activities-routing.module.ts** add the following code. 
+.**..\daily-planner\src\app\activities\activities-routing.module.ts** add the following code.
 
 ```typescript
 import { NgModule } from '@angular/core';
@@ -31,7 +31,6 @@ const routes: Routes = [{
   exports: [RouterModule]
 })
 export class ActivitiesRoutingModule { }
-
 ```
 
 {% hint style="info" %}
@@ -45,18 +44,17 @@ In the app-routing.module.ts file, update the const routes with the object as fo
 ```typescript
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
- 
+
 const routes: Routes = [{
   path: 'activities',
   loadChildren: './activities/activities.module#ActivitiesModule'
 }];
- 
+
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-
 ```
 
 **..\daily-planner\src\app\app.component.html** add the following between the header and the router

@@ -29,12 +29,11 @@ export class ActivitiesComponent implements OnInit {
     return this.activitiesService.getActivities();
   }
 }
-
 ```
 
 In the **...\daily-planner\src\app\activities\list-activities\list-activities.component.ts** remove the service call and its injectable
 
-In the activities.component.html file add activities as an input parameter on the selector 
+In the activities.component.html file add activities as an input parameter on the selector
 
 **...\daily-planner\src\app\activities\activities.component.html**
 
@@ -70,7 +69,7 @@ Back in the list-activities.component.html file add a click event listener to th
 It is generally a good idea to let the feature component do the job of keeping a record of the list for the plan
 {% endhint %}
 
-> To use @Output\(\),  let's add EventEmitter and Output to the Angular core import statement and bind a new instance of the EventEmitter
+> To use @Output\(\), let's add EventEmitter and Output to the Angular core import statement and bind a new instance of the EventEmitter
 
 In the list-activities.component.ts file add the following code - this is an emitter and will emit the selected item back to the parent page
 
@@ -84,7 +83,7 @@ import { EventEmitter, Output } from '@angular/core';
 @Output() addPlan: EventEmitter<ActivityModel> = new EventEmitter<ActivityModel>();
 ```
 
-Add a new function addToDailySchedule\(activity\) in the list-activities.component.ts page 
+Add a new function addToDailySchedule\(activity\) in the list-activities.component.ts page
 
 ```typescript
 addToDailySchedule(activity) {

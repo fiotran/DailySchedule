@@ -1,8 +1,8 @@
 # Dependency Injection
 
-> DI is a coding pattern in which a class asks for dependencies from external sources rather than creating them itself and is wired into the Angular framework. Dependencies are services or objects that a class needs to perform its function. Components consume services; that is, you can _inject_ a service into a component, giving the component access to that service class.
->
-> [https://angular.io/guide/architecture-services\#dependency-injection-di](https://angular.io/guide/architecture-services#dependency-injection-di)
+> DI is a software design pattern in which a class declares dependencies to other services rather than creating them itself and is wired into the Angular framework. Dependencies are services or objects that a class needs to perform its function. Components consume services; that is, you can _inject_ a service into a component, giving the component access to that service class.
+
+[https://angular.io/guide/architecture-services\#dependency-injection-di](https://angular.io/guide/architecture-services#dependency-injection-di)
 
 For modularity and reusability we will create an ActivitiesService where we will store the logic for our application.
 
@@ -58,6 +58,4 @@ To reference the getActivities\(\) function from the service, add the following 
 ```typescript
 this.activitiesList = this.activitiesService.getActivities();
 ```
-
-
 

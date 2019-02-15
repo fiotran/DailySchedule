@@ -4,7 +4,7 @@
 
 Using Visual Studio Code or your favourite text editor, copy the following text into the styles.css file found in the src folder. Notice that the first @import statement is commented out - we will need this later in the project.
 
-   **../daily-planner/src/styles.css**
+**../daily-planner/src/styles.css**
 
 ```css
 /* You can add global styles to this file, and also import other style files */
@@ -235,13 +235,11 @@ i.fa-swimmer {
 .cdk-drop-list-dragging :not(.cdk-drag-placeholder) {
   transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
 }
-
 ```
-
 
 Now add the following link to Font Awesome into the index.html on the root directory before the closing &lt;/head&gt; tag
 
-   **../daily-planner/src/index.html**
+**../daily-planner/src/index.html**
 
 ```markup
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
