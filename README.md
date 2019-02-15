@@ -4,11 +4,11 @@ Why learn Angular?
 
 Angular is a structured framework used to build dynamic enterprise scale applications. It creates a single page application that allows user interactions to be dynamically displayed without the need to refresh the application.
 
-In this project we will build a simple application to demonstrate core Angular theories
+In this project we will build a simple application to demonstrate core Angular theories to:
 
 * Add and remove from a list
-* Two-way data binding
-* Drag and drop \(available in Angular 7 and Angular Material 7\)
+* Two-way data binding on a form
+* Drag and drop elements on a list \(available in Angular 7 and Angular Material 7\)
 
 ![](.gitbook/assets/dailyschedule.JPG)
 
