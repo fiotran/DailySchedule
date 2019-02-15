@@ -2,7 +2,7 @@
 
 > As this project is not about CSS, we will copy and paste the below provided style sheet and reference Font Awesome for icons
 
-Using Visual Studio Code or your favorite text editor, copy the following text into the styles.css file found in the src folder. Notice that the first @import statement is commented out - we will need this later in the project.
+Using Visual Studio Code or your favourite text editor, copy the following text into the styles.css file found in the src folder. Notice that the first @import statement is commented out - we will need this later in the project.
 
    **../daily-planner/src/styles.css**
 
@@ -238,7 +238,8 @@ i.fa-swimmer {
 
 ```
 
-Now add the following link to Font awesome into the index.html on the root directory before the closing &lt;/head&gt; tag
+
+Now add the following link to Font Awesome into the index.html on the root directory before the closing &lt;/head&gt; tag
 
    **../daily-planner/src/index.html**
 
