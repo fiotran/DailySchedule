@@ -1,12 +1,12 @@
 # Components and Modules
 
-> Components are the basic building blocks in an Angular application. Modules in Angular are where you can group components, directives, pipes and services that are related in an application.
+> Components are the basic building blocks in an Angular application.  It's a way of dividing a user interface into smaller widgets or components to build a large application. Modules in Angular are where you can group components, directives, pipes and services that are related in an application.
 
 {% hint style="info" %}
 One of the best attributes of Angular is the ability to keep your code component-based and independent of each other and therefore scalable to big enterprise applications. There is also a separation between the template and the logic which we will demonstrate in this section.
 {% endhint %}
 
-Let's start by creating a component called header.component.ts
+Let's start by creating a component called header.component.ts with the single responsibility of displaying the Title of this project.
 
 Under the src/app folder create a new folder called shared. Inside the shared folder create a folder called header. In the header folder create two new files called header.component.html and header.component.ts. The ts or typescript file holds the logic for the html file.
 
