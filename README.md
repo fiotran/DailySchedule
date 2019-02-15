@@ -6,9 +6,9 @@ Angular is a structured framework used to build dynamic enterprise scale applica
 
 In this project we will build a simple application to demonstrate core Angular theories
 
-* Add and remove from list
-* two way data binding
-* drag and drop \(available in Angular 7 and the latest Material Design\)
+* Add and remove from a list
+* Two-way data binding
+* Drag and drop \(available in Angular 7 and Angular Material 7\)
 
 ![](.gitbook/assets/dailyschedule.JPG)
 
