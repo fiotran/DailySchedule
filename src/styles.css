@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+/* @import '~@angular/material/prebuilt-themes/indigo-pink.css';*/
 
 body {
   font-family: Georgia, serif;
@@ -32,7 +32,7 @@ section {
   width: 55%;
 }
 
-section > h1 {
+section>h1 {
   display: block;
   padding: 5px;
   border-bottom: 1px solid #ccc;
@@ -75,6 +75,7 @@ button {
   text-align: center;
   background-color: #eee;
 }
+
 button:hover {
   -webkit-filter: brightness(1.1);
   filter: brightness(1.1);
@@ -108,8 +109,8 @@ button:hover {
   position: relative;
 }
 
-.daily-schedule-item > h2,
-.daily-schedule-item > div {
+.daily-schedule-item>h2,
+.daily-schedule-item>div {
   margin: 0.2rem 0.2rem 0.2rem 60px;
   font-size: 1rem;
 }
@@ -124,6 +125,7 @@ button:hover {
   text-align: center;
   position: relative;
 }
+
 .activity-item h2 {
   margin: 15px auto;
 }
@@ -147,6 +149,7 @@ button#btn-reset {
   margin: 5px 5px 30px;
   border: 0;
 }
+
 button#btn-share {
   background-color: orange;
   color: white;
@@ -196,6 +199,7 @@ i.fa-utensils {
 i.fa-shower {
   background: cornflowerblue;
 }
+
 i.fa-bed {
   background: midnightblue;
 }
