@@ -1,6 +1,12 @@
 # Subscribe, Unsubscribe, OnDestroy
 
-> Observable is a way of managing streams on multiple values or data. It is not specific to Angular but a new standard included in the ES7 release.
+> Observable is a way of managing streams of multiple values or data. It is not specific to Angular but a new standard included in the ES7 release. There are many operators to handle observables found here
+
+> [https://rxjs-dev.firebaseapp.com/api](https://rxjs-dev.firebaseapp.com/api)
+>
+>  [https://angular.io/guide/observables-in-angular](https://angular.io/guide/observables-in-angular)
+
+> We can subscribe to an observable we need to unsubscribe to release the memory allocation otherwise we will experience memory leaks on our application.
 
 **In this section we will recap on output emitter and subscribe to changes on our reactive form**
 
