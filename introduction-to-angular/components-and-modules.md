@@ -6,13 +6,13 @@
 One of the best attributes of Angular is the ability to keep your code component-based and independent of each other and therefore scalable to big enterprise applications. There is also a separation between the template and the logic which we will demonstrate in this section.
 {% endhint %}
 
-Let's start by creating a component called header.component.ts 
+Let's start by creating a component called header.component.ts
 
 Under the src/app folder create a new folder called shared - inside this create a header folder. In the header folder create two new files called header.component.html and header.component.ts. The ts or typescript file holds the logic for the html file.
 
 In the .ts file paste the following code
 
-#### ../daily-planner/src/app/shared/header/header.component.ts
+## ../daily-planner/src/app/shared/header/header.component.ts
 
 ```typescript
 import { Component } from '@angular/core';
@@ -29,7 +29,7 @@ constructor() { }
 
 In the html file paste the following
 
-#### ../daily-planner/src/app/shared/header/header.component.html
+## ../daily-planner/src/app/shared/header/header.component.html
 
 ```markup
 <header>
@@ -39,7 +39,7 @@ In the html file paste the following
 
 To use the header component created above we need to declare it in the app.modules.ts found in the src/app folder
 
-#### ../daily-planner/src/app/app.module.ts
+## ../daily-planner/src/app/app.module.ts
 
 ```typescript
 import { BrowserModule } from '@angular/platform-browser';
@@ -62,12 +62,11 @@ import { HeaderComponent } from './shared/header.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-
 ```
 
-Now replace the existing code generated from the app.component.html file with the following code. 
+Now replace the existing code generated from the app.component.html file with the following code.
 
-#### ../daily-planner/src/app/app.component.html
+## ../daily-planner/src/app/app.component.html
 
 ```markup
 <app-header></app-header>
@@ -82,7 +81,7 @@ Now replace the existing code generated from the app.component.html file with th
 if you have compiling errors associated with routing, you may have selected no when given to option of creating your project with routing and will need to create the below file manually
 {% endhint %}
 
-#### ../daily-planner/src/app/app-routing.module.ts
+## ../daily-planner/src/app/app-routing.module.ts
 
 ```typescript
 import { NgModule } from '@angular/core';
@@ -95,6 +94,5 @@ const routes: Routes = [];
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-
 ```
 

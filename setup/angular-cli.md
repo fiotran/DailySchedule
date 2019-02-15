@@ -45,6 +45,6 @@ Congratulations you have just made your first angular application with the defau
 To terminate the batch job just type ctrl + c
 
 {% hint style="info" %}
-If using Visual Studio Code, you can open the terminal with the shortcut ctrl + shift + y to open the debug console and select the terminal window. This is where you can type all your commands 
+If using Visual Studio Code, you can open the terminal with the shortcut ctrl + shift + y to open the debug console and select the terminal window. This is where you can type all your commands
 {% endhint %}
 
