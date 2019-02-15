@@ -14,6 +14,7 @@ export interface ActivityModel {
     name: string;
     image: string;
 }
+
 ```
 
 Now, create a new file in the data folder named activities.ts and assign data to the constant variable ActivitiesConst

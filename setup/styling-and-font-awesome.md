@@ -84,6 +84,7 @@ button {
   text-align: center;
   background-color: #eee;
 }
+
 button:hover {
   -webkit-filter: brightness(1.1);
   filter: brightness(1.1);
@@ -156,6 +157,7 @@ button#btn-reset {
   margin: 5px 5px 30px;
   border: 0;
 }
+
 button#btn-share {
   background-color: orange;
   color: white;
@@ -235,6 +237,7 @@ i.fa-swimmer {
 .cdk-drop-list-dragging :not(.cdk-drag-placeholder) {
   transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
 }
+
 ```
 
 Now add the following link to Font Awesome into the index.html on the root directory before the closing &lt;/head&gt; tag
