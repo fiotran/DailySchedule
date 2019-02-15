@@ -3,15 +3,12 @@ import { Routes, RouterModule } from '@angular/router';
 import { ActivitiesComponent } from './activities.component';
 
 const routes: Routes = [{
-  path: '',
-  component: ActivitiesComponent
+    path: '',
+    component: ActivitiesComponent
 }];
 
 @NgModule({
-  declarations: [
-    ActivitiesComponent
-  ],
-  imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+    imports: [RouterModule.forChild(routes)],
+    exports: [RouterModule]
 })
 export class ActivitiesRoutingModule { }
