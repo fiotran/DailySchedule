@@ -1,6 +1,6 @@
 # Reset Daily Schedule and Activities list
 
-> Lets practice sending a reload message back to the parent to get a new activities list
+> Let's practise sending a reload message back to the parent to get a new activities list.
 
 In this section, we will emit a message to the parent to clear/reset the daily schedule list
 
