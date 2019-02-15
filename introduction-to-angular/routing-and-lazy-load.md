@@ -27,10 +27,14 @@ const routes: Routes = [{
 }];
 
 @NgModule({
+  declarations: [
+    ActivitiesComponent
+  ],
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
 export class ActivitiesRoutingModule { }
+
 ```
 
 {% hint style="info" %}
@@ -46,15 +50,16 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [{
-  path: 'activities',
-  loadChildren: './activities/activities.module#ActivitiesModule'
+    path: 'activities',
+    loadChildren: './activities/activities.module#ActivitiesRoutingModule'
 }];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+    imports: [RouterModule.forRoot(routes)],
+    exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
 ```
 
 **..\daily-planner\src\app\app.component.html** add the following between the header and the router

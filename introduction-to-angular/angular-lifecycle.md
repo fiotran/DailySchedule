@@ -29,12 +29,13 @@ import { ActivitiesConst } from 'src/app/data/activities';
 export class ListActivitiesComponent implements OnInit {
   activitiesList: ActivityModel[];
 
-  constructor() {}
+  constructor() { }
 
   ngOnInit() {
     this.activitiesList = ActivitiesConst;
   }
 }
+
 ```
 
 In list-activities.component.html add the following code
@@ -50,6 +51,7 @@ In list-activities.component.html add the following code
     <button class="btn-add">+ Add</button>
   </article>
 </section>
+
 ```
 
 Now add the &lt;app-list-activities&gt; selector to the activities.component.html
