@@ -1,8 +1,8 @@
-# Material Design Date Picker
+# Angular Material Date Picker
 
-> Component library based on the Google designed provided by the core Google team.
+> Angular Material is a component library based on Google's Material Design, and is built by the Angular team to integrate seamlessly with Angular.
 
-To use the Material Design Date Picker we need to install some additional modules
+To use the Angular Material Date Picker we need to install some additional modules
 
 ```bash
 npm install --save @angular/material @angular/cdk
@@ -21,7 +21,7 @@ imports: [
   ],
 ```
 
-We can now uncomment out the line in the css file - this is a pre-built material theme needed by the material design control
+We can now uncomment out the line in the css file - this is a pre-built Angular Material theme that includes all of the styles for core Angular Material components 
 
 ```css
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
