@@ -2,7 +2,7 @@
 
 > Observable is a way of managing streams on multiple values or data. It is not specific to Angular but a new standard included in the ES7 release.
 
-**recap on output emitter and subscribing the modelForm value changes**
+**In this section we will recap on output emitter and subscribe to changes on our reactive form**
 
 Emit any changes from the form \(customise-form.component.ts\) back to the parent 
 

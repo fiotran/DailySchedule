@@ -1,6 +1,8 @@
 # Angular Reactive Forms
 
-> Provides an observable base API \(async data flow\) to read continuous stream of values inputted to forms that allows more customisation on complex forms.
+> Reactive forms provide a model-driven approach to handling form inputs whose values change over time. [https://angular.io/guide/reactive-forms](https://angular.io/guide/reactive-forms)
+>
+> It provides an observable base API \(async data flow\) to read continuous stream of values inputted to forms that allows more customisation on complex forms.
 
 Create a new component 
 
@@ -22,7 +24,7 @@ imports: [
   ]
 ```
 
-In the customise.component.ts page add a modelForm variable with the type formGroup
+In the customise-form.component.ts page add a modelForm variable with the type formGroup
 
 **...\daily-planner\src\app\activities\customise-form\customise-form.component.ts**
 
@@ -32,7 +34,7 @@ modelForm: FormGroup;
 
 Inject formBuilder - making sure to import it from the @angular/forms node-module
 
-In the customise.component.ts file set the formGroup with the formControlName
+In the customise-form.component.ts file set the formGroup with the formControlName
 
 ```typescript
 constructor(private fb: FormBuilder) { 
@@ -42,7 +44,7 @@ constructor(private fb: FormBuilder) {
   }
 ```
 
-Add the code to the customise.component.html file
+Add the code to the customise-form.component.html file
 
 **...\daily-planner\src\app\activities\customise-form\customise-form.component.html**
 
@@ -65,8 +67,4 @@ Add the selector to view-plan.component.html
 ```markup
 <app-customise-form></app-customise-form>
 ```
-
-{% hint style="info" %}
-Make sure to ng serve --open regularly so you can see your changes.
-{% endhint %}
 
