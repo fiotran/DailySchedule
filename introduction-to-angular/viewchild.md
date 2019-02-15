@@ -9,6 +9,8 @@ Add a print button to the view-plan.component.html
 In angular we use the @ViewChild decorator to get the content of an element. Add the @ViewChild decorator to the view-plan.component.ts page
 
 ```typescript
+import{ Component, OnInit, Output, EventEmitter, ViewChild, ElementRef }from'@angular/core';
+
 @ViewChild('dailySchedule') dailySchedule: ElementRef;
 ```
 
