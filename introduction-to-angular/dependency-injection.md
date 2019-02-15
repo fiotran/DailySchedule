@@ -1,10 +1,10 @@
 # Dependency Injection
 
-> DI is wired into the Angular framework and used everywhere to provide new components with the services or other things they need. Components consume services; that is, you can _inject_ a service into a component, giving the component access to that service class.
+> DI is a coding pattern in which a class asks for dependencies from external sources rather than creating them itself and is wired into the Angular framework. Dependencies are services or objects that a class needs to perform its function. Components consume services; that is, you can _inject_ a service into a component, giving the component access to that service class.
 >
 > [https://angular.io/guide/architecture-services\#dependency-injection-di](https://angular.io/guide/architecture-services#dependency-injection-di)
 
-For modularity and reusability we will create an ActivitiesService where we will store the logic for our application
+For modularity and reusability we will create an ActivitiesService where we will store the logic for our application.
 
 ```bash
 ng g service services/activities
