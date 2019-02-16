@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { ActivitiesComponent } from './activities.component';
 import { ListActivitiesComponent } from './list-activities/list-activities.component';
 import { CommonModule } from '@angular/common';
+import { ViewPlanComponent } from './view-plan/view-plan.component';
 
 const routes: Routes = [{
   path: '',
@@ -12,7 +13,8 @@ const routes: Routes = [{
 @NgModule({
   declarations: [
     ActivitiesComponent,
-    ListActivitiesComponent
+    ListActivitiesComponent,
+    ViewPlanComponent
   ],
   imports: [
     CommonModule,

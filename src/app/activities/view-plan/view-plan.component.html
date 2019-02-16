@@ -1,46 +1,19 @@
-<div
-  id="daily-schedule"
-  #dailySchedule
-  cdkDropList
-  class="example-list"
-  (cdkDropListDropped)="drop($event)"
->
-  <h1 class="screen-only">Schedule a plan</h1>
-  <div *ngIf="planDetails">
-    <h2>{{ planDetails.name }} plan</h2>
-    <p>{{ planDetails.selectDate | date: 'MMMM d, y' }}</p>
+<div id="daily-schedule">
+  <h1>Schedule a plan</h1>
+  <div *ngIf="planList.length <= 0">
+    The daily schedule is currently empty
   </div>
-
-  <!--today-->
-  <div
-    class="daily-schedule-list"
-    *ngFor="let item of planList; let i = index"
-    cdkDrag
-  >
+  <div class="daily-schedule-list" *ngFor="let item of planList">
     <div class="daily-schedule-item">
       <h2>{{ item.name }}</h2>
-      <div>
-        <label for="Time-00{{ i }}">Time: </label>
-        <input
-          class="screen-only"
-          [(ngModel)]="item.time"
-          type="text"
-          name="Time-00{{ i }}"
-          id="Time-00{{ i }}"
-        />
-        <span class="print-only time-value">{{ item.time }}</span>
-      </div>
-
       <i class="fas {{ item.image }} circle-icon"></i>
-      <button class="btn-remove screen-only" (click)="deletePlan(item)">
+      <button class="btn-remove">
         ×
       </button>
     </div>
   </div>
-  <button id="btn-share" class="screen-only" (click)="print()">Print</button>
-  <button id="btn-reset" class="screen-only" (click)="clearPlan()">
+  <button id="btn-share" class="screen-only">Print</button>
+  <button id="btn-reset" class="screen-only">
     Reset
   </button>
 </div>
-
-<app-customise (planDetails)="getPlanDetails($event)"></app-customise>
