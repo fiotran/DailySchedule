@@ -26,11 +26,17 @@ header h1 {
   font-style: italic;
 }
 
+#menu {
+  display: block;
+  margin: 20px auto;
+}
+
 #customise, #activity-list {
   text-align: left;
   margin-bottom: 50px;
   display: block;
   overflow: hidden;
+  max-width: 600px;
 }
 
 #customise h1, #activity-list h1 {
