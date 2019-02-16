@@ -19,7 +19,7 @@ export class ListActivitiesComponent implements OnInit {
     this.activitiesList = this.activitiesService.getActivities();
   }
 
-  addToDailySchedule(activity) {
+  addToDailySchedule(activity: ActivityModel) {
     this.addPlan.emit(activity);
   }
 }

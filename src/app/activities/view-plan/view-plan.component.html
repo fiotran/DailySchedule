@@ -7,7 +7,7 @@
     <div class="daily-schedule-item">
       <h2>{{ item.name }}</h2>
       <i class="fas {{ item.image }} circle-icon"></i>
-      <button class="btn-remove">
+      <button class="btn-remove" (click)="deleteFromDailySchedule(item)">
         ×
       </button>
     </div>
