@@ -96,7 +96,7 @@ In the activities.component.html file add an output parameter on the selector - 
 **...\daily-planner\src\app\activities\activities.component.html**
 
 ```markup
-<app-list-activities [activitiesList]="activities" (addItemPlan)="addtToPlan($event)"></app-list-activities>
+<app-list-activities [activitiesList]="activities" (addItemPlan)="addToPlan($event)"></app-list-activities>
 ```
 
 Open the file src/app/services/activities.service.ts and add a dailyPlanList array with type ActivityModel\[\] and create an addToDailyPlanList function that will push the item into the dailyPlanList array
