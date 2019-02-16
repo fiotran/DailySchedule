@@ -29,7 +29,6 @@ export class ActivitiesComponent implements OnInit {
     return this.activitiesService.getActivities();
   }
 }
-
 ```
 
 In the **...\daily-planner\src\app\activities\list-activities\list-activities.component.ts** remove the service call and its injectable
@@ -40,7 +39,6 @@ In the activities.component.html file add activities as an input parameter on th
 
 ```markup
 <app-list-activities [activitiesList]="activities"></app-list-activities>
-
 ```
 
 To listen to the variable we add an @Input decorator in the list-activities.component.ts file

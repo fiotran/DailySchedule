@@ -1,6 +1,6 @@
 # Subscribe, Unsubscribe, OnDestroy
 
-> Observable is a way of managing streams of multiple values or data. It is not specific to Angular but a new standard included in the ES7 release. There are many operators to handle observables found here [https://rxjs-dev.firebaseapp.com/api](https://rxjs-dev.firebaseapp.com/api) 
+> Observable is a way of managing streams of multiple values or data. It is not specific to Angular but a new standard included in the ES7 release. There are many operators to handle observables found here [https://rxjs-dev.firebaseapp.com/api](https://rxjs-dev.firebaseapp.com/api)
 >
 > [https://angular.io/guide/observables-in-angular](https://angular.io/guide/observables-in-angular)
 
@@ -8,7 +8,7 @@ We can subscribe to an observable we need to unsubscribe to release the memory a
 
 **In this section we will recap on output emitter and subscribe to changes on our reactive form**
 
-Emit any changes from the form \(customise-form.component.ts\) back to the parent 
+Emit any changes from the form \(customise-form.component.ts\) back to the parent
 
 **...\daily-planner\src\app\activities\customise-form\customise-form.component.ts**
 
@@ -24,7 +24,7 @@ ngOnInit() {
       this.customiseFormChanges.emit(val);
     });
   }
-  
+
   ngOnDestroy() {
     this.formSubscription.unsubscribe();
   }
@@ -36,7 +36,7 @@ Add output parameters to the app-customise-form selector in view-plan.compnent.h
 <app-customise-form (customiseFormChanges)="getPlanDetails($event)"></app-customise-form>
 ```
 
-Create getPlanDetails\(\) inside view-plan.component.ts 
+Create getPlanDetails\(\) inside view-plan.component.ts
 
 ```typescript
 import { PlanModel } from 'src/app/data/plan.model';
@@ -58,7 +58,6 @@ export class PlanModel {
      public name: string;
      public selectedDate: string;
 }
-
 ```
 
 In the view-plan.components.html above the daily-schedule-list div class

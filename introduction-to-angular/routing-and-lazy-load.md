@@ -20,7 +20,6 @@ ng generate component activities
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ActivitiesComponent } from './activities.component';
-import { ListActivitiesComponent } from './list-activities/list-activities.component';
 
 const routes: Routes = [{
   path: '',

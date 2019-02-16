@@ -43,7 +43,6 @@ print() {
       </html>`);
     printWindow.document.close();
   }
-  
 ```
 
 to the first div in the view-plan.component.html page and add
