@@ -26,7 +26,7 @@ import { ActivitiesService } from 'src/app/services/activities.service';
 ```
 
 ```typescript
-constructor(private activitesService: ActivitiesService) { }
+constructor(private activitiesService: ActivitiesService) { }
 ```
 
 Declare a variable planList of type ActivityModel array inside the opening brackets of the export class
@@ -39,7 +39,7 @@ In ngOnInit\(\) call the function getPlan\(\) and assign it to planList variable
 
 ```typescript
   ngOnInit() {
-    this.planList = this.activitesService.getPlan();
+    this.planList = this.activitiesService.getPlan();
   }
 ```
 
