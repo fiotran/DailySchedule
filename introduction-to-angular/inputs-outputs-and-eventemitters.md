@@ -88,7 +88,7 @@ import { EventEmitter, Output } from '@angular/core';
 Add a new function addToDailySchedule\(activity\) in the list-activities.component.ts page
 
 ```typescript
-addToDailySchedule(activity) {
+addToDailySchedule(activity: ActivityModel) {
     this.addPlan.emit(activity);
 }
 ```

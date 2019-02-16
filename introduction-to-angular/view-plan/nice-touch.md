@@ -8,18 +8,18 @@ Create a removeActivities\(\) and an updateActivitiesList\(\) function
 
 ```typescript
 public removeActivity(item: ActivityModel) {
-  return this.activitiesList = this.activitiesList
-      .filter((activity: ActivityModel) => activity !== item);
+ return this.activitiesList = this.activitiesList
+   .filter((activity: ActivityModel) => activity !== item);
 }
 
 public updateActvitiesList(item: ActivityModel) {
-     return this.activitiesList.push(item);
- }
+ return this.activitiesList.push(item);
+}
  
 public deletePlanItem(item: ActivityModel) {
-    return this.dailySchedule = this.dailySchedule
-            .filter((activity: ActivityModel) => activity !== item);
-    }
+ return this.dailySchedule = this.dailySchedule
+    .filter((activity: ActivityModel) => activity !== item);
+}
     
 ```
 

@@ -27,7 +27,7 @@ export class ActivitiesService {
 
     constructor() { }
 
-    getActivities() {
+    public getActivities() {
         return this.activitiesList = ActivitiesConst;
     }
 }

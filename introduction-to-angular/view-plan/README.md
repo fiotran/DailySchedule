@@ -11,7 +11,7 @@ In the activities.service.ts file create a new public method getPlan\(\) which r
 **...\daily-planner\src\app\services\activities.service.ts**
 
 ```typescript
-public getPlan(){
+public getPlan() {
   return this.dailySchedule;
 }
 ```
