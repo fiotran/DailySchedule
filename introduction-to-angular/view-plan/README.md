@@ -45,7 +45,7 @@ In ngOnInit\(\) call the function getPlan\(\) and assign it to planList variable
 
 In the view-plan.component.html file add
 
-**...\daily-planner\src\app\activities\view-plan\view-plan.component.html** 
+**...\daily-planner\src\app\activities\view-plan\view-plan.component.html**
 
 ```markup
 <div id="daily-schedule">

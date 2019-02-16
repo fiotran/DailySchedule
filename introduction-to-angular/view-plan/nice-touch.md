@@ -15,12 +15,11 @@ public removeActivity(item: ActivityModel) {
 public updateActvitiesList(item: ActivityModel) {
  return this.activitiesList.push(item);
 }
- 
+
 public deletePlanItem(item: ActivityModel) {
  return this.dailyPlanList = this.dailyPlanList
     .filter((activity: ActivityModel) => activity !== item);
 }
-    
 ```
 
 In the activities.component.ts page set the activities list to what is returned from our new service in the addToDailyPlanList function

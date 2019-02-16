@@ -22,33 +22,33 @@ Now, create a new file in the data folder named activities.ts and assign data to
 #### ../daily-planner/src/app/data/activity.ts
 
 ```typescript
- export const ActivitiesConst = [
-        {
-            'id': 1,
-            'name': 'Breakfast',
-            'image': 'fa-utensils'
-        },
-        {
-            'id': 2,
-            'name': 'Exercise',
-            'image': 'fa-swimmer'
-        },
-        {
-            'id': 3,
-            'name': 'Lunch',
-            'image': 'fa-utensils'
-        },
-        {
-            'id': 4,
-            'name': 'Sleep',
-            'image': 'fa-bed'
-        },
-        {
-            'id': 5,
-            'name': 'Shower',
-            'image': 'fa-shower'
-        }
-    ];
+export const ActivitiesConst = [
+    {
+        id: 1,
+        name: 'Breakfast',
+        image: 'fa-utensils'
+    },
+    {
+        id: 2,
+        name: 'Exercise',
+        image: 'fa-swimmer'
+    },
+    {
+        id: 3,
+        name: 'Lunch',
+        image: 'fa-utensils'
+    },
+    {
+        id: 4,
+        name: 'Sleep',
+        image: 'fa-bed'
+    },
+    {
+        id: 5,
+        name: 'Shower',
+        image: 'fa-shower'
+    }
+];
 
 ```
 
