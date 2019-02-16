@@ -48,7 +48,7 @@ import {
  @Output() updateActivitiesList: EventEmitter<ActivityModel> = new EventEmitter<ActivityModel>();
 ```
 
-```text
+```typescript
 deleteFromDailySchedule(item: ActivityModel) {
     this.planList = this.activitiesService.deletePlanItem(item);
     this.updateActivitiesList.emit(item);
