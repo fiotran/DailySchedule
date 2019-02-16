@@ -36,4 +36,8 @@ export class ActivitiesService {
         return this.dailySchedule = this.dailySchedule
             .filter((activity: ActivityModel) => activity !== item);
     }
+
+    public clearPlan() {
+        return this.dailySchedule = [];
+    }
 }
