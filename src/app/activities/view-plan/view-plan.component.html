@@ -1,4 +1,4 @@
-<div id="daily-schedule" #dailySchedule cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
+<div id="daily-schedule" cdkDropList class="example-list" (cdkDropListDropped)="drop($event)" #dailySchedule>
   <h1>Schedule a plan</h1>
   <div *ngIf="planList.length <= 0">
     The daily schedule is currently empty
@@ -11,12 +11,12 @@
     <div class="daily-schedule-item">
       <h2>{{ item.name }}</h2>
       <i class="fas {{ item.image }} circle-icon"></i>
-      <button class="btn-remove" (click)="deleteFromDailySchedule(item)">
+      <button class="btn-remove screen-only" (click)="deleteFromDailySchedule(item)">
         ×
       </button>
     </div>
   </div>
-  <button id="btn-share" class="screen-only">Print</button>
+  <button id="btn-share" class="screen-only" (click)="print()">Print</button>
   <button id="btn-reset" class="screen-only" (click)="resetView()">
     Reset
   </button>
