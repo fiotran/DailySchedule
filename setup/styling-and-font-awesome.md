@@ -8,7 +8,7 @@ Using Visual Studio Code or your favourite text editor, copy the following text 
 
 ```css
 /* You can add global styles to this file, and also import other style files */
-/* @import '~@angular/material/prebuilt-themes/indigo-pink.css';*/
+/* @import '~@angular/material/prebuilt-themes/indigo-pink.css'; */
 
 body {
   font-family: Georgia, serif;
@@ -16,6 +16,10 @@ body {
   text-align: center;
   max-width: 1000px;
   margin: auto;
+}
+
+header {
+  margin-bottom: 40px;
 }
 
 header h1 {
@@ -26,14 +30,17 @@ header h1 {
   font-style: italic;
 }
 
-#customise, #activity-list {
+#customise,
+#activity-list {
   text-align: left;
   margin-bottom: 50px;
   display: block;
   overflow: hidden;
+  max-width: 600px;
 }
 
-#customise h1, #activity-list h1 {
+#customise h1,
+#activity-list h1 {
   display: block;
 
   padding: 5px;
@@ -78,6 +85,7 @@ button {
   text-align: center;
   background-color: #eee;
 }
+
 button:hover {
   -webkit-filter: brightness(1.1);
   filter: brightness(1.1);
@@ -112,8 +120,8 @@ button:hover {
   position: relative;
 }
 
-.daily-schedule-item > h2,
-.daily-schedule-item > p {
+.daily-schedule-item>h2,
+.daily-schedule-item>p {
   margin: 0.6rem 0.2rem 0.6rem 60px;
   font-size: 1rem;
 }
@@ -128,14 +136,16 @@ button:hover {
   text-align: center;
   position: relative;
 }
+
 .activity-item h2 {
   margin: 15px auto;
 }
 
-button.btn-add, button.btn-remove {
+button.btn-add,
+button.btn-remove {
   font-size: 1rem;
   line-height: 1.3rem;
-  border: solid 1px #888; 
+  border: solid 1px #888;
   background-color: #fff;
   color: #888;
 }
@@ -153,7 +163,8 @@ button.btn-remove {
 }
 
 
-button.btn-add:hover,button.btn-remove:hover  {
+button.btn-add:hover,
+button.btn-remove:hover {
   background-color: #888;
   color: #fff;
 }
@@ -167,6 +178,7 @@ button#btn-reset {
   margin: 5px 5px 30px;
   border: 0;
 }
+
 button#btn-print {
   background-color: orange;
   color: white;
@@ -176,8 +188,11 @@ button#btn-reset {
   background-color: #999;
 }
 
-@media (max-width: 600px){
-  #customise, #activity-list, #daily-schedule {
+@media (max-width: 600px) {
+
+  #customise,
+  #activity-list,
+  #daily-schedule {
     width: 100%;
   }
 }
@@ -223,6 +238,7 @@ i.fa-utensils {
 i.fa-shower {
   background: cornflowerblue;
 }
+
 i.fa-bed {
   background: midnightblue;
 }

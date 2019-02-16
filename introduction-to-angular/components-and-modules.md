@@ -32,7 +32,9 @@ In the html file paste the following
 
 ```markup
 <header>
-    <h1>Daily Schedule Planner</h1>
+  <h1>Daily Schedule Planner</h1>
+  <h2> Welcome the the daily planner</h2>
+  <a routerLink="/activities">click here go the the activities section</a>
 </header>
 ```
 
@@ -69,9 +71,7 @@ Now replace the existing code generated from the app.component.html file with th
 
 ```markup
 <app-header></app-header>
-<main>
-  <router-outlet></router-outlet>
-</main>
+<router-outlet></router-outlet>
 ```
 
 > A selector tells Angular to create and insert an instance of this component wherever it finds the corresponding tag in template HTML. [https://angular.io/guide/architecture-components](https://angular.io/guide/architecture-components)
