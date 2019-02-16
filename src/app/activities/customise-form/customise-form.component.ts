@@ -14,7 +14,8 @@ export class CustomiseFormComponent implements OnInit, OnDestroy {
 
   constructor(private fb: FormBuilder) {
     this.modelForm = this.fb.group({
-      name: ''
+      name: '',
+      selectedDate: ''
     });
   }
 
