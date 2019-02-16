@@ -37,7 +37,6 @@ const routes: Routes = [{
   exports: [RouterModule]
 })
 export class ActivitiesRoutingModule { }
-
 ```
 
 {% hint style="info" %}
@@ -62,14 +61,15 @@ const routes: Routes = [{
     exports: [RouterModule]
 })
 export class AppRoutingModule { }
-
 ```
 
 **..\daily-planner\src\app\app.component.html** add the following between the header and the router
 
 ```markup
-<h2> Welcome the the daily planner</h2>
-<a routerLink="/activities">click here go the the activities section</a>
+<div id="menu">
+  <h2> Welcome the the daily planner</h2>
+  <a routerLink="/activities">click here go the the activities section</a>
+</div>
 ```
 
 {% hint style="info" %}
