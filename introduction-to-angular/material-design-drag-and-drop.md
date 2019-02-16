@@ -9,9 +9,9 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 ```
 
 ```typescript
-@import { 
+import: [ 
    DragDropModule
-}
+]
 ```
 
 replace the main div tag with the following code to in view-plan.component.html:
