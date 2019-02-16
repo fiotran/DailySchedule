@@ -3,7 +3,7 @@
 Add a print button to the view-plan.component.html
 
 ```typescript
-<button id="btn-share" class="screen-only" (click)="print()">Print</button>
+<button id="btn-print" class="screen-only" (click)="print()">Print</button>
 ```
 
 In angular we use the @ViewChild decorator to get the content of an element. Add the @ViewChild decorator to the view-plan.component.ts page
@@ -11,7 +11,7 @@ In angular we use the @ViewChild decorator to get the content of an element. Add
 ```typescript
 import{ ViewChild, ElementRef }from'@angular/core';
 
-@ViewChild('dailySchedule') dailySchedule: ElementRef;
+@ViewChild('dailyPlanList') dailySchedule: ElementRef;
 ```
 
 Create a print\(\) function in the view-plan.component.ts file

@@ -39,7 +39,7 @@ add new method to the service
 
 ```typescript
 public clearPlan() {
-    return this.dailySchedule = [];
+    return this.dailyPlanList = [];
 }
 ```
 

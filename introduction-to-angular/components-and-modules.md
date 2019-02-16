@@ -69,9 +69,7 @@ Now replace the existing code generated from the app.component.html file with th
 
 ```markup
 <app-header></app-header>
-<main>
-  <router-outlet></router-outlet>
-</main>
+<router-outlet></router-outlet>
 ```
 
 > A selector tells Angular to create and insert an instance of this component wherever it finds the corresponding tag in template HTML. [https://angular.io/guide/architecture-components](https://angular.io/guide/architecture-components)

@@ -12,7 +12,7 @@ In the activities.service.ts file create a new public method getPlan\(\) which r
 
 ```typescript
 public getPlan() {
-  return this.dailySchedule;
+  return this.dailyPlanList;
 }
 ```
 
@@ -62,7 +62,7 @@ In the view-plan.component.html file add
       </button>
     </div>
   </div>
-    <button id="btn-share" class="screen-only">Print</button>
+    <button id="btn-print" class="screen-only">Print</button>
   <button id="btn-reset" class="screen-only">
     Reset
   </button>

@@ -17,7 +17,7 @@ public updateActvitiesList(item: ActivityModel) {
 }
  
 public deletePlanItem(item: ActivityModel) {
- return this.dailySchedule = this.dailySchedule
+ return this.dailyPlanList = this.dailyPlanList
     .filter((activity: ActivityModel) => activity !== item);
 }
     

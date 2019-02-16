@@ -7,7 +7,7 @@ import { ActivityModel } from '../data/activity.model';
 })
 export class ActivitiesService {
     activitiesList: ActivityModel[];
-    dailySchedule: ActivityModel[] = [];
+    dailyPlanList: ActivityModel[] = [];
 
     constructor() { }
 
@@ -16,11 +16,11 @@ export class ActivitiesService {
     }
 
     public addToPlan(item: ActivityModel) {
-        this.dailySchedule.push(item);
+        this.dailyPlanList.push(item);
     }
 
     public getPlan() {
-        return this.dailySchedule;
+        return this.dailyPlanList;
     }
 
     public removeActivity(item: ActivityModel) {
@@ -33,11 +33,11 @@ export class ActivitiesService {
     }
 
     public deletePlanItem(item: ActivityModel) {
-        return this.dailySchedule = this.dailySchedule
+        return this.dailyPlanList = this.dailyPlanList
             .filter((activity: ActivityModel) => activity !== item);
     }
 
     public clearPlan() {
-        return this.dailySchedule = [];
+        return this.dailyPlanList = [];
     }
 }
