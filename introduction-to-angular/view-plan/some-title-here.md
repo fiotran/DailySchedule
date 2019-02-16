@@ -18,11 +18,7 @@ then add EventEmitter and Output to the @angular/core import statement
 
 **.../src/app/activities/view-plan/view-plan.component.ts**
 
-```typescript
-import ( Output, EventEmitter} from '@angular/core';
-```
-
-In the view-plan.component.ts file create a variable for the reload message
+In the view-plan.component.ts file create an @Output property for the reload message
 
 ```typescript
 @Output() reloadActivities: EventEmitter<boolean> = new EventEmitter<boolean>();
