@@ -31,7 +31,6 @@ Import the MatDatepickerModule and the MatNativeDateModule in the activities.mod
 
 ```typescript
 import {
-    MatIconModule,
     MatDatepickerModule,
     MatNativeDateModule
 } from '@angular/material';
@@ -42,7 +41,6 @@ imports: [
     ActivitiesRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    MatIconModule,
     MatDatepickerModule,
     MatNativeDateModule,
 ]
