@@ -8,9 +8,9 @@ Import the drag and drop module into the activities.module.ts:
 import { DragDropModule } from '@angular/cdk/drag-drop';
 ```
 
-```text
+```typescript
 @import { 
-DragDropModule
+   DragDropModule
 }
 ```
 
@@ -35,7 +35,7 @@ import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 
 drop(event: CdkDragDrop<any[]>) {
     moveItemInArray(this.planList, event.previousIndex, event.currentIndex);
-  }
+}
 ```
 
 Save your files and go test out your new drag and drop feature !!
