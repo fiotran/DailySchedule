@@ -9,15 +9,15 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 ```
 
 ```typescript
-@import { 
+import: [ 
    DragDropModule
-}
+]
 ```
 
 replace the main div tag with the following code to in view-plan.component.html:
 
 ```typescript
-<div id="daily-schedule"  #dailyPlanList cdkDropList
+<div id="daily-schedule" cdkDropList
 class="example-list"
 (cdkDropListDropped)="drop($event)">
 ```

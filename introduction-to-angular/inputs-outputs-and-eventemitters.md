@@ -31,8 +31,6 @@ export class ActivitiesComponent implements OnInit {
 }
 ```
 
-In the **...\daily-planner\src\app\activities\list-activities\list-activities.component.ts** remove the service call and its injectable
-
 In the activities.component.html file add activities as an input parameter on the selector
 
 **...\daily-planner\src\app\activities\activities.component.html**
@@ -48,6 +46,8 @@ To listen to the variable we add an @Input decorator in the list-activities.comp
 ```typescript
 import { Input } from '@angular/core';
 ```
+
+In the **...\daily-planner\src\app\activities\list-activities\list-activities.component.ts** remove the service call and its injectable
 
 just inside the export class add @Input\(\) to the beginning of the activitiesList array
 
@@ -96,7 +96,7 @@ In the activities.component.html file add an output parameter on the selector - 
 **...\daily-planner\src\app\activities\activities.component.html**
 
 ```markup
-<app-list-activities [activitiesList]="activities" (addItemPlan)="addToDailyPlanList($event)"></app-list-activities>
+<app-list-activities [activitiesList]="activities" (addItemPlan)="addToPlan($event)"></app-list-activities>
 ```
 
 Open the file src/app/services/activities.service.ts and add a dailyPlanList array with type ActivityModel\[\] and create an addToDailyPlanList function that will push the item into the dailyPlanList array

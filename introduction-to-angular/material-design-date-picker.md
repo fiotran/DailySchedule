@@ -12,11 +12,8 @@ These modules have some dependencies which need to be added to the app.module.ts
 
 ```typescript
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AppRoutingModule } from 'src/app/app-routing';
 
 imports: [
-    BrowserModule,
-    AppRoutingModule,
     BrowserAnimationsModule
   ],
 ```
@@ -31,7 +28,6 @@ Import the MatDatepickerModule and the MatNativeDateModule in the activities.mod
 
 ```typescript
 import {
-    MatIconModule,
     MatDatepickerModule,
     MatNativeDateModule
 } from '@angular/material';
@@ -42,7 +38,6 @@ imports: [
     ActivitiesRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    MatIconModule,
     MatDatepickerModule,
     MatNativeDateModule,
 ]
@@ -52,8 +47,8 @@ Add more code to the customise-form.component.html page - under the closing &lt;
 
 ```markup
 <p>
-   <label for="selectDate">Plan date: </label>
-   <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="picker" placeholder="Choose a date" formControlName="selectedDate">
+   <label>Plan date: </label>
+   <input matInput [matDatepicker]="picker" placeholder="Choose a date" formControlName="selectedDate">
    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
    <mat-datepicker #picker></mat-datepicker>
 </p>

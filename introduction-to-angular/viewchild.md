@@ -48,7 +48,7 @@ print() {
 to the first div in the view-plan.component.html page and add
 
 ```typescript
-#dailySchedule
+#dailyPlanList
 ```
 
 where we do not want the text to display in our print
