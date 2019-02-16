@@ -1,7 +1,5 @@
 # View Plan Component and Add to Plan
 
-> Some text here from fiona
-
 Lets create a view-plan component
 
 ```bash
