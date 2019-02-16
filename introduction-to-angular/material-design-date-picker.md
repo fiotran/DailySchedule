@@ -12,11 +12,8 @@ These modules have some dependencies which need to be added to the app.module.ts
 
 ```typescript
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AppRoutingModule } from 'src/app/app-routing';
 
 imports: [
-    BrowserModule,
-    AppRoutingModule,
     BrowserAnimationsModule
   ],
 ```
