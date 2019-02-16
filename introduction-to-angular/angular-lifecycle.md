@@ -62,3 +62,7 @@ Now add the &lt;app-list-activities&gt; selector to the activities.component.htm
 <app-list-activities></app-list-activities>
 ```
 
+{% hint style="info" %}
+Congratulations! now you should see a list of activities on your simple app
+{% endhint %}
+
