@@ -18,7 +18,6 @@ Import the ReactiveFormsModule in the activities.modules.ts file
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 imports: [
-    CommonModule,
     FormsModule,
     ReactiveFormsModule,
   ]
@@ -58,11 +57,12 @@ Add the code to the customise-form.component.html file
     </p>
   </form>
 </section>
+
 ```
 
 Add the selector to view-plan.component.html
 
-**...\daily-planner\src\app\activities\customise-form\customise-form.component.ts**
+**...\daily-planner\src\app\activities\view-plan\view-plan.component.html**
 
 ```markup
 <app-customise-form></app-customise-form>
