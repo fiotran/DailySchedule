@@ -4,6 +4,7 @@ import {
 } from '@angular/core';
 import { ActivityModel } from 'src/app/data/activity.model';
 import { ActivitiesService } from 'src/app/services/activities.service';
+import { PlanModel } from 'src/app/data/plan.model';
 
 @Component({
   selector: 'app-view-plan',
@@ -11,6 +12,7 @@ import { ActivitiesService } from 'src/app/services/activities.service';
 })
 export class ViewPlanComponent implements OnInit {
   planList: ActivityModel[];
+  customisedValues: PlanModel;
   @Output() updateActivitiesList: EventEmitter<ActivityModel> = new EventEmitter<ActivityModel>();
   @Output() reloadActivities: EventEmitter<boolean> = new EventEmitter<boolean>();
 
@@ -29,6 +31,10 @@ export class ViewPlanComponent implements OnInit {
   resetView() {
     this.planList = this.activitiesService.clearPlan();
     this.reloadActivities.emit(true);
+  }
+
+  getPlanDetails(plan: PlanModel) {
+    this.customisedValues = plan;
   }
 
 }
