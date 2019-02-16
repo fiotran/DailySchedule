@@ -20,17 +20,18 @@ import { ActivitiesConst } from '../data/activities';
 import { ActivityModel } from '../data/activity.model';
 
 @Injectable({
-  providedIn: 'root'
+    providedIn: 'root'
 })
 export class ActivitiesService {
-  activitiesList: ActivityModel[];
+    activitiesList: ActivityModel[];
 
-  constructor() { }
+    constructor() { }
 
-  getActivities() {
-    return this.activitiesList = ActivitiesConst;
-  }
+    getActivities() {
+        return this.activitiesList = ActivitiesConst;
+    }
 }
+
 ```
 
 To use the service as a dependency, add the following to the constructor of the list-activities.component.ts page
@@ -57,5 +58,31 @@ To reference the getActivities\(\) function from the service, add the following 
 
 ```typescript
 this.activitiesList = this.activitiesService.getActivities();
+```
+
+Your list-activities.component.ts should look like this
+
+```typescript
+import { Component, OnInit } from '@angular/core';
+import { ActivityModel } from 'src/app/data/activity.model';
+import { ActivitiesService } from 'src/app/services/activities.service';
+
+@Component({
+  selector: 'app-list-activities',
+  templateUrl: './list-activities.component.html',
+  styleUrls: ['./list-activities.component.css']
+})
+export class ListActivitiesComponent implements OnInit {
+  activitiesList: ActivityModel[];
+
+  constructor(
+    private activitiesService: ActivitiesService
+  ) { }
+
+  ngOnInit() {
+    this.activitiesList = this.activitiesService.getActivities();
+  }
+}
+
 ```
 
