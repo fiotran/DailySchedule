@@ -9,7 +9,7 @@ add \(click\)="resetPlan\(\)" to the reset button
 **.../src/app/activities/view-plan/view-plan.component.html**
 
 ```markup
-<button id="btn-reset" class="screen-only" (click)="resetPlan()">
+<button id="btn-reset" (click)="resetPlan()">
     Reset
 </button>
 ```

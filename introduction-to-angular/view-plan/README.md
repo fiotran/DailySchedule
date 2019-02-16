@@ -62,8 +62,8 @@ In the view-plan.component.html file add
       </button>
     </div>
   </div>
-    <button id="btn-print" class="screen-only">Print</button>
-  <button id="btn-reset" class="screen-only">
+    <button id="btn-print">Print</button>
+  <button id="btn-reset">
     Reset
   </button>
 </div>

@@ -11,13 +11,13 @@
     <div class="daily-schedule-item">
       <h2>{{ item.name }}</h2>
       <i class="fas {{ item.image }} circle-icon"></i>
-      <button class="btn-remove screen-only" (click)="deleteFromDailyPlan(item)">
+      <button class="btn-remove" (click)="deleteFromDailyPlan(item)">
         ×
       </button>
     </div>
   </div>
-  <button id="btn-print" class="screen-only" (click)="print()">Print</button>
-  <button id="btn-reset" class="screen-only" (click)="resetPlan()">
+  <button id="btn-print" (click)="print()">Print</button>
+  <button id="btn-reset" (click)="resetPlan()">
     Reset
   </button>
 </div>
