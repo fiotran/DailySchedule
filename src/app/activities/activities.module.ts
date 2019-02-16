@@ -6,6 +6,11 @@ import { CommonModule } from '@angular/common';
 import { ViewPlanComponent } from './view-plan/view-plan.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CustomiseFormComponent } from './customise-form/customise-form.component';
+import {
+  MatDatepickerModule,
+  MatNativeDateModule
+} from '@angular/material';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 
 const routes: Routes = [{
@@ -24,6 +29,9 @@ const routes: Routes = [{
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    DragDropModule,
     RouterModule.forChild(routes)],
   exports: [RouterModule]
 })

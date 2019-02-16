@@ -5,6 +5,7 @@ import {
 import { ActivityModel } from 'src/app/data/activity.model';
 import { ActivitiesService } from 'src/app/services/activities.service';
 import { PlanModel } from 'src/app/data/plan.model';
+import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'app-view-plan',
@@ -35,6 +36,10 @@ export class ViewPlanComponent implements OnInit {
 
   getPlanDetails(plan: PlanModel) {
     this.customisedValues = plan;
+  }
+
+  drop(event: CdkDragDrop<any[]>) {
+    moveItemInArray(this.planList, event.previousIndex, event.currentIndex);
   }
 
 }

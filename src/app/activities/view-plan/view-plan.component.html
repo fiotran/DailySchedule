@@ -1,4 +1,4 @@
-<div id="daily-schedule">
+<div id="daily-schedule" #dailySchedule cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
   <h1>Schedule a plan</h1>
   <div *ngIf="planList.length <= 0">
     The daily schedule is currently empty
@@ -7,7 +7,7 @@
     <h2>{{ customisedValues.name }} plan</h2>
     <p>{{ customisedValues.selectedDate | date: 'MMMM d, y' }}</p>
   </div>
-  <div class="daily-schedule-list" *ngFor="let item of planList">
+  <div class="daily-schedule-list" *ngFor="let item of planList" cdkDrag>
     <div class="daily-schedule-item">
       <h2>{{ item.name }}</h2>
       <i class="fas {{ item.image }} circle-icon"></i>
