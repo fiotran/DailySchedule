@@ -21,7 +21,7 @@ export class ActivitiesComponent implements OnInit {
   }
 
   addToPlan(item: ActivityModel) {
-    this.activitiesService.addToPlan(item);
+    this.activitiesService.addToDailyPlanList(item);
     this.activities = this.activitiesService.removeActivity(item);
   }
 

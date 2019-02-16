@@ -98,10 +98,10 @@ In the activities.component.html file add an output parameter on the selector - 
 **...\daily-planner\src\app\activities\activities.component.html**
 
 ```markup
-<app-list-activities [activitiesList]="activities" (addItemPlan)="addToPlan($event)"></app-list-activities>
+<app-list-activities [activitiesList]="activities" (addItemPlan)="addToDailyPlanList($event)"></app-list-activities>
 ```
 
-Open the file src/app/services/activities.service.ts and add a dailyPlanList array with type ActivityModel\[\] and create an addToPlan function that will push the item into the dailyPlanList array
+Open the file src/app/services/activities.service.ts and add a dailyPlanList array with type ActivityModel\[\] and create an addToDailyPlanList function that will push the item into the dailyPlanList array
 
 In the activities.component.ts file create a function to call the function just created
 
@@ -109,7 +109,7 @@ In the activities.component.ts file create a function to call the function just 
 
 ```typescript
 addToPlan(item: ActivityModel) {
-    this.activitiesService.addToPlan(item);
+    this.activitiesService.addToDailyPlanList(item);
 }
 ```
 
@@ -120,7 +120,7 @@ dailyPlanList: ActivityModel[] = [];
 ```
 
 ```typescript
-public addToPlan(item: ActivityModel) {
+public addToDailyPlanList(item: ActivityModel) {
     this.dailyPlanList.push(item);
 }
 ```

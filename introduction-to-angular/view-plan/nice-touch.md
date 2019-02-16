@@ -23,7 +23,7 @@ public deletePlanItem(item: ActivityModel) {
     
 ```
 
-In the activities.component.ts page set the activities list to what is returned from our new service in the addToPlan function
+In the activities.component.ts page set the activities list to what is returned from our new service in the addToDailyPlanList function
 
 Add on click for the delete button
 
@@ -59,7 +59,7 @@ deleteFromDailyPlan(item: ActivityModel) {
 
 ```typescript
 addToPlan(item: ActivityModel) {
-    this.activitiesService.addToPlan(item);
+    this.activitiesService.addToDailyPlanList(item);
     this.activities = this.activitiesService.removeActivity(item);
 }
 

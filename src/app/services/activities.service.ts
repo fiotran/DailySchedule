@@ -15,7 +15,7 @@ export class ActivitiesService {
         return this.activitiesList = ActivitiesConst;
     }
 
-    public addToPlan(item: ActivityModel) {
+    public addToDailyPlanList(item: ActivityModel) {
         this.dailyPlanList.push(item);
     }
 
