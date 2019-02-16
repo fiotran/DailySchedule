@@ -9,7 +9,7 @@ import { ISubscription } from 'rxjs/Subscription';
 })
 export class CustomiseFormComponent implements OnInit, OnDestroy {
   modelForm: FormGroup;
-  @Output() planDetails: EventEmitter<any> = new EventEmitter<any>();
+  @Output() customiseFormChanges: EventEmitter<any> = new EventEmitter<any>();
   private formSubscription: ISubscription;
 
   constructor(private fb: FormBuilder) {
@@ -21,7 +21,7 @@ export class CustomiseFormComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.formSubscription = this.modelForm.valueChanges.subscribe(val => {
-      this.planDetails.emit(val);
+      this.customiseFormChanges.emit(val);
     });
   }
 

@@ -13,7 +13,7 @@ Emit any changes from the form \(customise-form.component.ts\) back to the paren
 **...\daily-planner\src\app\activities\customise-form\customise-form.component.ts**
 
 ```typescript
-@Output() planDetails: EventEmitter<any> = new EventEmitter<any>();
+@Output() customiseFormChanges: EventEmitter<any> = new EventEmitter<any>();
 ```
 
 In ngOnInit\(\) subscribe to the form changes
@@ -21,7 +21,7 @@ In ngOnInit\(\) subscribe to the form changes
 ```typescript
 ngOnInit() {
     this.formSubscription= this.modelForm.valueChanges.subscribe(val => {
-      this.planDetails.emit(val);
+      this.customiseFormChanges.emit(val);
     });
   }
   
@@ -33,7 +33,7 @@ ngOnInit() {
 Add output parameters to the app-customise-form selector in view-plan.compnent.html
 
 ```markup
-<app-customise-form (planDetails)="getPlanDetails($event)"></app-customise-form>
+<app-customise-form (customiseFormChanges)="getPlanDetails($event)"></app-customise-form>
 ```
 
 Create getPlanDetails\(\) inside view-plan.component.ts 

@@ -11,15 +11,15 @@
     <div class="daily-schedule-item">
       <h2>{{ item.name }}</h2>
       <i class="fas {{ item.image }} circle-icon"></i>
-      <button class="btn-remove screen-only" (click)="deleteFromDailySchedule(item)">
+      <button class="btn-remove screen-only" (click)="deleteFromDailyPlan(item)">
         ×
       </button>
     </div>
   </div>
   <button id="btn-print" class="screen-only" (click)="print()">Print</button>
-  <button id="btn-reset" class="screen-only" (click)="resetView()">
+  <button id="btn-reset" class="screen-only" (click)="resetPlan()">
     Reset
   </button>
 </div>
 
-<app-customise-form (planDetails)="getPlanDetails($event)"></app-customise-form>
+<app-customise-form (customiseFormChanges)="getPlanDetails($event)"></app-customise-form>

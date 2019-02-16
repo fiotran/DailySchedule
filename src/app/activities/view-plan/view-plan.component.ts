@@ -25,12 +25,12 @@ export class ViewPlanComponent implements OnInit {
     this.planList = this.activitiesService.getPlan();
   }
 
-  deleteFromDailySchedule(item: ActivityModel) {
+  deleteFromDailyPlan(item: ActivityModel) {
     this.planList = this.activitiesService.deletePlanItem(item);
     this.updateActivitiesList.emit(item);
   }
 
-  resetView() {
+  resetPlan() {
     this.planList = this.activitiesService.clearPlan();
     this.reloadActivities.emit(true);
   }

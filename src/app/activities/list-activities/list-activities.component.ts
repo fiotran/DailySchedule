@@ -9,7 +9,7 @@ import { ActivitiesService } from 'src/app/services/activities.service';
 })
 export class ListActivitiesComponent implements OnInit {
   @Input() activitiesList: ActivityModel[];
-  @Output() addPlan: EventEmitter<ActivityModel> = new EventEmitter<ActivityModel>();
+  @Output() addItemPlan: EventEmitter<ActivityModel> = new EventEmitter<ActivityModel>();
 
   constructor(
     private activitiesService: ActivitiesService
@@ -19,7 +19,7 @@ export class ListActivitiesComponent implements OnInit {
     this.activitiesList = this.activitiesService.getActivities();
   }
 
-  addToDailySchedule(activity: ActivityModel) {
-    this.addPlan.emit(activity);
+  addToDailyPlan(activity: ActivityModel) {
+    this.addItemPlan.emit(activity);
   }
 }

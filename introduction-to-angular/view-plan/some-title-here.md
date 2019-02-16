@@ -4,12 +4,12 @@
 
 In this section, we will emit a message to the parent to clear/reset the daily schedule list
 
-add \(click\)="resetView\(\)" to the reset button
+add \(click\)="resetPlan\(\)" to the reset button
 
 **.../src/app/activities/view-plan/view-plan.component.html**
 
 ```markup
-<button id="btn-reset" class="screen-only" (click)="resetView()">
+<button id="btn-reset" class="screen-only" (click)="resetPlan()">
     Reset
 </button>
 ```
@@ -27,7 +27,7 @@ In the view-plan.component.ts file create an @Output property for the reload mes
 and add this.reloadActivities.emit\(true\); to the clearPlan method
 
 ```typescript
-resetView() {
+resetPlan() {
     this.planList = this.activitiesService.clearPlan();
     this.reloadActivities.emit(true);
 }

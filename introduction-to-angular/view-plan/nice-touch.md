@@ -30,7 +30,7 @@ Add on click for the delete button
 **.../src/app/activities/view-plan/view-plan.component.html**
 
 ```markup
-<button class="btn-remove" (click)="deleteFromDailySchedule(item)">
+<button class="btn-remove" (click)="deleteFromDailyPlan(item)">
      ×
 </button>
 ```
@@ -49,7 +49,7 @@ import {
 ```
 
 ```typescript
-deleteFromDailySchedule(item: ActivityModel) {
+deleteFromDailyPlan(item: ActivityModel) {
     this.planList = this.activitiesService.deletePlanItem(item);
     this.updateActivitiesList.emit(item);
 }

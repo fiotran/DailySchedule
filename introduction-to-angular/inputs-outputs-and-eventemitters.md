@@ -64,7 +64,7 @@ Back in the list-activities.component.html file add a click event listener to th
 **...\daily-planner\src\app\activities\list-activities\list-activities.component.html**
 
 ```markup
-<button class="btn-add" (click)="addToDailySchedule(activity)">+ Add</button>
+<button class="btn-add" (click)="addToDailyPlan(activity)">+ Add</button>
 ```
 
 {% hint style="info" %}
@@ -82,14 +82,14 @@ import { EventEmitter, Output } from '@angular/core';
 ```
 
 ```typescript
-@Output() addPlan: EventEmitter<ActivityModel> = new EventEmitter<ActivityModel>();
+@Output() addItemPlan: EventEmitter<ActivityModel> = new EventEmitter<ActivityModel>();
 ```
 
-Add a new function addToDailySchedule\(activity\) in the list-activities.component.ts page
+Add a new function addToDailyPlan\(activity\) in the list-activities.component.ts page
 
 ```typescript
-addToDailySchedule(activity: ActivityModel) {
-    this.addPlan.emit(activity);
+addToDailyPlan(activity: ActivityModel) {
+    this.addItemPlan.emit(activity);
 }
 ```
 
@@ -98,7 +98,7 @@ In the activities.component.html file add an output parameter on the selector - 
 **...\daily-planner\src\app\activities\activities.component.html**
 
 ```markup
-<app-list-activities [activitiesList]="activities" (addPlan)="addToPlan($event)"></app-list-activities>
+<app-list-activities [activitiesList]="activities" (addItemPlan)="addToPlan($event)"></app-list-activities>
 ```
 
 Open the file src/app/services/activities.service.ts and add a dailyPlanList array with type ActivityModel\[\] and create an addToPlan function that will push the item into the dailyPlanList array
