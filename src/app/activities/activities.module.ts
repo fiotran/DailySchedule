@@ -11,12 +11,8 @@ import {
   MatNativeDateModule
 } from '@angular/material';
 import { DragDropModule } from '@angular/cdk/drag-drop';
+import { ActivitiesRoutingModule } from './activities-routing';
 
-
-const routes: Routes = [{
-  path: '',
-  component: ActivitiesComponent
-}];
 
 @NgModule({
   declarations: [
@@ -31,8 +27,7 @@ const routes: Routes = [{
     ReactiveFormsModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    DragDropModule,
-    RouterModule.forChild(routes)],
-  exports: [RouterModule]
+    ActivitiesRoutingModule,
+    DragDropModule]
 })
-export class ActivitiesRoutingModule { }
+export class ActivitiesModule { }

@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [{
     path: 'activities',
-    loadChildren: './activities/activities.module#ActivitiesRoutingModule'
+    loadChildren: './activities/activities.module#ActivitiesModule'
 }];
 
 @NgModule({
