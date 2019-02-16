@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivityModel } from 'src/app/data/activity.model';
-import { ActivitiesConst } from 'src/app/data/activities';
+import { ActivitiesService } from 'src/app/services/activities.service';
 
 @Component({
   selector: 'app-list-activities',
@@ -10,11 +10,11 @@ import { ActivitiesConst } from 'src/app/data/activities';
 export class ListActivitiesComponent implements OnInit {
   activitiesList: ActivityModel[];
 
-  constructor() { }
+  constructor(
+    private activitiesService: ActivitiesService
+  ) { }
 
   ngOnInit() {
-    this.activitiesList = ActivitiesConst;
-    console.log(this.activitiesList);
-
+    this.activitiesList = this.activitiesService.getActivities();
   }
 }
