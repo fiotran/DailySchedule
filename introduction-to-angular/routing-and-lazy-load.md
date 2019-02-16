@@ -27,19 +27,15 @@ const routes: Routes = [{
 }];
 
 @NgModule({
-  declarations: [
-    ActivitiesComponent
-  ],
-  imports: [
-    CommonModule,
-    RouterModule.forChild(routes)],
+  imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
 export class ActivitiesRoutingModule { }
+
 ```
 
 {% hint style="info" %}
-Here we are creating a constant variable called ACTIVITIES\_ROUTE and setting an empty path and importing the ActivitiesComponent
+Here we insert the object with an empty path and importing the ActivitiesComponent
 {% endhint %}
 
 In the app-routing.module.ts file, update the const routes with the object as follows
@@ -51,24 +47,16 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [{
-    path: 'activities',
-    loadChildren: './activities/activities.module#ActivitiesRoutingModule'
+  path: 'activities',
+  loadChildren: './activities/activities.module#ActivitiesModule'
 }];
 
 @NgModule({
-    imports: [RouterModule.forRoot(routes)],
-    exports: [RouterModule]
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
 })
 export class AppRoutingModule { }
-```
 
-**..\daily-planner\src\app\app.component.html** add the following between the header and the router
-
-```markup
-<div id="menu">
-  <h2> Welcome the the daily planner</h2>
-  <a routerLink="/activities">click here go the the activities section</a>
-</div>
 ```
 
 {% hint style="info" %}
