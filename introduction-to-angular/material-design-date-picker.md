@@ -48,15 +48,15 @@ imports: [
 ]
 ```
 
-Add more code to the customise-form.component.html page - under the name input so we can use the mat-datepicker
+Add more code to the customise-form.component.html page - under the closing &lt;/p&gt; tag so we can use the mat-datepicker
 
 ```markup
 <p>
-      <label for="selectDate">Plan date: </label>
-            <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="picker" placeholder="Choose a date" formControlName="selectedDate">
-            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-            <mat-datepicker #picker></mat-datepicker>
-      </p>
+   <label for="selectDate">Plan date: </label>
+   <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="picker" placeholder="Choose a date" formControlName="selectedDate">
+   <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+   <mat-datepicker #picker></mat-datepicker>
+</p>
 ```
 
 Add the selectedDate control to the modelForm in the customise-form.component.ts file

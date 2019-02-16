@@ -10,6 +10,8 @@ We can subscribe to an observable we need to unsubscribe to release the memory a
 
 Emit any changes from the form \(customise-form.component.ts\) back to the parent 
 
+**...\daily-planner\src\app\activities\customise-form\customise-form.component.ts**
+
 ```typescript
 @Output() planDetails: EventEmitter<any> = new EventEmitter<any>();
 ```
@@ -18,13 +20,13 @@ In ngOnInit\(\) subscribe to the form changes
 
 ```typescript
 ngOnInit() {
-    this.subscription = this.modelForm.valueChanges.subscribe(val => {
+    this.formSubscription= this.modelForm.valueChanges.subscribe(val => {
       this.planDetails.emit(val);
     });
   }
   
   ngOnDestroy() {
-    this.subscription.valueChanges.unsubscribe();
+    this.formSubscription.unsubscribe();
   }
 ```
 
@@ -45,17 +47,18 @@ customisedValues: PlanModel;
 ```typescript
 getPlanDetails(plan: PlanModel) {
     this.customisedValues = plan;
-  }
+}
 ```
 
 Create a plan.model.ts file in the data folder
 
 ```typescript
 export class PlanModel {
-    public id: number;
-    public name: string;
-    public selectedDate: string;
+     public id: number;
+     public name: string;
+     public selectedDate: string;
 }
+
 ```
 
 In the view-plan.components.html above the daily-schedule-list div class
