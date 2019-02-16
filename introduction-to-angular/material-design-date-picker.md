@@ -47,8 +47,8 @@ Add more code to the customise-form.component.html page - under the closing &lt;
 
 ```markup
 <p>
-   <label for="selectDate">Plan date: </label>
-   <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="picker" placeholder="Choose a date" formControlName="selectedDate">
+   <label>Plan date: </label>
+   <input matInput [matDatepicker]="picker" placeholder="Choose a date" formControlName="selectedDate">
    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
    <mat-datepicker #picker></mat-datepicker>
 </p>
