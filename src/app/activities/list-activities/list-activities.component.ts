@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { ActivityModel } from 'src/app/data/activity.model';
 import { ActivitiesService } from 'src/app/services/activities.service';
 
@@ -8,7 +8,8 @@ import { ActivitiesService } from 'src/app/services/activities.service';
   styleUrls: ['./list-activities.component.css']
 })
 export class ListActivitiesComponent implements OnInit {
-  activitiesList: ActivityModel[];
+  @Input() activitiesList: ActivityModel[];
+  @Output() addPlan: EventEmitter<ActivityModel> = new EventEmitter<ActivityModel>();
 
   constructor(
     private activitiesService: ActivitiesService
@@ -16,5 +17,9 @@ export class ListActivitiesComponent implements OnInit {
 
   ngOnInit() {
     this.activitiesList = this.activitiesService.getActivities();
+  }
+
+  addToDailySchedule(activity) {
+    this.addPlan.emit(activity);
   }
 }

@@ -23,10 +23,10 @@ export class ViewPlanComponent implements OnInit {
   >();
   @Output() updateActivitiesList: EventEmitter<ActivityModel> = new EventEmitter<ActivityModel>();
   @ViewChild('dailySchedule') dailySchedule: ElementRef;
-  constructor(private activitesService: ActivitiesService) {}
+  constructor(private activitesService: ActivitiesService) { }
 
   ngOnInit() {
-    this.planList = this.activitesService.getPlan();
+    // this.planList = this.activitesService.getPlan();
   }
 
   drop(event: CdkDragDrop<any[]>) {
@@ -66,15 +66,15 @@ export class ViewPlanComponent implements OnInit {
     this.planDetails = plan;
   }
 
-  deletePlan(item: ActivityModel) {
-    this.planList = this.activitesService.deletePlanItem(item);
-    console.log(item);
-    
-    this.updateActivitiesList.emit(item);
-  }
+  // deletePlan(item: ActivityModel) {
+  //   this.planList = this.activitesService.deletePlanItem(item);
+  //   console.log(item);
 
-  clearPlan() {
-    this.planList = this.activitesService.clearPlan();
-    this.reloadActivities.emit(true);
-  }
+  //   this.updateActivitiesList.emit(item);
+  // }
+
+  // clearPlan() {
+  //   this.planList = this.activitesService.clearPlan();
+  //   this.reloadActivities.emit(true);
+  // }
 }
