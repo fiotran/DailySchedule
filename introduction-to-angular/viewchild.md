@@ -9,6 +9,8 @@ Add a print button to the view-plan.component.html
 In angular we use the @ViewChild decorator to get the content of an element. Add the @ViewChild decorator to the view-plan.component.ts page
 
 ```typescript
+import{ ViewChild, ElementRef }from'@angular/core';
+
 @ViewChild('dailySchedule') dailySchedule: ElementRef;
 ```
 
@@ -41,19 +43,18 @@ print() {
       </html>`);
     printWindow.document.close();
   }
-```
-
-Add
-
-```typescript
-#dailySchedule
+  
 ```
 
 to the first div in the view-plan.component.html page and add
 
 ```typescript
-class="screen-only"
+#dailySchedule
 ```
 
 where we do not want the text to display in our print
+
+```typescript
+class="screen-only"
+```
 

@@ -4,18 +4,22 @@
 
 In this section, we will create a model for the main activities object so it can be used to type variables in our application at a later point. We will also bring in a predefined list of activities for display.
 
-Create a folder called data under src/app and under the data folder create a folder called activity.model.ts with the following interface model
+Create a folder called data under src/app and under the data folder create a file called activity.model.ts with the following interface
+
+####  ../daily-planner/src/app/data/activity.model.ts
 
 ```typescript
 export interface ActivityModel {
     id: number;
     name: string;
     image: string;
-    time?: string;
 }
+
 ```
 
-Create a new file in the data folder named activities.ts and assign data to the constant variable ActivitiesConst
+Now, create a new file in the data folder named activities.ts and assign data to the constant variable ActivitiesConst
+
+#### ../daily-planner/src/app/data/activity.ts
 
 ```typescript
  export const ActivitiesConst = [

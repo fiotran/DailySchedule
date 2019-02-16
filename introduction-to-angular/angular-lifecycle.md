@@ -1,6 +1,6 @@
 # Angular Lifecycle
 
-Every component has a lifecycle managed by Angular. We have access to key moments such as ngOnChanges\(\) or ngOnInit\(\). For more information, visit the official website
+Every component has a lifecycle managed by Angular. We have access to key moments with predefined methods such as ngOnChanges\(\) or ngOnInit\(\). For more information, visit the official website
 
 [https://angular.io/guide/lifecycle-hooks](https://angular.io/guide/lifecycle-hooks)
 
@@ -9,15 +9,17 @@ In this section, we are going to use ngOnInit\(\) to set the list of activities
 Generate the list-activities components
 
 ```text
-ng generate component activites/list-activities
+ng generate component activities/list-activities
 ```
 
 In list-activities.component.ts add the following code
 
+**...\daily-planner\src\app\activities\list-activities\list-activities.component.ts**
+
 ```typescript
 import { Component, OnInit } from '@angular/core';
-import { ActivitiesConst } from '../../Data/activities';
 import { ActivityModel } from 'src/app/data/activity.model';
+import { ActivitiesConst } from 'src/app/data/activities';
 
 @Component({
   selector: 'app-list-activities',
@@ -27,15 +29,18 @@ import { ActivityModel } from 'src/app/data/activity.model';
 export class ListActivitiesComponent implements OnInit {
   activitiesList: ActivityModel[];
 
-  constructor() {}
+  constructor() { }
 
   ngOnInit() {
     this.activitiesList = ActivitiesConst;
   }
 }
+
 ```
 
 In list-activities.component.html add the following code
+
+**...\daily-planner\src\app\activities\list-activities\list-activities.component.html**
 
 ```markup
 <section id="activity-list">
@@ -46,21 +51,14 @@ In list-activities.component.html add the following code
     <button class="btn-add">+ Add</button>
   </article>
 </section>
-```
-
-Now add the app-list-activities selector to the activities.component.html
-
-in the app.component.ts
-
-```text
-<activities></activities>
-<main>
-  <router-outlet></router-outlet>
-</main>
 
 ```
 
-```text
+Now add the &lt;app-list-activities&gt; selector to the activities.component.html
+
+**...\daily-planner\src\app\activities\activities.component.html**
+
+```markup
 <app-list-activities></app-list-activities>
 ```
 

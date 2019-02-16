@@ -1,32 +1,42 @@
 # Routing and Lazy Loading
 
-As Angular builds a single page application, the concept of lazy loading ensures modules and components can be asynchronously loaded when the route is activated. This speeds up the time it takes to load your application to a needs only basis.
+Because Angular is a framework to build a single page application, dynamically loading different parts of the application as needed is a core concept and feature so in this section we'll discuss lazy loading.
 
-Run the following commands in the command line
+Lazy loading is a technique used in Angular that allows JavaScript components to be asynchronously loaded when a specific route is activated. This speeds up the time it takes to load your application to a needs only basis.
+
+Run the following commands in the command line \(CTRL + C for stop the serve\)
 
 ```bash
-ng generate module activities
+ng generate module activities --routing
 ```
 
 ```text
-ng generate component activities --routing
+ng generate component activities
 ```
 
-Manually create activities.routing.ts file and then add the following code. 
+.**..\daily-planner\src\app\activities\activities-routing.module.ts** add the following code.
 
 ```typescript
-import { Routes } from '@angular/router';
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+import { ActivitiesComponent } from './activities.component';
+import { ListActivitiesComponent } from './list-activities/list-activities.component';
 
-export const APP_ROUTES: Routes = [
-  {
-    path: '',
-    loadChildren: './activities/activities.module#ActivitiesModule'
-  },
-  {
-    path: '**',
-    redirectTo: ''
-  }
-];
+const routes: Routes = [{
+  path: '',
+  component: ActivitiesComponent
+}];
+
+@NgModule({
+  declarations: [
+    ActivitiesComponent
+  ],
+  imports: [
+    CommonModule,
+    RouterModule.forChild(routes)],
+  exports: [RouterModule]
+})
+export class ActivitiesRoutingModule { }
 
 ```
 
@@ -34,35 +44,32 @@ export const APP_ROUTES: Routes = [
 Here we are creating a constant variable called ACTIVITIES\_ROUTE and setting an empty path and importing the ActivitiesComponent
 {% endhint %}
 
-In activities.module.ts, import into @NgModule imports
+In the app-routing.module.ts file, update the const routes with the object as follows
+
+**...\daily-planner\src\app\app-routing.module.ts**
 
 ```typescript
-RouterModule.forChild(ACTIVITIES_ROUTES)
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+
+const routes: Routes = [{
+    path: 'activities',
+    loadChildren: './activities/activities.module#ActivitiesRoutingModule'
+}];
+
+@NgModule({
+    imports: [RouterModule.forRoot(routes)],
+    exports: [RouterModule]
+})
+export class AppRoutingModule { }
+
 ```
 
-In the activities.module.ts import the RouterModule
+**..\daily-planner\src\app\app.component.html** add the following between the header and the router
 
-```typescript
-import { RouterModule } from '@angular/router';
-```
-
-In the app.routing.ts file create a route const but this time load the child route you just created
-
-```typescript
-import { Routes } from '@angular/router';
-
-export const APP_ROUTE : Routes = [
-{
- path: 'activities',
- loadChildren:  './activities/activities.module#ActivitiesModule'
-}
-];
-```
-
-In the app.component.ts file import into @NgModule imports
-
-```typescript
-RouterModule.forRoot(APP_ROUTE)
+```markup
+<h2> Welcome the the daily planner</h2>
+<a routerLink="/activities">click here go the the activities section</a>
 ```
 
 {% hint style="info" %}

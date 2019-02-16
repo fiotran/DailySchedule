@@ -1,35 +1,50 @@
 # Dependency Injection
 
-> DI is wired into the Angular framework and used everywhere to provide new components with the services or other things they need. Components consume services; that is, you can _inject_ a service into a component, giving the component access to that service class.
->
-> [https://angular.io/guide/architecture-services\#dependency-injection-di](https://angular.io/guide/architecture-services#dependency-injection-di)
+> DI is a software design pattern in which a class declares dependencies to other services rather than creating them itself and is wired into the Angular framework. Dependencies are services or objects that a class needs to perform its function. Components consume services; that is, you can _inject_ a service into a component, giving the component access to that service class.
 
-For modularity and reusability we will create an ActivitiesService where we will store the logic for our application
+[https://angular.io/guide/architecture-services\#dependency-injection-di](https://angular.io/guide/architecture-services#dependency-injection-di)
+
+For modularity and reusability we will create an ActivitiesService where we will store the logic for our application.
 
 ```bash
-ng g service activities/services/activities
+ng g service services/activities
 ```
 
 In the activities service create a function getActivities\(\), that returns the service list
 
+**...\daily-planner\src\app\services\activities.service.ts**
+
 ```typescript
 import { Injectable } from '@angular/core';
-import { ActivitiesConst } from '../../Data/activities';
+import { ActivitiesConst } from '../data/activities';
+import { ActivityModel } from '../data/activity.model';
 
-@Injectable()
+@Injectable({
+    providedIn: 'root'
+})
 export class ActivitiesService {
+    activitiesList: ActivityModel[];
 
-  activities: any;
-  constructor() { }
+    constructor() { }
 
-  public getActivities(){
-    return (this.activities = ActivitiesConst)
-  }
-
+    public getActivities() {
+        return this.activitiesList = ActivitiesConst;
+    }
 }
+
 ```
 
-To use the service as a dependency, add the following to the constructor of the activities.component.ts page
+To use the service as a dependency, add the following to the constructor of the list-activities.component.ts page
+
+**...\daily-planner\src\app\activities\list-activities\list-activities.component.ts**
+
+Make sure to import the service
+
+```typescript
+import { ActivitiesService } from 'src/app/services/activities.service';
+```
+
+Inject the service into the constructor
 
 ```typescript
 constructor(
@@ -37,17 +52,37 @@ constructor(
   ) {  }
 ```
 
-Making sure to import the service
+To reference the getActivities\(\) function from the service, add the following to the list-activities.component.ts page.
+
+**...\daily-planner\src\app\activities\list-activities\list-activities.component.ts**
 
 ```typescript
-import { ActivitiesService } from './services/activities.service';
+this.activitiesList = this.activitiesService.getActivities();
 ```
 
-To reference the getActivities\(\) function from the service, create a new function getList\(\) in the activities.component.ts page and call the function via the injected service.
+Your list-activities.component.ts should look like this
 
 ```typescript
-getList() {
-    return this.activitiesService.getActivities();
+import { Component, OnInit } from '@angular/core';
+import { ActivityModel } from 'src/app/data/activity.model';
+import { ActivitiesService } from 'src/app/services/activities.service';
+
+@Component({
+  selector: 'app-list-activities',
+  templateUrl: './list-activities.component.html',
+  styleUrls: ['./list-activities.component.css']
+})
+export class ListActivitiesComponent implements OnInit {
+  activitiesList: ActivityModel[];
+
+  constructor(
+    private activitiesService: ActivitiesService
+  ) { }
+
+  ngOnInit() {
+    this.activitiesList = this.activitiesService.getActivities();
   }
+}
+
 ```
 

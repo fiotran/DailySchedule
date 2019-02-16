@@ -1,6 +1,4 @@
-# View Plan and Add Details
-
-> Some text here from fiona
+# View Plan Component and Add to Plan
 
 Lets create a view-plan component
 
@@ -10,33 +8,44 @@ ng g c activities/view-plan
 
 In the activities.service.ts file create a new public method getPlan\(\) which returns our list of activities.
 
+**...\daily-planner\src\app\services\activities.service.ts**
+
 ```typescript
-public getPlan(){
+public getPlan() {
   return this.dailySchedule;
 }
 ```
 
 Inject the activities service into the view-plan.component.ts by adding it to the constructor
 
+**...\daily-planner\src\app\activities\view-plan\view-plan.component.ts**
+
 ```typescript
-constructor(private activitesService: ActivitiesService) { }
+import { ActivityModel } from 'src/app/data/activity.model';
+import { ActivitiesService } from 'src/app/services/activities.service';
 ```
 
-Declare a variable planList of type ActivityModel array
+```typescript
+constructor(private activitiesService: ActivitiesService) { }
+```
+
+Declare a variable planList of type ActivityModel array inside the opening brackets of the export class
 
 ```typescript
-planList: ActivityModel[] = [];
+planList: ActivityModel[];
 ```
 
 In ngOnInit\(\) call the function getPlan\(\) and assign it to planList variable.
 
 ```typescript
   ngOnInit() {
-    this.planList = this.activitesService.getPlan();
+    this.planList = this.activitiesService.getPlan();
   }
 ```
 
-In the view-plan.component.html file add 
+In the view-plan.component.html file add
+
+**...\daily-planner\src\app\activities\view-plan\view-plan.component.html** 
 
 ```markup
 <div id="daily-schedule">
@@ -48,69 +57,23 @@ In the view-plan.component.html file add
     <div class="daily-schedule-item">
       <h2>{{ item.name }}</h2>
       <i class="fas {{ item.image }} circle-icon"></i>
-      <button class="btn-remove" (click)="deletePlan(item)">
+      <button class="btn-remove">
         ×
       </button>
     </div>
   </div>
+    <button id="btn-share" class="screen-only">Print</button>
+  <button id="btn-reset" class="screen-only">
+    Reset
+  </button>
 </div>
 ```
 
-Add the app-view-plan selector to the activities.component.html
+Add the app-view-plan selector to the activities.component.html above the existing code
+
+**...\daily-planner\src\app\activities\activities.component.html**
 
 ```markup
 <app-view-plan></app-view-plan>
-```
-
-Add the ListActivitiesComponent to the declarations in the activities.module.ts file
-
-```typescript
-import { ListActivitiesComponent } from './components/list-activities/list-activities.component';
-```
-
-```typescript
-@NgModule({
-  declarations: [
-    ActivitiesComponent,
-    ViewPlanComponent,
-    ListActivitiesComponent
-  ],
-```
-
-Create a new button which we will use to clear the list in the view-plan.component.html page
-
-```typescript
-<button id="btn-reset" class="screen-only" (click)="clearPlan()">
-        Reset
-      </button>
-```
-
-Write two functions in the service - one to delete a plan item and one to clear the list
-
-```typescript
-public deletePlanItem(item: ActivityModel) {
-  return this.dailySchedule = this.dailySchedule
-      .filter((activity: ActivityModel) => activity !== item);
-}
-```
-
-```typescript
-public clearPlan() {
-  return this.dailySchedule = [];
-}
-```
-
-In the view-plan.component.ts file call these new funtions - making sure the function name is the same as the click action on the button
-
-```typescript
-deletePlan(item: ActivityModel) {
-    this.planList = this.activitesService.deletePlanItem(item);
-  }
-```
-
-```typescript
-clearPlan() {
-    this.planList = this.activitesService.clearPlan();
-  }
 ```
 
