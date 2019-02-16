@@ -10,5 +10,5 @@ In this project we will build a simple application to demonstrate core Angular t
 * Two-way data binding on a form
 * Drag and drop elements on a list \(available in Angular 7 and Angular Material 7\)
 
-![](.gitbook/assets/dailyschedule.JPG)
+![Daily Schedule Planner](.gitbook/assets/dailyschedule%20%281%29.JPG)
 
