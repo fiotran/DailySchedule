@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { ActivityModel } from '../data/activity.model';
 
 
 @Component({
@@ -7,7 +6,6 @@ import { ActivityModel } from '../data/activity.model';
   templateUrl: './activities.component.html'
 })
 export class ActivitiesComponent {
-  activities: ActivityModel[];
 
   constructor() { }
 

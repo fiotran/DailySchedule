@@ -1,22 +1,20 @@
-import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
-import { ActivityModel } from '../../data/activity.model';
-import { ActivitiesService } from '../../services/activities.service';
+import { Component, OnInit } from '@angular/core';
+import { ActivityModel } from 'src/app/data/activity.model';
+import { ActivitiesConst } from 'src/app/data/activities';
 
 @Component({
   selector: 'app-list-activities',
-  templateUrl: './list-activities.component.html'
+  templateUrl: './list-activities.component.html',
+  styleUrls: ['./list-activities.component.css']
 })
 export class ListActivitiesComponent implements OnInit {
-  @Input() activities: ActivityModel[];
-  @Output() addPlan: EventEmitter<ActivityModel> = new EventEmitter<ActivityModel>();
+  activitiesList: ActivityModel[];
 
   constructor() { }
 
   ngOnInit() {
-  }
+    this.activitiesList = ActivitiesConst;
+    console.log(this.activitiesList);
 
-  addToPlan(activity: ActivityModel) {
-    this.addPlan.emit(activity);
   }
-
 }

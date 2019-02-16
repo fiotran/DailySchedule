@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ActivitiesComponent } from './activities.component';
+import { ListActivitiesComponent } from './list-activities/list-activities.component';
+import { CommonModule } from '@angular/common';
 
 const routes: Routes = [{
   path: '',
@@ -9,9 +11,12 @@ const routes: Routes = [{
 
 @NgModule({
   declarations: [
-    ActivitiesComponent
+    ActivitiesComponent,
+    ListActivitiesComponent
   ],
-  imports: [RouterModule.forChild(routes)],
+  imports: [
+    CommonModule,
+    RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
 export class ActivitiesRoutingModule { }

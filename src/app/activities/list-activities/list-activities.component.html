@@ -1,9 +1,8 @@
-
 <section id="activity-list">
-  <h1>List of activities</h1>
-  <article class="activity-item" *ngFor="let activity of activities">
-      <i class="fas {{activity.image}} circle-icon"></i>
-      <h2>{{activity.name}}</h2>
-      <button class="btn-add" (click)="addToPlan(activity)">+ Add</button>
+  <h1> List of activities</h1>
+  <article class="activity-item" *ngFor="let activity of activitiesList">
+    <i class="fas {{activity.image}} circle-icon"></i>
+    <h2>{{activity.name}}</h2>
+    <button class="btn-add">+ Add</button>
   </article>
 </section>
