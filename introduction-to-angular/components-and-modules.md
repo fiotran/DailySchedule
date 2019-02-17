@@ -1,8 +1,6 @@
 # Components and Modules
 
-> Components are a way of dividing a user interface into smaller basic building blocks to build a large application. 
-
-NgModules are containers for a cohesive block of code dedicated to an application domain, a workflow, or a closely related set of capabilities. They can contain components, service providers, and other code files whose scope is defined by the containing NgModule.
+Angular apps are modular and Angular has its own modularity system called NgModules. NgModules are containers for a cohesive block of code dedicated to an application domain, a workflow, or a closely related set of capabilities. They can contain components, service providers, and other code files whose scope is defined by the containing NgModule.
 [https://angular.io/guide/architecture-modules](https://angular.io/guide/architecture-modules)
 
 {% hint style="info" %}
