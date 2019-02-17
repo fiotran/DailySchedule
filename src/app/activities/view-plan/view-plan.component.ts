@@ -44,9 +44,8 @@ export class ViewPlanComponent implements OnInit {
   }
 
   print() {
-    let printContent, printWindow;
-    printContent = this.dailySchedule.nativeElement.innerHTML;
-    printWindow = window.open(
+    const printContent = this.dailySchedule.nativeElement.innerHTML;
+    const printWindow = window.open(
       '',
       '_blank',
       'top=0,left=0,height=100%,width=auto'
