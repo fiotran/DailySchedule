@@ -49,6 +49,10 @@ To listen to the variable we import Input add an @Input decorator in the list-ac
 
 **...\daily-planner\src\app\activities\list-activities\list-activities.component.ts**
 
+{% hint style="info" %}
+Only add to the import type you need to the @angular/core statement and not the whole line
+{% endhint %}
+
 ```typescript
 import { Input } from '@angular/core';
 ```
@@ -59,7 +63,7 @@ just inside the export class add @Input\(\) to the beginning of the activitiesLi
 @Input() activitiesList: ActivityModel[];
 ```
 
-In the **...\daily-planner\src\app\activities\list-activities\list-activities.component.ts** remove the ActivitiesService that we added previously - serve the application and check the list is displaying as expected.
+Remove the any references to ActivitiesService that we added previously as it is no longer needed at this level \(list-component.ts\) - serve the application and check the list is displaying as expected.
 
 ## Output Decorator
 
@@ -70,8 +74,6 @@ Back in the list-activities.component.html file add a click event listener to th
 ```markup
 <button class="btn-add" (click)="addToDailyPlan(activity)">+ Add</button>
 ```
-
-> To use @Output\(\), let's add EventEmitter and Output to the Angular core import statement and bind a new instance of the EventEmitter
 
 In the list-activities.component.ts file add the following code - this is an emitter and will emit the selected item back to the parent page
 
@@ -85,7 +87,7 @@ import { EventEmitter, Output } from '@angular/core';
 @Output() addItemPlan: EventEmitter<ActivityModel> = new EventEmitter<ActivityModel>();
 ```
 
-Add a new function addToDailyPlan\(activity\) in the list-activities.component.ts page
+Add a new function addToDailyPlan\(activity\) under the ngOnInit\(\) function in the list-activities.component.ts page
 
 ```typescript
 addToDailyPlan(activity: ActivityModel) {
@@ -103,16 +105,6 @@ In the activities.component.html file add an output parameter on the selector - 
 
 Open the file src/app/services/activities.service.ts and add a dailyPlanList array with type ActivityModel\[\] and create an addToDailyPlanList function that will push the item into the dailyPlanList array
 
-In the activities.component.ts file create a function to call the function just created
-
-**.../src/app/activities/activities.component.ts**
-
-```typescript
-addToPlan(item: ActivityModel) {
-    this.activitiesService.addToDailyPlanList(item);
-}
-```
-
 **...\daily-planner\src\app\services\activities.service.ts**
 
 ```typescript
@@ -122,6 +114,16 @@ dailyPlanList: ActivityModel[] = [];
 ```typescript
 public addToDailyPlanList(item: ActivityModel) {
     this.dailyPlanList.push(item);
+}
+```
+
+**.../src/app/activities/activities.component.ts**
+
+In the activities.component.ts file create a function to call the function just created
+
+```typescript
+addToPlan(item: ActivityModel) {
+    this.activitiesService.addToDailyPlanList(item);
 }
 ```
 
