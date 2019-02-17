@@ -16,6 +16,10 @@ The official Angular documentation [https://angular.io/](https://angular.io/)
 
 {% embed url="https://rxmarbles.com/" %}
 
+### Testing
+
+{% embed url="https://angular.io/guide/testing" %}
+
 ### NgRx
 
 {% embed url="https://blog.angular-university.io/angular-ngrx-store-and-effects-crash-course/" %}
