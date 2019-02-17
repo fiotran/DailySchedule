@@ -1,12 +1,12 @@
 # Components and Modules
 
-> Components are the basic building blocks in an Angular application.  It's a way of dividing a user interface into smaller widgets or components to build a large application. Modules in Angular are where you can group components, directives, pipes and services that are related in an application.
+> Components are the basic building blocks in an Angular application.  It's a way of dividing a user interface into smaller widgets or components to build a large application. A module in Angular is where you can group components, directives, pipes and services that are related in an application.
 
 {% hint style="info" %}
-One of the best attributes of Angular is the ability to keep your code component-based and independent of each other and therefore scalable to big enterprise applications. There is also a separation between the template and the logic which we will demonstrate in this section.
+One of the best attributes of Angular is the ability to keep your code component-based and modularised. There is also a separation between the template HTML and the Typescript logic which we will demonstrate in this section. The act of keeping everything separate makes Angular scalable to big enterprise applications. 
 {% endhint %}
 
-Let's start by creating a component called header.component.ts with the single responsibility of displaying the Title of this project.
+Let's start by creating a component called header.component.ts with the single responsibility of displaying the Title and a router link for this project.
 
 Under the src/app folder create a new folder called shared. Inside the shared folder create a folder called header. In the header folder create two new files called header.component.html and header.component.ts. The ts or typescript file holds the logic for the html file.
 
@@ -77,10 +77,10 @@ Now replace the existing code generated from the app.component.html file with th
 > A selector tells Angular to create and insert an instance of this component wherever it finds the corresponding tag in template HTML. [https://angular.io/guide/architecture-components](https://angular.io/guide/architecture-components)
 
 {% hint style="warning" %}
-If you have compiling errors associated with routing, you may have selected no when given the option of creating your project with routing and will need to create the below file manually.
+If you come across any compilation errors associated with routing, you may have selected no when given the option of creating your project with routing and will need to create the below file manually.
 {% endhint %}
 
-## ../daily-planner/src/app/app-routing.module.ts
+**../daily-planner/src/app/app-routing.module.ts**
 
 ```typescript
 import { NgModule } from '@angular/core';
@@ -95,4 +95,8 @@ const routes: Routes = [];
 export class AppRoutingModule { }
 
 ```
+
+{% hint style="info" %}
+Congratulation! You have now created your first component in Angular
+{% endhint %}
 
