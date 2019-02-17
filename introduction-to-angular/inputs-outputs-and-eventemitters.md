@@ -37,7 +37,7 @@ export class ActivitiesComponent implements OnInit {
 
 Now that we have the activities variable in parent \(activities.component.ts\) we are going to send the data to the child component \(list-components.ts\) as a Input
 
-In the activities.component.html file add activities as an input parameter on the selector
+In the activities.component.html file, assign the local activities to the child prpperty activitiesList
 
 **...\daily-planner\src\app\activities\activities.component.html**
 
@@ -45,7 +45,7 @@ In the activities.component.html file add activities as an input parameter on th
 <app-list-activities [activitiesList]="activities"></app-list-activities>
 ```
 
-To listen to the variable we import Input add an @Input decorator in the list-activities.component.ts file
+To listen to the variable, we import Input add an @Input decorator in the list-activities.component.ts file
 
 **...\daily-planner\src\app\activities\list-activities\list-activities.component.ts**
 
@@ -95,7 +95,7 @@ addToDailyPlan(activity: ActivityModel) {
 }
 ```
 
-In the activities.component.html file add an output parameter on the selector - the round brackets indicate that we are sending values out of the child component.
+In the activities.component.html file add round brackets around activitiesList to indicate that we are sending activities out of the child component.
 
 **...\daily-planner\src\app\activities\activities.component.html**
 
