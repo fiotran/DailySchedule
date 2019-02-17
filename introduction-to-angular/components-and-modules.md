@@ -8,7 +8,7 @@ One of the best attributes of Angular is the ability to keep your code component
 
 Let's start by creating a component called header.component.ts with the single responsibility of displaying the Title and a router link for this project.
 
-Under the src/app folder create a new folder called shared. Inside the shared folder create a folder called header. In the header folder create two new files called header.component.html and header.component.ts. The ts or typescript file holds the logic for the html file.
+Under the src/app folder create a new folder called shared. Inside the shared folder create a folder called header. In the header folder create three new files called header.component.html, header.component.css and header.component.ts. The ts or typescript file holds the logic for the html and css file.
 
 In the .ts file paste the following code
 
@@ -19,7 +19,8 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-header',
-  templateUrl: './header.component.html'
+  templateUrl: './header.component.html',
+  styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
 }
@@ -36,6 +37,27 @@ In the html file paste the following
   <h2> Welcome the the daily planner</h2>
   <a routerLink="/activities">click here go the the activities section</a>
 </header>
+```
+
+{% hint style="info" %}
+The css file here uses View Encapsulation to ensure the &lt;h1&gt;  styles doesn't effect any other &lt;h1&gt; in our application. Without it, you will have to be very specific about which &lt;h1&gt; tag should be effected. In this case, only inside the header tag. 
+{% endhint %}
+
+**../daily-planner/src/app/shared/header/header.component.css**
+
+```css
+header {
+  margin-bottom: 40px;
+}
+
+h1 {
+  display: inline-block;
+  padding: 5px 15px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  font-style: italic;
+}
+
 ```
 
 To use the header component created above we need to declare it in app.modules.ts found in the src/app folder
