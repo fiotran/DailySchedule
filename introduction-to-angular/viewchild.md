@@ -1,6 +1,6 @@
 # ViewChild and Print Button
 
-Add a print button to the view-plan.component.html
+Add a click event to call the method print() on the print button to the view-plan.component.html
 
 ```typescript
 <button id="btn-print" (click)="print()">Print</button>
