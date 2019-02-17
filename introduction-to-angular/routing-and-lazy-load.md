@@ -38,7 +38,7 @@ export class ActivitiesRoutingModule { }
 Here we insert the object with an empty path and importing the ActivitiesComponent
 {% endhint %}
 
-In the app-routing.module.ts file, update the const routes with the object as follows
+In the app-routing.module.ts file, update the constant routes with the object as follows.
 
 **...\daily-planner\src\app\app-routing.module.ts**
 
@@ -58,6 +58,8 @@ const routes: Routes = [{
 export class AppRoutingModule { }
 
 ```
+
+ As you can see above, Angular routes accepts an array so you can specify as many routes as needed
 
 {% hint style="info" %}
 when working with routing always re serve
