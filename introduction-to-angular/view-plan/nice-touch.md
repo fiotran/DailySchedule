@@ -1,8 +1,8 @@
-# Update Activities List and remove from daily schedule button
+# Update Activities List and remove from daily plan button
 
-After adding the activity to the daily schedule, remove it from the activities list and if it's removed for the daily schedule plan add it back to the activities list.
+After adding the activity to the dailyPlanList, we need logic to remove it from the activitiesList and if it's removed for the dailyPlanList, add it back to the activitiesList.
 
-Create a removeActivities\(\) and an updateActivitiesList\(\) function
+Create a removeActivities\(\), updateActivitiesList\(\), delelePlanItem\(\) and addToDailyPlanList\(\) function
 
 .**../src/app/services/activities.service.ts**
 
@@ -20,9 +20,12 @@ public deletePlanItem(item: ActivityModel) {
  return this.dailyPlanList = this.dailyPlanList
     .filter((activity: ActivityModel) => activity !== item);
 }
-```
 
-In the activities.component.ts page set the activities list to what is returned from our new service in the addToDailyPlanList function
+public addToDailyPlanList(item: ActivityModel) {
+ this.dailyPlanList.push(item);
+}
+    
+```
 
 Add on click for the delete button
 
@@ -54,6 +57,14 @@ deleteFromDailyPlan(item: ActivityModel) {
 }
 ```
 
+**.../src/app/activities/activities/activities.component.html**
+
+```markup
+<app-view-plan (updateActivitiesList)="updateActivities($event)"></app-view-plan>
+```
+
+In the activities.component.ts page set the dailyPlanList by calling addToDailyPlanList function in the service and reassign activities with the list returned for the removeActivities\(\) method in the service
+
 **.../src/app/activities/activities.component.ts**
 
 ```typescript
@@ -65,11 +76,5 @@ addToPlan(item: ActivityModel) {
 updateActivities(item: ActivityModel) {
    this.activitiesService.updateActvitiesList(item);
 }
-```
-
-**.../src/app/activities/activities/activities.component.html**
-
-```markup
-<app-view-plan (updateActivitiesList)="updateActivities($event)"></app-view-plan>
 ```
 
