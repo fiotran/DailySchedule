@@ -1,6 +1,9 @@
 # Components and Modules
 
-> Components are the basic building blocks in an Angular application.  It's a way of dividing a user interface into smaller widgets or components to build a large application. A module in Angular is where you can group components, directives, pipes and services that are related in an application.
+> Components are a way of dividing a user interface into smaller basic building blocks to build a large application. 
+
+NgModules are containers for a cohesive block of code dedicated to an application domain, a workflow, or a closely related set of capabilities. They can contain components, service providers, and other code files whose scope is defined by the containing NgModule.
+[https://angular.io/guide/architecture-modules](https://angular.io/guide/architecture-modules)
 
 {% hint style="info" %}
 One of the best attributes of Angular is the ability to keep your code component-based and modularised. There is also a separation between the template HTML and the Typescript logic which we will demonstrate in this section. The act of keeping everything separate makes Angular scalable to big enterprise applications. 
