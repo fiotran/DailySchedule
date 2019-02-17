@@ -4,19 +4,9 @@
 >
 > [https://angular.io/guide/observables-in-angular](https://angular.io/guide/observables-in-angular)
 
-**In this section we will recap on output emitter and subscribe to changes on our reactive form**
-
-Add Output and EventEmitter to the existing import statement to emit any changes from the form \(customise-form.component.ts\) back to the parent \(view-plan.component.ts\)
+Subscribe is a method on an observable type that we will be using in this section to'subscribe' to any changes on the form.
 
 **...\daily-planner\src\app\activities\customise-form\customise-form.component.ts**
-
-```typescript
-import { Output, EventEmitter } from '@angular/core';
-```
-
-```typescript
-@Output() customiseFormChanges: EventEmitter<any> = new EventEmitter<any>();
-```
 
 In ngOnInit\(\) subscribe to the form changes
 
@@ -28,13 +18,27 @@ ngOnInit() {
   }
 ```
 
+Add Output and EventEmitter to the existing import statement to emit any changes from the form \(customise-form.component.ts\) back to the parent \(view-plan.component.ts\)
+
+```typescript
+import { Output, EventEmitter } from '@angular/core';
+```
+
+```typescript
+@Output() customiseFormChanges: EventEmitter<any> = new EventEmitter<any>();
+```
+
 Add output parameters to the app-customise-form selector in view-plan.compnent.html
+
+**...\daily-planner\src\app\activities\view-plan\view-plan.component.html**
 
 ```markup
 <app-customise-form (customiseFormChanges)="getPlanDetails($event)"></app-customise-form>
 ```
 
 Create getPlanDetails\(\) inside view-plan.component.ts
+
+**...\daily-planner\src\app\activities\view-plan\view-plan.component.ts**
 
 ```typescript
 import { PlanModel } from 'src/app/data/plan.model';
@@ -50,6 +54,8 @@ getPlanDetails(plan: PlanModel) {
 
 Create a plan.model.ts file in the data folder
 
+####  ../daily-planner/src/app/data/plan.model.ts
+
 ```typescript
 export class PlanModel {
      public id: number;
@@ -59,6 +65,8 @@ export class PlanModel {
 ```
 
 In the view-plan.components.html above the daily-schedule-list div class
+
+**...\daily-planner\src\app\activities\view-plan\view-plan.component.html**
 
 ```markup
 <div *ngIf="customisedValues">
