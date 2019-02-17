@@ -44,7 +44,7 @@ print() {
   }
 ```
 
-to the first div in the view-plan.component.html page and add
+In the first div on the view-plan.component.html page, add the below anywhere inside the tag
 
 ```typescript
 #dailySchedule
