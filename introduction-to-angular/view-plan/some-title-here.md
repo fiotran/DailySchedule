@@ -1,4 +1,4 @@
-# Reset Daily Schedule and Activities list
+# Reset Daily Schedule and Activities List
 
 In this section, we will emit a message to the parent to clear/reset the daily schedule list
 
