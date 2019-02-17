@@ -1,6 +1,6 @@
 # Learn Angular
 
-Why learn Angular?
+What is Angular?
 
 Angular is a structured framework used to build dynamic enterprise scale applications. It creates a single page application that allows user interactions to be dynamically displayed without the need to refresh the application.
 
