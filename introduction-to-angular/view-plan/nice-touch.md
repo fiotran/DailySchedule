@@ -24,10 +24,9 @@ public deletePlanItem(item: ActivityModel) {
 public addToDailyPlanList(item: ActivityModel) {
  this.dailyPlanList.push(item);
 }
-    
 ```
 
-Add a click event to call the method deleteFromDailyPlan() and passing it the item that the use clicks to the delete button
+Add a click event to call the method deleteFromDailyPlan\(\) and passing it the item that the use clicks to the delete button
 
 **..\daily-planner\src\app\activities\view-plan\view-plan.component.html**
 

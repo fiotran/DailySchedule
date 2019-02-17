@@ -22,7 +22,7 @@ In the view-plan.component.ts file create an @Output property for the reload mes
 @Output() reloadActivities: EventEmitter<boolean> = new EventEmitter<boolean>();
 ```
 
-and add this.reloadActivities.emit\(true\); to the clearPlan method
+Add this.reloadActivities.emit\(true\); to the clearPlan method
 
 ```typescript
 resetPlan() {
@@ -31,7 +31,7 @@ resetPlan() {
 }
 ```
 
-add new method to the service
+Add new method called clearPlan\(\) to the service
 
 **..\daily-planner\src\app\services\activities.service.ts**
 
@@ -49,7 +49,7 @@ Add output parameters to the app-view-plan selector in the activities.component.
 <app-view-plan (reloadActivities)="reload()"></app-view-plan>
 ```
 
-then in the activities.component.ts create a reload function and call getList\(\)
+In the activities.component.ts, create a reload function and call getList\(\)
 
 **..\daily-planner\src\app\activities\activities.component.ts**
 
