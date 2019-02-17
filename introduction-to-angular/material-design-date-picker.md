@@ -2,7 +2,7 @@
 
 > Angular Material is a component library based on Google's Material Design, and is built by the Google team to integrate seamlessly with Angular.
 
-To use the Angular Material Date Picker we need to install some additional modules
+To use the Angular Material Components and the CDK tool kit \(for Drag and Drop\), we need to install angular/material and angular/cdk
 
 ```bash
 npm install --save @angular/material @angular/cdk

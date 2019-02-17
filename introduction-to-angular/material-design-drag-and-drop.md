@@ -8,17 +8,18 @@ Import the drag and drop module into the activities.module.ts:
 import { DragDropModule } from '@angular/cdk/drag-drop';
 ```
 
+Add DragDropModule to the import array
+
 ```typescript
 import: [ 
    DragDropModule
 ]
 ```
 
-replace the main div tag with the following code to in view-plan.component.html:
+Replace the main div tag with the following code to in view-plan.component.html:
 
 ```typescript
-<div id="daily-schedule" cdkDropList
-class="example-list"
+<div id="daily-schedule" cdkDropList class="example-list"
 (cdkDropListDropped)="drop($event)">
 ```
 
@@ -28,7 +29,7 @@ Add cdkDrag to the list that you want to make drag and drop
 <div class="daily-schedule-list" *ngFor="let item of planList" cdkDrag>
 ```
 
-Add the drop method into the view-plan.component.ts file
+Add the drop method into the view-plan.component.ts file with the following imports
 
 ```typescript
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
