@@ -18,18 +18,6 @@ body {
   margin: auto;
 }
 
-header {
-  margin-bottom: 40px;
-}
-
-header h1 {
-  display: inline-block;
-  padding: 5px 15px;
-  border-top: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
-  font-style: italic;
-}
-
 #customise,
 #activity-list {
   text-align: left;
