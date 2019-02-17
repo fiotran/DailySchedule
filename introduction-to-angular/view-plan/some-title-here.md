@@ -1,12 +1,10 @@
 # Reset Daily Schedule and Activities list
 
-> Let's practise sending a reload message back to the parent to get a new activities list.
-
 In this section, we will emit a message to the parent to clear/reset the daily schedule list
 
-add \(click\)="resetPlan\(\)" to the reset button
+Add \(click\)="resetPlan\(\)" to the reset button
 
-**.../src/app/activities/view-plan/view-plan.component.html**
+**..\daily-planner\src\app\activities\view-plan\view-plan.component.html**
 
 ```markup
 <button id="btn-reset" (click)="resetPlan()">
@@ -14,9 +12,9 @@ add \(click\)="resetPlan\(\)" to the reset button
 </button>
 ```
 
-then add EventEmitter and Output to the @angular/core import statement
+Then add EventEmitter and Output to the @angular/core import statement
 
-**.../src/app/activities/view-plan/view-plan.component.ts**
+**..\daily-planner\src\app\activities\view-plan\view-plan.component.ts**
 
 In the view-plan.component.ts file create an @Output property for the reload message
 
@@ -35,7 +33,7 @@ resetPlan() {
 
 add new method to the service
 
-**.../src/app/services/activities.service.ts**
+**..\daily-planner\src\app\services\activities.service.ts**
 
 ```typescript
 public clearPlan() {
@@ -45,15 +43,15 @@ public clearPlan() {
 
 Add output parameters to the app-view-plan selector in the activities.component.html
 
-**.../src/app/activities/activities.component.html**
+**..\daily-planner\src\app\activities\activities.component.html**
 
 ```markup
 <app-view-plan (reloadActivities)="reload()"></app-view-plan>
 ```
 
-then in the activities.component.ts create a reload function and call getlist\(\)
+then in the activities.component.ts create a reload function and call getList\(\)
 
-**.../src/app/activities/activities.component.ts**
+**..\daily-planner\src\app\activities\activities.component.ts**
 
 ```typescript
 reload() {

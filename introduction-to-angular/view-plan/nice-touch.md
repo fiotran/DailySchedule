@@ -4,7 +4,7 @@ After adding the activity to the dailyPlanList, we need logic to remove it from 
 
 Create a removeActivities\(\), updateActivitiesList\(\), delelePlanItem\(\) and addToDailyPlanList\(\) function
 
-.**../src/app/services/activities.service.ts**
+**..\daily-planner\src\app\services\activities.service.ts**
 
 ```typescript
 public removeActivity(item: ActivityModel) {
@@ -29,7 +29,7 @@ public addToDailyPlanList(item: ActivityModel) {
 
 Add on click for the delete button
 
-**.../src/app/activities/view-plan/view-plan.component.html**
+**..\daily-planner\src\app\activities\view-plan\view-plan.component.html**
 
 ```markup
 <button class="btn-remove" (click)="deleteFromDailyPlan(item)">
@@ -37,7 +37,7 @@ Add on click for the delete button
 </button>
 ```
 
-**.../src/app/activities/view-plan/view-plan.component.ts**
+**..\daily-planner\src\app\activities\view-plan\view-plan.component.ts**
 
 ```typescript
 import {
@@ -57,7 +57,7 @@ deleteFromDailyPlan(item: ActivityModel) {
 }
 ```
 
-**.../src/app/activities/activities/activities.component.html**
+**..\daily-planner\src\app\activities\activities\activities.component.html**
 
 ```markup
 <app-view-plan (updateActivitiesList)="updateActivities($event)"></app-view-plan>
@@ -65,7 +65,7 @@ deleteFromDailyPlan(item: ActivityModel) {
 
 In the activities.component.ts page set the dailyPlanList by calling addToDailyPlanList function in the service and reassign activities with the list returned for the removeActivities\(\) method in the service
 
-**.../src/app/activities/activities.component.ts**
+**..\daily-planner\src\app\activities\activities.component.ts**
 
 ```typescript
 addToPlan(item: ActivityModel) {
