@@ -1,6 +1,6 @@
 # Routing and Lazy Loading
 
-Because Angular is a framework to build a single page application, dynamically loading different parts of the application as needed is a core concept and feature so in this section we'll discuss lazy loading.
+Because Angular is a framework to build a single page application, we need to be able to dynamically load different parts of the application only when requested.
 
 Lazy loading is a technique used in Angular that allows JavaScript components to be asynchronously loaded when a specific route is activated. This speeds up the time it takes to load your application to a needs only basis.
 
