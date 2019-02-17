@@ -2,7 +2,9 @@
 
 > To communicate between parent and child components, Angular offers @Inputs\(\) and @Outputs\(\) decorators with the EventEmitter class.
 
-Now that we have the activities variable in list-activities.component.ts we are going to send the data to the child component list-components.ts
+Now that we have the activities variable in list-activities.component.ts we are going to send the data to the child component list-components.ts as a Input
+
+## Input decorator
 
 **...\daily-planner\src\app\activities\activities.component.ts**
 
@@ -39,7 +41,7 @@ In the activities.component.html file add activities as an input parameter on th
 <app-list-activities [activitiesList]="activities"></app-list-activities>
 ```
 
-To listen to the variable we add an @Input decorator in the list-activities.component.ts file
+To listen to the variable we import Input add an @Input decorator in the list-activities.component.ts file
 
 **...\daily-planner\src\app\activities\list-activities\list-activities.component.ts**
 
@@ -47,15 +49,15 @@ To listen to the variable we add an @Input decorator in the list-activities.comp
 import { Input } from '@angular/core';
 ```
 
-In the **...\daily-planner\src\app\activities\list-activities\list-activities.component.ts** remove the service call and its injectable
-
 just inside the export class add @Input\(\) to the beginning of the activitiesList array
 
 ```typescript
 @Input() activitiesList: ActivityModel[];
 ```
 
-Remove the code from the ngOnInit\(\) function that we added previously - serve the application and check the list is displaying as expected.
+In the **...\daily-planner\src\app\activities\list-activities\list-activities.component.ts** remove the ActivitiesService that we added previously - serve the application and check the list is displaying as expected.
+
+## Output Decorator
 
 Back in the list-activities.component.html file add a click event listener to the add button
 
