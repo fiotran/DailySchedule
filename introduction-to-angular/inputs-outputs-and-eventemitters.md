@@ -1,8 +1,10 @@
 # S1.5 Inputs, Outputs and EventEmitters
 
-> To communicate between parent and child components, Angular offers @Inputs\(\) and @Outputs\(\) decorators with the EventEmitter class.
+To communicate between parent and child components, Angular offers @Inputs\(\) and @Outputs\(\) decorators with the EventEmitter class.
 
-Now that we have the activities variable in list-activities.component.ts we are going to send the data to the child component list-components.ts as a Input
+{% hint style="info" %}
+It is generally a good idea for the parent component be responsible for making service calls and only sending it's child components what they need to do their job. In this section, we will move the service call to the Parent Activities component and the list to the List-activities component for display and when the add button is clicked we will end that information back to the parent
+{% endhint %}
 
 ## Input decorator
 
@@ -32,6 +34,8 @@ export class ActivitiesComponent implements OnInit {
   }
 }
 ```
+
+Now that we have the activities variable in parent \(activities.component.ts\) we are going to send the data to the child component \(list-components.ts\) as a Input
 
 In the activities.component.html file add activities as an input parameter on the selector
 
@@ -66,10 +70,6 @@ Back in the list-activities.component.html file add a click event listener to th
 ```markup
 <button class="btn-add" (click)="addToDailyPlan(activity)">+ Add</button>
 ```
-
-{% hint style="info" %}
-It is generally a good idea to let the feature component do the job of keeping a record of the list for the plan
-{% endhint %}
 
 > To use @Output\(\), let's add EventEmitter and Output to the Angular core import statement and bind a new instance of the EventEmitter
 
