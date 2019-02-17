@@ -4,11 +4,15 @@ Every component has a lifecycle managed by Angular. We have access to key moment
 
 [https://angular.io/guide/lifecycle-hooks](https://angular.io/guide/lifecycle-hooks)
 
-In this section, we are going to use ngOnInit\(\) to set the list of activities
+{% hint style="info" %}
+It is important to note, the first thing that's run is code in the constructor including bring in any parameters defined as dependencies before any lifecycle hooks such as ngOnInit\(\) is executed. 
+{% endhint %}
+
+In this section, we are going to use ngOnInit\(\) to set the list of activities on initial load of the component.
 
 Generate the list-activities components
 
-```text
+```bash
 ng generate component activities/list-activities
 ```
 
