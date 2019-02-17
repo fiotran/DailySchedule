@@ -1,4 +1,4 @@
-# Update Activities List and remove from daily plan button
+# Update Activities List and remove from Daily Plan Button
 
 After adding the activity to the dailyPlanList, we need logic to remove it from the activitiesList and if it's removed for the dailyPlanList, add it back to the activitiesList.
 
