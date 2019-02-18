@@ -23,7 +23,7 @@ Replace the main div tag with the following code to in view-plan.component.html:
 (cdkDropListDropped)="drop($event)">
 ```
 
-Add cdkDrag to the list that you want to make drag and drop
+Add cdkDrag to the list that you want to make drag and drop simple
 
 ```typescript
 <div class="daily-schedule-list" *ngFor="let item of planList" cdkDrag>
