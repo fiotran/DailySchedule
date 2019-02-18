@@ -54,7 +54,7 @@ Only add to the import type you need to the @angular/core statement and not the 
 {% endhint %}
 
 ```typescript
-import { Input } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 ```
 
 just inside the export class add @Input\(\) to the beginning of the activitiesList array
@@ -80,7 +80,7 @@ In the list-activities.component.ts file add the following code - this is an emi
 **...\daily-planner\src\app\activities\list-activities\list-activities.component.ts**
 
 ```typescript
-import { EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 ```
 
 ```typescript
@@ -103,6 +103,16 @@ In the activities.component.html file add round brackets around activitiesList t
 <app-list-activities [activitiesList]="activities" (addItemPlan)="addToPlan($event)"></app-list-activities>
 ```
 
+**.../src/app/activities/activities.component.ts**
+
+In the activities.component.ts file create a function to call the function just created
+
+```typescript
+addToPlan(item: ActivityModel) {
+    this.activitiesService.addToDailyPlanList(item);
+}
+```
+
 Open the file src/app/services/activities.service.ts and add a dailyPlanList array with type ActivityModel\[\] and create an addToDailyPlanList function that will push the item into the dailyPlanList array
 
 **...\daily-planner\src\app\services\activities.service.ts**
@@ -117,13 +127,5 @@ public addToDailyPlanList(item: ActivityModel) {
 }
 ```
 
-**.../src/app/activities/activities.component.ts**
 
-In the activities.component.ts file create a function to call the function just created
-
-```typescript
-addToPlan(item: ActivityModel) {
-    this.activitiesService.addToDailyPlanList(item);
-}
-```
 
