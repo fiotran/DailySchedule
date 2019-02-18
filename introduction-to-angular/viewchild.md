@@ -3,7 +3,7 @@
 Add a click event to call the method print\(\) on the print button to the view-plan.component.html
 
 ```typescript
-<button id="btn-print" (click)="print()">Print</button> 
+<button id="btn-print" (click)="print()">Print</button>
 ```
 
 In angular we use the @ViewChild decorator to get the content of an element. Add the @ViewChild decorator to the view-plan.component.ts page

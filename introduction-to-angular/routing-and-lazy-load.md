@@ -1,8 +1,8 @@
 # Routing and Lazy Loading
 
-Because Angular is a framework to build a single page application, we need to be able to dynamically load different parts of the application only when requested.
+Angular is a framework to build a single page application \(SPA\), but we have the ability to dynamically load different parts of the application only when requested. This is called lazy loading.
 
-Lazy loading is a technique used in Angular to load modules asynchronously when a specific route is activated. This speeds up the time it takes to initially load your application.
+Lazy loading is a technique used in Angular to download modules only when a specific route is activated. This speeds up the time it takes to initially load your application.
 
 Run the following commands in the command line \(CTRL + C for stop the serve\)
 
@@ -31,7 +31,6 @@ const routes: Routes = [{
   exports: [RouterModule]
 })
 export class ActivitiesRoutingModule { }
-
 ```
 
 {% hint style="info" %}
@@ -56,10 +55,9 @@ const routes: Routes = [{
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-
 ```
 
- As you can see above, Angular routes accepts an array so you can specify as many routes as needed
+As you can see above, Angular routes accepts an array so you can specify as many routes as needed
 
 {% hint style="info" %}
 when working with routing always re serve

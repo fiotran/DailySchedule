@@ -95,7 +95,7 @@ addToDailyPlan(activity: ActivityModel) {
 }
 ```
 
-In the activities.component.html file add round brackets around activitiesList to indicate that we are sending activities out of the child component.
+In the activities.component.html file add \(addItemPlan\)="addToPlan\($event\)" to indicate that we are sending the event out of the child component.
 
 **...\daily-planner\src\app\activities\activities.component.html**
 
@@ -126,6 +126,4 @@ public addToDailyPlanList(item: ActivityModel) {
     this.dailyPlanList.push(item);
 }
 ```
-
-
 
