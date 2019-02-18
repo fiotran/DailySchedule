@@ -5,7 +5,7 @@ Every component has a lifecycle managed by Angular. We have access to key moment
 [https://angular.io/guide/lifecycle-hooks](https://angular.io/guide/lifecycle-hooks)
 
 {% hint style="info" %}
-It is important to note, the first thing that's run is code in the constructor including bring in any parameters defined as dependencies before any lifecycle hooks such as ngOnInit\(\) is executed. 
+The first thing that's run is code in the constructor, bringing in parameters defined as dependencies before any lifecycle hooks such as ngOnInit\(\) are executed. 
 {% endhint %}
 
 In this section, we are going to use ngOnInit\(\) to set the list of activities on initial load of the component.
@@ -67,6 +67,6 @@ Now add the &lt;app-list-activities&gt; selector to the activities.component.htm
 ```
 
 {% hint style="info" %}
-Congratulations! now you should see a list of activities on your simple app
+Congratulations! Now you should see a list of activities on your simple app.
 {% endhint %}
 
