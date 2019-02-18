@@ -4,6 +4,10 @@
 >
 > They are built on observable base API \(async data flow\) to read continuous stream of values inputted to the form. It enables more customisation on complex forms or ones with dynamically created inputs at run time and is also better with unit testing.
 
+{% hint style="info" %}
+Angular also offer Template Driven forms as an alternative but is is excepted best practice to use Reactive Forms.
+{% endhint %}
+
 Create a new customise-form component
 
 ```bash

@@ -5,7 +5,7 @@ Every component has a lifecycle managed by Angular. We have access to key moment
 [https://angular.io/guide/lifecycle-hooks](https://angular.io/guide/lifecycle-hooks)
 
 {% hint style="info" %}
-The first thing that's run is code in the constructor, bringing in parameters defined as dependencies before any lifecycle hooks such as ngOnInit\(\) are executed.
+The first thing that runs is the constructor, before any lifecycle hooks such as ngOnInit\(\) are executed. We will cover constructors in the next section
 {% endhint %}
 
 In this section, we are going to use ngOnInit\(\) to set the list of activities on initial load of the component.
