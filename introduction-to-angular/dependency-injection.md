@@ -44,6 +44,12 @@ Make sure to import the service
 import { ActivitiesService } from 'src/app/services/activities.service';
 ```
 
+remove the ActivitiesConst import statement
+
+```typescript
+import { ActivitiesConst } from 'src/app/data/activities';
+```
+
 Inject the service into the constructor
 
 ```typescript

@@ -24,6 +24,7 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 }
+
 ```
 
 In the html file paste the following
@@ -36,6 +37,7 @@ In the html file paste the following
   <h2> Welcome the the daily planner</h2>
   <a routerLink="/activities">click here go the the activities section</a>
 </header>
+
 ```
 
 {% hint style="info" %}
@@ -83,6 +85,7 @@ import { AppComponent } from './app.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
 ```
 
 Now replace the existing code generated from the app.component.html file with the following code.
@@ -113,6 +116,7 @@ const routes: Routes = [];
     exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
 ```
 
 {% hint style="info" %}

@@ -20,27 +20,30 @@ Inject the activities service into the view-plan.component.ts by adding it to th
 
 **...\daily-planner\src\app\activities\view-plan\view-plan.component.ts**
 
+Declare a variable planList of type ActivityModel array inside the opening brackets of the export class and in ngOnInit\(\) call the function getPlan\(\) and assign it to planList variable.
+
 ```typescript
+import { Component, OnInit } from '@angular/core';
 import { ActivityModel } from 'src/app/data/activity.model';
 import { ActivitiesService } from 'src/app/services/activities.service';
-```
 
-```typescript
-constructor(private activitiesService: ActivitiesService) { }
-```
 
-Declare a variable planList of type ActivityModel array inside the opening brackets of the export class
+@Component({
+  selector: 'app-view-plan',
+  templateUrl: './view-plan.component.html',
+  styleUrls: ['./view-plan.component.css']
+})
+export class ViewPlanComponent implements OnInit {
+  planList: ActivityModel[];
 
-```typescript
-planList: ActivityModel[];
-```
+  constructor(private activitiesService: ActivitiesService) { }
 
-In ngOnInit\(\) call the function getPlan\(\) and assign it to planList variable.
-
-```typescript
   ngOnInit() {
     this.planList = this.activitiesService.getPlan();
   }
+
+}
+
 ```
 
 In the view-plan.component.html file add

@@ -31,6 +31,7 @@ const routes: Routes = [{
   exports: [RouterModule]
 })
 export class ActivitiesRoutingModule { }
+
 ```
 
 {% hint style="info" %}
@@ -55,6 +56,7 @@ const routes: Routes = [{
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
 ```
 
 As you can see above, Angular routes accepts an array so you can specify as many routes as needed
