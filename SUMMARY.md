@@ -17,7 +17,7 @@
 * [S1.5 Inputs, Outputs and EventEmitters](introduction-to-angular/inputs-outputs-and-eventemitters.md)
 * [View Plan Component and Add to Plan](introduction-to-angular/view-plan/README.md)
   * [Update Activities List and remove from Daily Plan Button](introduction-to-angular/view-plan/nice-touch.md)
-  * [Reset Daily Schedule and Activities List](introduction-to-angular/view-plan/some-title-here.md)
+  * [Reset Daily Plan and Activities List](introduction-to-angular/view-plan/some-title-here.md)
 * [Angular Reactive Forms](introduction-to-angular/angular-reactive-forms.md)
 * [Subscribe, Unsubscribe, OnDestroy](introduction-to-angular/subscribe-unsubscribe-ondestroy.md)
 * [Material Design Date Picker](introduction-to-angular/material-design-date-picker.md)
