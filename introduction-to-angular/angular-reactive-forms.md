@@ -22,31 +22,42 @@ Import FormModules and ReactiveFormsModule into the activities.modules.ts file
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 imports: [
+    CommonModule,
+    ActivitiesRoutingModule,
     FormsModule,
     ReactiveFormsModule,
   ]
 ```
 
-In the customise-form.component.ts page, add a modelForm variable with the type formGroup
-
 **...\daily-planner\src\app\activities\customise-form\customise-form.component.ts**
 
+In the customise-form.component.ts page, add a modelForm variable with the type formGroup. Then inject formBuilder - making sure to import it from the @angular/forms node-module
+
+Finally, in the customise-form.component.ts file, set the formGroup with the formControlName as per below
+
 ```typescript
+import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 
-modelForm: FormGroup;
-```
+@Component({
+  selector: 'app-customise-form',
+  templateUrl: './customise-form.component.html',
+  styleUrls: ['./customise-form.component.css']
+})
+export class CustomiseFormComponent implements OnInit {
+  modelForm: FormGroup;
 
-Inject formBuilder - making sure to import it from the @angular/forms node-module
-
-In the customise-form.component.ts file, set the formGroup with the formControlName
-
-```typescript
-constructor(private fb: FormBuilder) { 
+  constructor(private fb: FormBuilder) {
     this.modelForm = this.fb.group({
       name: ''
     });
   }
+
+  ngOnInit() {
+  }
+
+}
+
 ```
 
 Add the code to the customise-form.component.html file

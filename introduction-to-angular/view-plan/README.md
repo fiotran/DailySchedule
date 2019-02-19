@@ -70,6 +70,7 @@ In the view-plan.component.html file add
     Reset
   </button>
 </div>
+
 ```
 
 Add the app-view-plan selector to the activities.component.html above the existing code

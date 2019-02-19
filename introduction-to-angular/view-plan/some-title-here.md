@@ -46,7 +46,7 @@ Add output parameters to the app-view-plan selector in the activities.component.
 **..\daily-planner\src\app\activities\activities.component.html**
 
 ```markup
-<app-view-plan (reloadActivities)="reload()"></app-view-plan>
+<app-view-plan (updateActivitiesList)="updateActivities($event)" (reloadActivities)="reload()"></app-view-plan>
 ```
 
 In the activities.component.ts, create a reload function and call getList\(\)

@@ -8,22 +8,19 @@ Create a removeActivities\(\), updateActivitiesList\(\), delelePlanItem\(\) and 
 
 ```typescript
 public removeActivity(item: ActivityModel) {
- return this.activitiesList = this.activitiesList
-   .filter((activity: ActivityModel) => activity !== item);
+    return this.activitiesList = this.activitiesList
+      .filter((activity: ActivityModel) => activity !== item);
 }
 
 public updateActvitiesList(item: ActivityModel) {
- return this.activitiesList.push(item);
+    return this.activitiesList.push(item);
 }
 
 public deletePlanItem(item: ActivityModel) {
- return this.dailyPlanList = this.dailyPlanList
-    .filter((activity: ActivityModel) => activity !== item);
+    return this.dailyPlanList = this.dailyPlanList
+      .filter((activity: ActivityModel) => activity !== item);
 }
 
-public addToDailyPlanList(item: ActivityModel) {
- this.dailyPlanList.push(item);
-}
 ```
 
 Add a click event to call the method deleteFromDailyPlan\(\) and passing it the item that the use clicks to the delete button
@@ -39,10 +36,7 @@ Add a click event to call the method deleteFromDailyPlan\(\) and passing it the 
 **..\daily-planner\src\app\activities\view-plan\view-plan.component.ts**
 
 ```typescript
-import {
-  Output,
-  EventEmitter,
-} from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 ```
 
 ```typescript

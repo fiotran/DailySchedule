@@ -21,7 +21,7 @@ ngOnInit() {
 Add Output and EventEmitter to the existing import statement to emit any changes from the form \(customise-form.component.ts\) back to the parent \(view-plan.component.ts\)
 
 ```typescript
-import { Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 ```
 
 ```typescript
@@ -45,6 +45,8 @@ import { PlanModel } from 'src/app/data/plan.model';
 
 customisedValues: PlanModel;
 ```
+
+Create getPlanDetails\(\) passing in plan of type PlanModel
 
 ```typescript
 getPlanDetails(plan: PlanModel) {
