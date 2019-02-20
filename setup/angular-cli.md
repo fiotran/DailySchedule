@@ -82,3 +82,9 @@ When we open the project in our favourite IDE, we should see something like this
 {% hint style="info" %}
 You can open Visual Studio Code in terminal window by typing `code .`.
 {% endhint %}
+
+## Troubleshooting
+
+If you have issues, use `npm -v` and `ng version` to verify you have the right tools and right versions installed. Sometimes reinstalling NodeJS or AngularCLI helps.
+
+![Outputting the versions of npm and AngularCLI](../.gitbook/assets/ng-version.png)
