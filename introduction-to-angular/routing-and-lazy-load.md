@@ -64,6 +64,6 @@ export class AppRoutingModule { }
 As you can see above, Angular routes accepts an array so you can specify as many routes as needed
 
 {% hint style="warning" %}
-when working with routing always re serve
+when working with routing always restart `ng serve`
 {% endhint %}
 
