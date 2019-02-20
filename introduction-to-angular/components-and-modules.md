@@ -6,9 +6,18 @@
 One of the best attributes of Angular is the ability to keep your code component-based and modularised. There is also a separation between the template HTML and the Typescript logic which we will demonstrate in this section. The act of keeping everything separate makes Angular scalable to big enterprise applications.
 {% endhint %}
 
-Let's start by creating a component called header.component.ts with the single responsibility of displaying the Title and a router link for this project.
+Let's start by creating a component called **header.component.ts** with the single responsibility of displaying the Title and a router link for this project.
 
-Under the src/app folder create a new folder called shared. Inside the shared folder create a folder called header. In the header folder create three new files called header.component.html, header.component.css and header.component.ts. The ts or typescript file holds the logic for the html and css file.
+<!--
+Shouldn't we just use:
+``` bash
+ng generate component shared/header/HeaderComponent --spec false
+```
+
+That generates the similar code.
+
+-->
+Under the src/app folder create a new folder called **shared**. Inside the **shared** folder create a folder called **header**. In the **header** folder create three new files called **header.component.html**, **header.component.css** and **header.component.ts**. The ts or typescript file holds the logic for the html and css file.
 
 In the .ts file paste the following code
 
@@ -31,7 +40,7 @@ In the html file paste the following
 
 **../daily-planner/src/app/shared/header/header.component.html**
 
-```markup
+```html
 <header>
   <h1>Daily Schedule Planner</h1>
   <h2> Welcome the the daily planner</h2>
@@ -41,7 +50,7 @@ In the html file paste the following
 ```
 
 {% hint style="info" %}
-The css file here uses View Encapsulation to ensure the &lt;h1&gt; styles doesn't effect any other &lt;h1&gt; in our application. Without it, you will have to be very specific about which &lt;h1&gt; tag should be effected. In this case, only inside the header tag.
+The css file here uses View Encapsulation to ensure the &lt;h1&gt; styles doesn't effect any other `<h1>` in our application. Without it, you will have to be very specific about which `<h1>` tag should be effected. In this case, only inside the header tag.
 {% endhint %}
 
 **../daily-planner/src/app/shared/header/header.component.css**
@@ -60,7 +69,7 @@ h1 {
 }
 ```
 
-To use the header component created above we need to declare it in app.modules.ts found in the src/app folder
+To use the header component created above we need to declare it in **app.modules.ts** found in the **src/app** folder
 
 **../daily-planner/src/app/app.module.ts**
 
@@ -88,7 +97,7 @@ export class AppModule { }
 
 ```
 
-Now replace the existing code generated from the app.component.html file with the following code.
+Now replace the existing code generated from the **app.component.html** file with the following code.
 
 **../daily-planner/src/app/app.component.html**
 
