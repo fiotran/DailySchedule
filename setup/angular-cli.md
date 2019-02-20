@@ -75,3 +75,10 @@ To terminate the batch job just type ctrl + c
 If using Visual Studio Code, you can open the terminal with the shortcut ctrl + shift + y to open the debug console and select the terminal window. This is where you can type all your commands
 {% endhint %}
 
+When we open the project in our favourite IDE, we should see something like this
+
+![VS Code Daily Planner project](../.gitbook/assets/vscode.png)
+
+{% hint style="info" %}
+You can open Visual Studio Code in terminal window by typing `code .`.
+{% endhint %}
