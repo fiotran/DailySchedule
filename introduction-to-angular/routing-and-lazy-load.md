@@ -1,6 +1,8 @@
 # Routing and Lazy Loading
 
-Angular is a framework to build a single page application \(SPA\), but we have the ability to dynamically load different parts of the application only when requested. This is called lazy loading.
+Routes allow you to have friendly names in the path URL that map to specific parts of the page rather than to completely different HTML pages.
+
+Angular is a framework to build a single page application \(SPA\), and we have the ability to dynamically load different parts of the application only when requested. This is called lazy loading.
 
 Lazy loading is a technique used in Angular to download modules only when a specific route is activated. This speeds up the time it takes to initially load your application.
 
@@ -61,7 +63,7 @@ export class AppRoutingModule { }
 
 As you can see above, Angular routes accepts an array so you can specify as many routes as needed
 
-{% hint style="info" %}
+{% hint style="warning" %}
 when working with routing always re serve
 {% endhint %}
 
