@@ -2,11 +2,15 @@
 
 The official Angular documentation [https://angular.io/](https://angular.io/)
 
+### AngularCLI
+
+{% embed url="https://cli.angular.io/" %}
+
 ### Material Design
 
 {% embed url="https://material.angular.io/" %}
 
-### **View Encapsulation**
+### View Encapsulation
 
 {% embed url="https://angular.io/guide/component-styles\#view-encapsulation" %}
 
