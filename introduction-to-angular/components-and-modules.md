@@ -40,7 +40,7 @@ In the html file paste the following
 
 **../daily-planner/src/app/shared/header/header.component.html**
 
-```html
+```markup
 <header>
   <h1>Daily Schedule Planner</h1>
   <h2> Welcome the the daily planner</h2>
