@@ -143,3 +143,6 @@ ng generate component shared/header --skipTests
 The following creates **header.component.css**, **header.component.css** and **header.component.css** in **app/shared/header** folder as well as modifies the **app.module.ts**.
 
 ![Use ng generate to generate header component](../.gitbook/assets/ng-generate-header.png)
+
+Changes in **app.module.ts**
+![Use ng generate to generate header component](../.gitbook/assets/ng-generate-header-app-module.png)
