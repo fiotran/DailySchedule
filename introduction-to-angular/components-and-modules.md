@@ -132,6 +132,9 @@ export class AppRoutingModule { }
 Congratulation! You have now created your first component in Angular
 {% endhint %}
 
+![Result](../.gitbook/assets/components-and-modules-result.png)
+**Figure: Result**
+
 ## AngularCli generate command
 
 Now that we know how to create a component manually, we can use an AngularCLI command that simplifies this process
@@ -146,3 +149,4 @@ The following creates **header.component.css**, **header.component.css** and **h
 
 Changes in **app.module.ts**
 ![Use ng generate to generate header component](../.gitbook/assets/ng-generate-header-app-module.png)
+

@@ -67,3 +67,5 @@ As you can see above, Angular routes accepts an array so you can specify as many
 when working with routing always restart `ng serve`
 {% endhint %}
 
+![Result](../.gitbook/assets/routing-result.png)
+
