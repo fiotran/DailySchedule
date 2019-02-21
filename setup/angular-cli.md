@@ -85,3 +85,7 @@ If you have issues, use `npm -v` and `ng version` to verify you have the right t
 
 ![Outputting the versions of npm and AngularCLI](../.gitbook/assets/ng-version.png)
 
+{% hint style="info" %}
+For those who what to code along, click here for the [Live code](https://stackblitz.com/github/fiotrann/daily-planner/tree/initial-commit)
+{% endhint %}
+
