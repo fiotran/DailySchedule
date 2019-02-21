@@ -259,6 +259,8 @@ i.fa-swimmer {
 }
 ```
 
+## Font Awesome
+
 Now add the following link to Font Awesome into the index.html on the root directory before the closing &lt;/head&gt; tag
 
 **../daily-planner/src/index.html**
