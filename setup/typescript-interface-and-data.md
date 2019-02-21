@@ -1,6 +1,6 @@
 # Typescript, Interfaces and Data
 
-> Typescript is a superset of Javascript used to write applications that is type safe which supports cleaner code for higher scalability. It is then compiled into plain Javascript at run time.
+> Typescript is a superset of JavaScript used to write applications that is type safe which supports cleaner code. It is then converted into plain JavaScript at build time.
 
 In this section, we will create a model for the main activities object so it can be used to type variables in our application at a later point. We will also bring in a predefined list of activities for display.
 
