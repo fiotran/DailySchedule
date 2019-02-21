@@ -72,8 +72,8 @@ Remove the any references to ActivitiesService that we added previously as it is
 
 ```typescript
 import { Component, OnInit, Input } from '@angular/core';
-import { ActivityModel } from 'src/app/data/activity.model';
-import { ActivitiesService } from 'src/app/services/activities.service';
+import { ActivityModel } from '../../data/activity.model';
+import { ActivitiesService } from '../../services/activities.service';
 
 @Component({
   selector: 'app-list-activities',

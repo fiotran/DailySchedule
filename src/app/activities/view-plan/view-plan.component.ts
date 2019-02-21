@@ -2,9 +2,9 @@ import {
   Component, OnInit, Output,
   EventEmitter, ViewChild, ElementRef
 } from '@angular/core';
-import { ActivityModel } from 'src/app/data/activity.model';
-import { ActivitiesService } from 'src/app/services/activities.service';
-import { PlanModel } from 'src/app/data/plan.model';
+import { ActivityModel } from '../../data/activity.model';
+import { ActivitiesService } from '../../services/activities.service';
+import { PlanModel } from '../../data/plan.model';
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 
 @Component({

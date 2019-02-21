@@ -43,13 +43,13 @@ To use the service as a dependency, add the following to the constructor of the 
 Make sure to import the service
 
 ```typescript
-import { ActivitiesService } from 'src/app/services/activities.service';
+import { ActivitiesService } from '../../services/activities.service';
 ```
 
 remove the ActivitiesConst import statement
 
 ```typescript
-import { ActivitiesConst } from 'src/app/data/activities';
+import { ActivitiesConst } from '../../data/activities';
 ```
 
 Inject the service into the constructor
@@ -72,8 +72,8 @@ Your list-activities.component.ts should look like this
 
 ```typescript
 import { Component, OnInit } from '@angular/core';
-import { ActivityModel } from 'src/app/data/activity.model';
-import { ActivitiesService } from 'src/app/services/activities.service';
+import { ActivityModel } from '../../data/activity.model';
+import { ActivitiesService } from '../../services/activities.service';
 
 @Component({
   selector: 'app-list-activities',
