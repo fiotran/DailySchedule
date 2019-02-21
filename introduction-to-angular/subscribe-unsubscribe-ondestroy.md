@@ -34,7 +34,28 @@ Add output parameters to the app-customise-form selector in view-plan.compnent.h
 
 **...\daily-planner\src\app\activities\view-plan\view-plan.component.html**
 
+<!--
+TODO: This part doesn't seem to be in the live code.
+`<app-customise-form (customiseFormChanges)="getPlanDetails($event)"></app-customise-form>`
+
+Also, in live code it's in activities.component.html
+
+That one is correct, than bellow should be:
+
 ```markup
+<app-view-plan [formValues]="customisedValues" (updateActivitiesList)="updateActivities($event)" (reloadActivities)="reload()"></app-view-plan>
+<app-customise-form (customiseFormChanges)="getPlanDetails($event)"></app-customise-form>
+<app-list-activities [activitiesList]="activities" (addItemPlan)="addToPlan($event)"></app-list-activities>
+```
+-->
+
+```markup
+  <button id="btn-print">Print</button>
+  <button id="btn-reset" (click)="resetPlan()">
+    Reset
+  </button>
+</div>
+
 <app-customise-form (customiseFormChanges)="getPlanDetails($event)"></app-customise-form>
 ```
 
@@ -43,6 +64,7 @@ Create getPlanDetails\(\) inside activities.component.ts
 **...\daily-planner\src\app\activities\activities.component.ts**
 
 ```typescript
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { PlanModel } from '../../data/plan.model';
 
 customisedValues: PlanModel;
@@ -75,10 +97,15 @@ In the view-plan.components.html above the daily-schedule-list div class
 **...\daily-planner\src\app\activities\view-plan\view-plan.component.html**
 
 ```markup
-<div *ngIf="formValues">
+<div id="daily-schedule">
+  <h1>Schedule a plan</h1>
+  <div *ngIf="planList.length <= 0">
+    The daily schedule is currently empty
+  </div>
+  <div *ngIf="formValues">
     <h2>{{ formValues.name }} plan</h2>
     <p>{{ formValues.selectedDate | date: 'MMMM d, y' }}</p>
-</div>
+  </div>
 ```
 
 [https://angular.io/guide/pipes](https://angular.io/guide/pipes)
@@ -96,12 +123,19 @@ npm install rxjs --save
 npm install rxjs-compat --save
 ```
 
+<!--
+TODO: When checking the live code, the following code is down below.
+-->
+
+**...\daily-planner\src\app\activities\view-plan\view-plan.component.ts**
+
 ```typescript
+import { Component, OnInit, Output, EventEmitter, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs/Subscription';
 ```
 
 ```typescript
-private formSubscription: ISubscription;
+private formSubscription: Subscription;
 ```
 
 ```typescript
@@ -120,5 +154,6 @@ ngOnDestroy() {
 }
 ```
 
-Completed [live code](https://stackblitz.com/edit/s8-subscribe-unsubscribe-ondestroy) for this section.
+![subscribe-unsubscribe-ondestroy](../.gitbook/assets/subscribe-unsubscribe-ondestroy-result.png)
 
+Completed [live code](https://stackblitz.com/edit/s8-subscribe-unsubscribe-ondestroy) for this section.

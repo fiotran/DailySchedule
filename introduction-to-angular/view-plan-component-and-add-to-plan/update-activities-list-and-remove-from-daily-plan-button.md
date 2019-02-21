@@ -14,7 +14,7 @@ public removeActivity(item: ActivityModel) {
       .filter((activity: ActivityModel) => activity !== item);
 }
 
-public updateActvitiesList(item: ActivityModel) {
+public updateActivitiesList(item: ActivityModel) {
     return this.activitiesList.push(item);
 }
 
@@ -69,9 +69,10 @@ addToPlan(item: ActivityModel) {
 }
 
 updateActivities(item: ActivityModel) {
-   this.activitiesService.updateActvitiesList(item);
+   this.activitiesService.updateActivitiesList(item);
 }
 ```
 
-Completed [live code](https://stackblitz.com/edit/s6a-update-list-remove-button) for this section.
+![Update Activities List and remove from Daily Plan Button](../../.gitbook/assets/plan-view-update-activities.png)
 
+Completed [live code](https://stackblitz.com/edit/s6a-update-list-remove-button) for this section.

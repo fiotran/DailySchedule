@@ -26,7 +26,7 @@ export class ActivitiesComponent implements OnInit {
   }
 
   updateActivities(item: ActivityModel) {
-    this.activitiesService.updateActvitiesList(item);
+    this.activitiesService.updateActivitiesList(item);
   }
 
   reload() {

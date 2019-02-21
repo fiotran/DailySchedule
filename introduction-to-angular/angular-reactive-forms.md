@@ -31,6 +31,9 @@ imports: [
   ]
 ```
 
+![activities.module.ts difference](../.gitbook/assets/angular-reactive-forms-activities-module-compare.png)
+Diff for activities.module.ts.
+
 **...\daily-planner\src\app\activities\customise-form\customise-form.component.ts**
 
 In the customise-form.component.ts page, add a modelForm variable with the type formGroup. Then inject formBuilder - making sure to import it from the @angular/forms node-module
@@ -84,8 +87,11 @@ Add the selector app-customise-form to activities.component.html
 **...\daily-planner\src\app\activities\activities.component.html**
 
 ```markup
+<app-view-plan (updateActivitiesList)="updateActivities($event)" (reloadActivities)="reload()"></app-view-plan>
 <app-customise-form></app-customise-form>
+<app-list-activities [activitiesList]="activities" (addItemPlan)="addToPlan($event)"></app-list-activities>
 ```
 
-Completed [live code](https://stackblitz.com/edit/s7-reactive-forms) for this section.
+![Angular Reactive Forms Activities](../.gitbook/assets/angular-reactive-forms-activities-result.png)
 
+Completed [live code](https://stackblitz.com/edit/s7-reactive-forms) for this section.
