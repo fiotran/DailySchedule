@@ -1,5 +1,7 @@
 # S1.5 Inputs, Outputs and EventEmitters
 
+[Live code](https://stackblitz.com/edit/s4-dependency-injection) to follow along for this section.
+
 To communicate between parent and child components, Angular offers @Inputs\(\) and @Outputs\(\) decorators with the EventEmitter class.
 
 {% hint style="info" %}
@@ -152,4 +154,6 @@ public addToDailyPlanList(item: ActivityModel) {
     this.dailyPlanList.push(item);
 }
 ```
+
+Completed [live code](https://stackblitz.com/edit/s5-inputs-outputs-eventemitter) from this section.
 
