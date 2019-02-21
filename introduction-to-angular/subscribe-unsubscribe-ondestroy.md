@@ -24,19 +24,23 @@ Add an Output and EventEmitter to the existing import statement to emit any chan
 
 ```typescript
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+
+import { PlanModel } from '../../data/plan.model';
 ```
 
 Add the output decorator to the customiseFormChanges property in customise-form.component.ts
 
 ```typescript
-@Output() customiseFormChanges: EventEmitter<any> = new EventEmitter<any>();
+@Output() customiseFormChanges: EventEmitter<PlanModel> = new EventEmitter<PlanModel>();
 ```
 
 **...\daily-planner\src\app\activities\activities.component.html**
 
 ```markup
 <app-view-plan [formValues]="customisedValues" (updateActivitiesList)="updateActivities($event)" (reloadActivities)="reload()"></app-view-plan>
-<app-customise-form (customiseFormChanges)="getPlanDetails($event)"></app-customise-form>
+<app-customise-form 
+(customiseFormChanges)="getPlanDetails($event)">
+</app-customise-form>
 <app-list-activities [activitiesList]="activities" (addItemPlan)="addToPlan($event)"></app-list-activities>
 ```
 
@@ -44,7 +48,7 @@ Add the output decorator to the customiseFormChanges property in customise-form.
 
 ```typescript
 import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
-import { PlanModel } from '../../data/plan.model';
+import { PlanModel } from '../data/plan.model';
 
 customisedValues: PlanModel;
 ```
