@@ -32,5 +32,7 @@ The official Angular documentation [https://angular.io/](https://angular.io/)
 
 ## Events in Australia this year 2019
 
+{% embed url="https://www.componentsconf.com.au/" %}
+
 ![](../.gitbook/assets/mel-conference-ad.png)
 
