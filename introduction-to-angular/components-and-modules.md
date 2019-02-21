@@ -64,7 +64,7 @@ h1 {
 }
 ```
 
-To use the header component created above we need to declare it in **app.modules.ts** found in the **src/app** folder
+To use the header component created above, we need to declare it in **app.modules.ts** found in the **src/app** folder
 
 **../daily-planner/src/app/app.module.ts**
 
@@ -100,7 +100,7 @@ Now replace the existing code generated from the **app.component.html** file wit
 <router-outlet></router-outlet>
 ```
 
-> A selector tells Angular to create and insert an instance of this component wherever it finds the corresponding tag in template HTML. [https://angular.io/guide/architecture-components](https://angular.io/guide/architecture-components)
+> A selector tells Angular to create and insert/render an instance of this component wherever it finds the corresponding tag in the template HTML. [https://angular.io/guide/architecture-components](https://angular.io/guide/architecture-components)
 
 {% hint style="info" %}
 Congratulation! You have now created your first component in Angular
