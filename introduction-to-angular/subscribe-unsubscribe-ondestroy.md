@@ -26,30 +26,19 @@ Add Output and EventEmitter to the existing import statement to emit any changes
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 ```
 
+Add the output decorator to the app-customise-form selector in activities.component.html
+
 ```typescript
 @Output() customiseFormChanges: EventEmitter<any> = new EventEmitter<any>();
 ```
 
-Add output parameters to the app-customise-form selector in activities.component.html
-
 **...\daily-planner\src\app\activities\activities.component.html**
-
-<!--
-TODO: This part doesn't seem to be in the live code.
-`<app-customise-form (customiseFormChanges)="getPlanDetails($event)"></app-customise-form>`
-
-Also, in live code it's in activities.component.html
-
-That one is correct, than bellow should be:
--->
 
 ```markup
 <app-view-plan [formValues]="customisedValues" (updateActivitiesList)="updateActivities($event)" (reloadActivities)="reload()"></app-view-plan>
 <app-customise-form (customiseFormChanges)="getPlanDetails($event)"></app-customise-form>
 <app-list-activities [activitiesList]="activities" (addItemPlan)="addToPlan($event)"></app-list-activities>
 ```
-
-Create getPlanDetails\(\) inside activities.component.ts
 
 **...\daily-planner\src\app\activities\activities.component.ts**
 
@@ -68,18 +57,26 @@ getPlanDetails(plan: PlanModel) {
 }
 ```
 
-**...\daily-planner\src\app\activities\customise-form\customise-form.component.ts**
+## Send values to child component
 
-```typescript
-@Input() formValues: PlanModel;
-```
-
-add \[formValues\]="customiseValues" to app-view-plan to pass values to child component
+Add \[formValues\]="customiseValues" to app-view-plan to pass values to child component
 
 **...\daily-planner\src\app\activities\activities.component.html**
 
 ```markup
-<app-view-plan [formValues]="customisedValues" (updateActivitiesList)="updateActivities($event)" (reloadActivities)="reload()"></app-view-plan>
+<app-view-plan 
+    [formValues]="customisedValues" 
+    (updateActivitiesList)="updateActivities($event)" 
+    (reloadActivities)="reload()">
+</app-view-plan>
+<app-customise-form (customiseFormChanges)="getPlanDetails($event)"></app-customise-form>
+<app-list-activities [activitiesList]="activities" (addItemPlan)="addToPlan($event)"></app-list-activities>
+```
+
+**...\daily-planner\src\app\activities\customise-form\customise-form.component.ts**
+
+```typescript
+@Input() formValues: PlanModel;
 ```
 
 In the view-plan.components.html above the daily-schedule-list div class
@@ -113,9 +110,6 @@ npm install rxjs --save
 npm install rxjs-compat --save
 ```
 
-<!--
-TODO: When checking the live code, the following code is down below.
--->
 **...\daily-planner\src\app\activities\customise-form\customise-form.component.ts**
 
 ```typescript
