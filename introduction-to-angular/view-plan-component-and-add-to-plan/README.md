@@ -45,7 +45,6 @@ export class ViewPlanComponent implements OnInit {
   }
 
 }
-
 ```
 
 In the view-plan.component.html file add
@@ -72,7 +71,6 @@ In the view-plan.component.html file add
     Reset
   </button>
 </div>
-
 ```
 
 Add the app-view-plan selector to the activities.component.html above the existing code
@@ -85,3 +83,4 @@ Add the app-view-plan selector to the activities.component.html above the existi
 ```
 
 Completed [live code](https://stackblitz.com/edit/s6-view-plan-component) for this section.
+

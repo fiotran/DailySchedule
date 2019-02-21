@@ -31,8 +31,7 @@ imports: [
   ]
 ```
 
-![activities.module.ts difference](../.gitbook/assets/angular-reactive-forms-activities-module-compare.png)
-Diff for activities.module.ts.
+![activities.module.ts difference](../.gitbook/assets/angular-reactive-forms-activities-module-compare.png) Diff for activities.module.ts.
 
 **...\daily-planner\src\app\activities\customise-form\customise-form.component.ts**
 
@@ -62,7 +61,6 @@ export class CustomiseFormComponent implements OnInit {
   }
 
 }
-
 ```
 
 Add the code to the customise-form.component.html file
@@ -79,7 +77,6 @@ Add the code to the customise-form.component.html file
     </p>
   </form>
 </section>
-
 ```
 
 Add the selector app-customise-form to activities.component.html
@@ -95,3 +92,4 @@ Add the selector app-customise-form to activities.component.html
 ![Angular Reactive Forms Activities](../.gitbook/assets/angular-reactive-forms-activities-result.png)
 
 Completed [live code](https://stackblitz.com/edit/s7-reactive-forms) for this section.
+

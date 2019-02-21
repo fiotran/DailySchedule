@@ -22,7 +22,6 @@ public deletePlanItem(item: ActivityModel) {
     return this.dailyPlanList = this.dailyPlanList
       .filter((activity: ActivityModel) => activity !== item);
 }
-
 ```
 
 Add a click event to call the method deleteFromDailyPlan\(\) and passing it the item that the use clicks to the delete button
@@ -76,3 +75,4 @@ updateActivities(item: ActivityModel) {
 ![Update Activities List and remove from Daily Plan Button](../../.gitbook/assets/plan-view-update-activities.png)
 
 Completed [live code](https://stackblitz.com/edit/s6a-update-list-remove-button) for this section.
+

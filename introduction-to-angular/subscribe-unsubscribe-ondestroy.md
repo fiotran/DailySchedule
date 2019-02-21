@@ -116,8 +116,7 @@ npm install rxjs-compat --save
 <!--
 TODO: When checking the live code, the following code is down below.
 -->
-
-**...\daily-planner\src\app\activities\view-plan\view-plan.component.ts**
+**...\daily-planner\src\app\activities\customise-form\customise-form.component.ts**
 
 ```typescript
 import { Component, OnInit, Output, EventEmitter, OnDestroy } from '@angular/core';
@@ -147,3 +146,4 @@ ngOnDestroy() {
 ![subscribe-unsubscribe-ondestroy](../.gitbook/assets/subscribe-unsubscribe-ondestroy-result.png)
 
 Completed [live code](https://stackblitz.com/edit/s8-subscribe-unsubscribe-ondestroy) for this section.
+
