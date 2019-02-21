@@ -75,10 +75,6 @@ When we open the project in our favourite IDE, we should see something like this
 
 ![VS Code Daily Planner project](../.gitbook/assets/vscode.png)
 
-{% hint style="info" %}
-You can open Visual Studio Code in terminal window by typing `code .`.
-{% endhint %}
-
 ## Troubleshooting
 
 If you have issues, use `npm -v` and `ng version` to verify you have the right tools and right versions installed. Sometimes reinstalling NodeJS or AngularCLI helps.
