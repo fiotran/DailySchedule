@@ -127,6 +127,8 @@ const routes: Routes = [];
 export class AppRoutingModule { }
 ```
 
+## Expected Outcome
+
 ![Result](../.gitbook/assets/components-and-modules-result.png) **Figure: Result**
 
 ## AngularCLI generate command
@@ -140,6 +142,8 @@ ng generate component shared/header --skipTests
 The following creates **header.component.css**, **header.component.css** and **header.component.css** in **app/shared/header** folder as well as modifies the **app.module.ts**.
 
 ![Use ng generate to generate header component](../.gitbook/assets/ng-generate-header.png)
+
+## Code Changed
 
 Changes in **app.module.ts**
 
