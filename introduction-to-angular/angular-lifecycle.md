@@ -24,8 +24,8 @@ In list-activities.component.ts add the following code
 
 ```typescript
 import { Component, OnInit } from '@angular/core';
-import { ActivityModel } from 'src/app/data/activity.model';
-import { ActivitiesConst } from 'src/app/data/activities';
+import { ActivityModel } from '../../data/activity.model';
+import { ActivitiesConst } from '../../data/activities';
 
 @Component({
   selector: 'app-list-activities',

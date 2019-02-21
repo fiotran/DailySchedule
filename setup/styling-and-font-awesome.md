@@ -6,6 +6,8 @@
 
 Using Visual Studio Code or your favourite text editor, copy the following text into the styles.css file found in the src folder. Notice that the first @import statement is commented out - we will need this later in the project.
 
+## Stylesheet
+
 **../daily-planner/src/styles.css**
 
 ```css

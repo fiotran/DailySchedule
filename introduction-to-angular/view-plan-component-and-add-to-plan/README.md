@@ -26,8 +26,8 @@ Declare a variable planList of type ActivityModel array inside the opening brack
 
 ```typescript
 import { Component, OnInit } from '@angular/core';
-import { ActivityModel } from 'src/app/data/activity.model';
-import { ActivitiesService } from 'src/app/services/activities.service';
+import { ActivityModel } from '../../data/activity.model';
+import { ActivitiesService } from '../../services/activities.service';
 
 
 @Component({

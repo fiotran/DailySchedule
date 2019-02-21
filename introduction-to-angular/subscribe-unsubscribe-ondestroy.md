@@ -43,7 +43,7 @@ Create getPlanDetails\(\) inside view-plan.component.ts
 **...\daily-planner\src\app\activities\view-plan\view-plan.component.ts**
 
 ```typescript
-import { PlanModel } from 'src/app/data/plan.model';
+import { PlanModel } from '../../data/plan.model';
 
 customisedValues: PlanModel;
 ```
@@ -95,7 +95,7 @@ npm install rxjs-compat --save
 ```
 
 ```typescript
-import { ISubscription } from 'rxjs/Subscription';
+import { Subscription } from 'rxjs/Subscription';
 ```
 
 ```typescript
