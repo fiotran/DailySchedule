@@ -69,5 +69,5 @@ when working with routing always restart `ng serve`
 
 ![Result](../.gitbook/assets/routing-result.png)
 
-Completed [live code](https://stackblitz.com/edit/s3-lifecycle-hooks) from this section.
+Completed [live code](https://stackblitz.com/edit/s2-routing-lazy-loading) from this section.
 

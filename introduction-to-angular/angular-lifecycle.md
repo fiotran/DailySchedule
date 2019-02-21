@@ -1,6 +1,6 @@
 # Angular Lifecycle
 
-[Live code](https://stackblitz.com/edit/s1-components-modules) to follow along from the section.
+[Live code](https://stackblitz.com/edit/s2-routing-lazy-loading) to follow along from the section.
 
 Every component has a lifecycle managed by Angular. We have access to key moments with predefined methods such as ngOnChanges\(\) or ngOnInit\(\). For more information, visit the official website
 
