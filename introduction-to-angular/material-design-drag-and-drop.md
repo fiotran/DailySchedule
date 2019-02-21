@@ -1,5 +1,7 @@
 # Material Design Drag and Drop
 
+[Live code](https://stackblitz.com/edit/s9-material-design-date-picker) to follow along from this section.
+
 A standout in the recent release of Angular 7 was the Material Design drag and drop. Let's try it out.
 
 Import the drag and drop module into the activities.module.ts:
@@ -40,4 +42,6 @@ drop(event: CdkDragDrop<any[]>) {
 ```
 
 Save your files and go test out your new drag and drop feature !!
+
+Completed [live code](https://stackblitz.com/edit/s10-material-design-drag-drop) for this section.
 
