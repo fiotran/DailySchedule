@@ -85,7 +85,13 @@ If you have issues, use `npm -v` and `ng version` to verify you have the right t
 
 ![Outputting the versions of npm and AngularCLI](../.gitbook/assets/ng-version.png)
 
+If you have a previous version of node.js, try the following command in your terminal
+
+```bash
+npm cache clean --force
+```
+
 {% hint style="info" %}
-For those who what to code along, click here for the [Live code](https://stackblitz.com/github/fiotrann/daily-planner/tree/initial-commit)
+If the problem persist, you can still code along with the [Live code](https://stackblitz.com/github/fiotrann/daily-planner/tree/initial-commit) provided
 {% endhint %}
 
