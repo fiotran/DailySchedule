@@ -6,7 +6,7 @@
 
 * [Setup and Angular CLI](setup/angular-cli.md)
 * [Stylesheet and Font Awesome](setup/styling-and-font-awesome.md)
-* [Typescript, Interfaces and Data](setup/untitled.md)
+* [Typescript, Interfaces and Data](setup/typescript-interface-and-data.md)
 
 ## Introduction to Angular
 
@@ -26,5 +26,5 @@
 
 ## Resource LInks
 
-* [Angular reference websites](resource-links/untitled.md)
+* [Angular reference websites](resource-links/angular-reference-websites.md)
 
