@@ -14,7 +14,7 @@ public removeActivity(item: ActivityModel) {
       .filter((activity: ActivityModel) => activity !== item);
 }
 
-public updateActvitiesList(item: ActivityModel) {
+public updateActivitiesList(item: ActivityModel) {
     return this.activitiesList.push(item);
 }
 
@@ -69,7 +69,7 @@ addToPlan(item: ActivityModel) {
 }
 
 updateActivities(item: ActivityModel) {
-   this.activitiesService.updateActvitiesList(item);
+   this.activitiesService.updateActivitiesList(item);
 }
 ```
 

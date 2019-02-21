@@ -28,7 +28,7 @@ export class ActivitiesService {
             .filter((activity: ActivityModel) => activity !== item);
     }
 
-    public updateActvitiesList(item: ActivityModel) {
+    public updateActivitiesList(item: ActivityModel) {
         return this.activitiesList.push(item);
     }
 
