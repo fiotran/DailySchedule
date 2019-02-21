@@ -4,7 +4,7 @@
 
 > Reactive forms provide a model-driven approach to handling form inputs whose values change over time. [https://angular.io/guide/reactive-forms](https://angular.io/guide/reactive-forms)
 >
-> They are built on observable base API \(async data flow\) to read continuous stream of values inputted to the form. It enables more customisation on complex forms or ones with dynamically created inputs at run time and is also better with unit testing.
+> They are built on observable base APIs \(async data flow\) to read continuous streams of values inputted to the form. It enables more customisation on complex forms and can use dynamically created inputs at run time. Reactive Forms also work well with unit testing.
 
 {% hint style="info" %}
 Angular also offer Template Driven forms as an alternative but is is excepted best practice to use Reactive Forms.
