@@ -2,11 +2,11 @@
 
 [Live code](https://stackblitz.com/edit/s7-reactive-forms) to follow along from this section.
 
-> Observable is a way of managing streams of multiple values or data. It is not specific to Angular but a new standard included in the ES7 release. There are many operators to handle observables found here [https://rxjs-dev.firebaseapp.com/api](https://rxjs-dev.firebaseapp.com/api)
+> Observable is a way of managing streams of multiple values or data. It is not specific to Angular but is widely used across all modern frameworks. There are many operators to handle observables found here [https://rxjs-dev.firebaseapp.com/api](https://rxjs-dev.firebaseapp.com/api). Angular uses RxJs to provide observables.
 >
 > [https://angular.io/guide/observables-in-angular](https://angular.io/guide/observables-in-angular)
 
-Subscribe is a method on an observable type that we will be using in this section to 'subscribe' to any changes on the form.
+Subscribe is a method on an observable that we will be using in this section to 'subscribe' to any changes on the form.
 
 **...\daily-planner\src\app\activities\customise-form\customise-form.component.ts**
 
