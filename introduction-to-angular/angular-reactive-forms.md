@@ -1,5 +1,7 @@
 # Angular Reactive Forms
 
+[Live code](https://stackblitz.com/edit/s6b-reset-plan-update-activities-list) to follow along from this section.
+
 > Reactive forms provide a model-driven approach to handling form inputs whose values change over time. [https://angular.io/guide/reactive-forms](https://angular.io/guide/reactive-forms)
 >
 > They are built on observable base API \(async data flow\) to read continuous stream of values inputted to the form. It enables more customisation on complex forms or ones with dynamically created inputs at run time and is also better with unit testing.
@@ -84,4 +86,6 @@ Add the selector app-customise-form to view-plan.component.html
 ```markup
 <app-customise-form></app-customise-form>
 ```
+
+Completed [live code](https://stackblitz.com/edit/s7-reactive-forms) for this section.
 
