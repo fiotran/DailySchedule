@@ -2,7 +2,7 @@
 
 [Live code](https://stackblitz.com/github/fiotrann/daily-planner/tree/initial-commit) to follow along from this section.
 
-> As this project is not about CSS, we will copy and paste the below provided style sheet and reference Font Awesome for icons
+As this project is not about CSS, we will copy and paste the below provided stylesheet and reference Font Awesome for icons
 
 Using Visual Studio Code or your favourite text editor, copy the following text into the styles.css file found in the src folder. Notice that the first @import statement is commented out - we will need this later in the project.
 
