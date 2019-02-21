@@ -14,7 +14,7 @@ Run the following commands in the command line \(CTRL + C for stop the serve\)
 ng generate module activities --routing
 ```
 
-```text
+```bash
 ng generate component activities
 ```
 
@@ -38,7 +38,7 @@ export class ActivitiesRoutingModule { }
 ```
 
 {% hint style="info" %}
-Here we insert the object with an empty path and importing the ActivitiesComponent
+Here we insert the object with an empty path and specify we want to use ActivitiesComponent
 {% endhint %}
 
 In the app-routing.module.ts file, update the constant routes with the object as follows.
@@ -67,7 +67,13 @@ As you can see above, Angular routes accepts an array so you can specify as many
 when working with routing always restart `ng serve`
 {% endhint %}
 
+## Expected outcome
+
 ![Result](../.gitbook/assets/routing-result.png)
+
+## Code changed
+
+
 
 Completed [live code](https://stackblitz.com/edit/s2-routing-lazy-loading) from this section.
 
