@@ -79,9 +79,9 @@ Add the code to the customise-form.component.html file
 
 ```
 
-Add the selector app-customise-form to view-plan.component.html
+Add the selector app-customise-form to activities.component.html
 
-**...\daily-planner\src\app\activities\view-plan\view-plan.component.html**
+**...\daily-planner\src\app\activities\activities.component.html**
 
 ```markup
 <app-customise-form></app-customise-form>

@@ -6,7 +6,7 @@ In this section, we will create a model for the main activities object so it can
 
 Create a folder called data under src/app and under the data folder create a file called activity.model.ts with the following interface
 
-## Interface
+## Interfaces
 
 **../daily-planner/src/app/data/activity.model.ts**
 
@@ -19,6 +19,16 @@ export interface ActivityModel {
 ```
 
 Now, create a new file in the data folder named activities.ts and assign data to the constant variable ActivitiesConst
+
+**../daily-planner/src/app/data/plan.model.ts**
+
+```typescript
+export interface PlanModel {
+     id: number;
+     name: string;
+     selectedDate: string;
+}
+```
 
 ## Data
 
