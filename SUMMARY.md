@@ -27,4 +27,5 @@
 ## Resource LInks
 
 * [Angular reference websites](resource-links/angular-reference-websites.md)
+* [Events in Australia 2019](resource-links/events-in-australia-2019.md)
 

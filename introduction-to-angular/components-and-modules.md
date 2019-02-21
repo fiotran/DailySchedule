@@ -8,6 +8,10 @@
 One of the best attributes of Angular is the ability to keep your code component-based and modularised. There is also a separation between the template HTML and the Typescript logic which we will demonstrate in this section. The act of keeping everything separate makes Angular scalable to big enterprise applications.
 {% endhint %}
 
+## UI Breakdown
+
+![](../.gitbook/assets/app-structure.png)
+
 Let's start by creating a component called **header.component.ts** with the single responsibility of displaying the Title and a router link for this project.
 
 Under the src/app folder create a new folder called **shared**. Inside the **shared** folder create a folder called **header**. In the **header** folder create three new files called **header.component.html**, **header.component.css** and **header.component.ts**. The ts or typescript file holds the logic for the html and css file.
@@ -98,6 +102,12 @@ Now replace the existing code generated from the **app.component.html** file wit
 
 > A selector tells Angular to create and insert an instance of this component wherever it finds the corresponding tag in template HTML. [https://angular.io/guide/architecture-components](https://angular.io/guide/architecture-components)
 
+{% hint style="info" %}
+Congratulation! You have now created your first component in Angular
+{% endhint %}
+
+## Possible issue
+
 {% hint style="warning" %}
 If you come across any compilation errors associated with routing, you may have selected no when given the option of creating your project with routing and will need to create the below file manually.
 {% endhint %}
@@ -116,10 +126,6 @@ const routes: Routes = [];
 })
 export class AppRoutingModule { }
 ```
-
-{% hint style="info" %}
-Congratulation! You have now created your first component in Angular
-{% endhint %}
 
 ![Result](../.gitbook/assets/components-and-modules-result.png) **Figure: Result**
 
