@@ -12,6 +12,8 @@ npm install --save @angular/material @angular/cdk
 
 These modules have some dependencies which need to be added to the app.module.ts
 
+**...\daily-planner\src\app\app.module.ts**
+
 ```typescript
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -27,6 +29,8 @@ We can now uncomment out the line in the css file - this is a pre-built Angular 
 ```
 
 Import the MatDatepickerModule and the MatNativeDateModule in the activities.module.ts page
+
+**...\daily-planner\src\app\activities\activities.modules.ts**
 
 ```typescript
 import {
@@ -47,6 +51,8 @@ imports: [
 
 Add more code to the customise-form.component.html page - under the closing &lt;/p&gt; tag so we can use the mat-datepicker
 
+**..\daily-planner\src\app\activities\customise-form\customise-form.component.html**
+
 ```markup
 <p>
    <label>Plan date: </label>
@@ -57,6 +63,8 @@ Add more code to the customise-form.component.html page - under the closing &lt;
 ```
 
 Add the selectedDate control to the modelForm in the customise-form.component.ts file
+
+**..\daily-planner\src\app\activities\customise-form\customise-form.component.ts**
 
 ```typescript
 constructor(private fb: FormBuilder) {

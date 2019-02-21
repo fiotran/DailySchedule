@@ -6,6 +6,8 @@ A standout in the recent release of Angular 7 was the Material Design drag and d
 
 Import the drag and drop module into the activities.module.ts:
 
+**..\daily-planner\src\app\activities\activities.module.ts**
+
 ```typescript
 import { DragDropModule } from '@angular/cdk/drag-drop';
 ```
@@ -20,6 +22,8 @@ import: [
 
 Replace the main div tag with the following code to in view-plan.component.html:
 
+**...\daily-planner\src\app\activities\view-plan\view-plan.component.html**
+
 ```typescript
 <div id="daily-schedule" cdkDropList class="example-list"
 (cdkDropListDropped)="drop($event)">
@@ -32,6 +36,8 @@ Add cdkDrag to the list that you want to make drag and drop simple
 ```
 
 Add the drop method into the view-plan.component.ts file with the following imports
+
+**...\daily-planner\src\app\activities\view-plan\view-plan.component.ts**
 
 ```typescript
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
