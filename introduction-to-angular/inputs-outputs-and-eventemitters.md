@@ -5,7 +5,7 @@
 To communicate between parent and child components, Angular offers @Inputs\(\) and @Outputs\(\) decorators with the EventEmitter class.
 
 {% hint style="info" %}
-It is generally a good idea for the parent component be responsible for making service calls and only sending it's child components what they need to do their job. In this section, we will move the service call to the Parent Activities component and the list to the List-activities component for display and when the add button is clicked we will end that information back to the parent
+It is generally a good idea for the parent component be responsible for making service calls and only sending a child component what it needs to do their job. In this section, we will move the service call to the Parent Activities component and the list to the List-activities component for display and when the add button is clicked we will end that information back to the parent
 {% endhint %}
 
 ## Input decorator

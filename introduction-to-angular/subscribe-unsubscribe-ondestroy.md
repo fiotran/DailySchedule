@@ -34,16 +34,6 @@ Add output parameters to the app-customise-form selector in view-plan.compnent.h
 
 **...\daily-planner\src\app\activities\list-activities.component.html**
 
-<!--
-TODO: This part doesn't seem to be in the live code.
-`<app-customise-form (customiseFormChanges)="getPlanDetails($event)"></app-customise-form>`
-
-Also, in live code it's in activities.component.html
-
-That one is correct, than bellow should be:
--->
-
-
 ```markup
 <div>
   <button id="btn-print">Print</button>
@@ -117,10 +107,6 @@ npm install rxjs --save
 npm install rxjs-compat --save
 ```
 
-<!--
-TODO: When checking the live code, the following code is down below.
--->
-
 **...\daily-planner\src\app\activities\customise-form\customise-form.component.ts**
 
 ```typescript
@@ -151,3 +137,4 @@ ngOnDestroy() {
 ![subscribe-unsubscribe-ondestroy](../.gitbook/assets/subscribe-unsubscribe-ondestroy-result.png)
 
 Completed [live code](https://stackblitz.com/edit/s8-subscribe-unsubscribe-ondestroy) for this section.
+
