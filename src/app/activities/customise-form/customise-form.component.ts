@@ -1,6 +1,6 @@
 import { Component, OnInit, Output, EventEmitter, OnDestroy } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { ISubscription } from 'rxjs/Subscription';
+import { Subscription } from 'rxjs/Subscription';
 
 
 @Component({
@@ -10,7 +10,7 @@ import { ISubscription } from 'rxjs/Subscription';
 export class CustomiseFormComponent implements OnInit, OnDestroy {
   modelForm: FormGroup;
   @Output() customiseFormChanges: EventEmitter<any> = new EventEmitter<any>();
-  private formSubscription: ISubscription;
+  private formSubscription: Subscription;
 
   constructor(private fb: FormBuilder) {
     this.modelForm = this.fb.group({

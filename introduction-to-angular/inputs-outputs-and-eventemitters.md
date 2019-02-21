@@ -95,7 +95,7 @@ addToDailyPlan(activity: ActivityModel) {
 }
 ```
 
-In the activities.component.html file add round brackets around activitiesList to indicate that we are sending activities out of the child component.
+In the activities.component.html file add round brackets around addItemPlan to indicate that we are sending activities out of the child component.
 
 **...\daily-planner\src\app\activities\activities.component.html**
 
