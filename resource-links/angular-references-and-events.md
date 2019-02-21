@@ -10,10 +10,6 @@ The official Angular documentation [https://angular.io/](https://angular.io/)
 
 {% embed url="https://material.angular.io/" caption="" %}
 
-## View Encapsulation
-
-{% embed url="https://angular.io/guide/component-styles\#view-encapsulation" caption="" %}
-
 ## Rxjs
 
 {% embed url="https://www.learnrxjs.io/" caption="" %}
