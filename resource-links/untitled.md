@@ -2,31 +2,31 @@
 
 The official Angular documentation [https://angular.io/](https://angular.io/)
 
-### AngularCLI
+## AngularCLI
 
-{% embed url="https://cli.angular.io/" %}
+{% embed url="https://cli.angular.io/" caption="" %}
 
-### Material Design
+## Material Design
 
-{% embed url="https://material.angular.io/" %}
+{% embed url="https://material.angular.io/" caption="" %}
 
-### View Encapsulation
+## View Encapsulation
 
-{% embed url="https://angular.io/guide/component-styles\#view-encapsulation" %}
+{% embed url="https://angular.io/guide/component-styles\#view-encapsulation" caption="" %}
 
-### Rxjs
+## Rxjs
 
-{% embed url="https://www.learnrxjs.io/" %}
+{% embed url="https://www.learnrxjs.io/" caption="" %}
 
-{% embed url="https://rxmarbles.com/" %}
+{% embed url="https://rxmarbles.com/" caption="" %}
 
-### Testing
+## Testing
 
-{% embed url="https://angular.io/guide/testing" %}
+{% embed url="https://angular.io/guide/testing" caption="" %}
 
-### NgRx
+## NgRx
 
-{% embed url="https://blog.angular-university.io/angular-ngrx-store-and-effects-crash-course/" %}
+{% embed url="https://blog.angular-university.io/angular-ngrx-store-and-effects-crash-course/" caption="" %}
 
-{% embed url="https://toddmotto.com/ngrx/" %}
+{% embed url="https://toddmotto.com/ngrx/" caption="" %}
 

@@ -8,15 +8,6 @@ One of the best attributes of Angular is the ability to keep your code component
 
 Let's start by creating a component called **header.component.ts** with the single responsibility of displaying the Title and a router link for this project.
 
-<!--
-Shouldn't we just use:
-``` bash
-ng generate component shared/header --skipTests
-```
-
-That generates the similar code.
-
--->
 Under the src/app folder create a new folder called **shared**. Inside the **shared** folder create a folder called **header**. In the **header** folder create three new files called **header.component.html**, **header.component.css** and **header.component.ts**. The ts or typescript file holds the logic for the html and css file.
 
 In the .ts file paste the following code
@@ -33,7 +24,6 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 }
-
 ```
 
 In the html file paste the following
@@ -46,7 +36,6 @@ In the html file paste the following
   <h2> Welcome the the daily planner</h2>
   <a routerLink="/activities">click here go the the activities section</a>
 </header>
-
 ```
 
 {% hint style="info" %}
@@ -94,7 +83,6 @@ import { AppComponent } from './app.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-
 ```
 
 Now replace the existing code generated from the **app.component.html** file with the following code.
@@ -125,21 +113,19 @@ const routes: Routes = [];
     exports: [RouterModule]
 })
 export class AppRoutingModule { }
-
 ```
 
 {% hint style="info" %}
 Congratulation! You have now created your first component in Angular
 {% endhint %}
 
-![Result](../.gitbook/assets/components-and-modules-result.png)
-**Figure: Result**
+![Result](../.gitbook/assets/components-and-modules-result.png) **Figure: Result**
 
-## AngularCli generate command
+## AngularCLI generate command
 
 Now that we know how to create a component manually, we can use an AngularCLI command that simplifies this process
 
-``` bash
+```bash
 ng generate component shared/header --skipTests
 ```
 
@@ -148,5 +134,6 @@ The following creates **header.component.css**, **header.component.css** and **h
 ![Use ng generate to generate header component](../.gitbook/assets/ng-generate-header.png)
 
 Changes in **app.module.ts**
+
 ![Use ng generate to generate header component](../.gitbook/assets/ng-generate-header-app-module.png)
 

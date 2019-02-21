@@ -8,10 +8,6 @@ Visit node.js [https://nodejs.org/en/](https://nodejs.org/en/) and download the 
 
 ## Optional step - Download Visual Studio Code
 
-<!--
-  Should this be optional for a Angular workshop day?
-  It should be strongly recommended so that mentors don't have to learn lots of different tools.
--->
 > Visual Studio Code is a lightweight but powerful source code editor which runs on your desktop and is available for Windows, macOS and Linux. It comes with built-in support for JavaScript, TypeScript and Node.js and has a rich ecosystem of extensions for other languages \(such as C++, C\#, Java, Python, PHP, Go\) and runtimes \(such as .NET and Unity\). Install visual studio code for your platform from [https://code.visualstudio.com/download](https://code.visualstudio.com/download)
 
 ![Install VS Code](../.gitbook/assets/install-vscode.png)
@@ -26,7 +22,7 @@ Open up terminal on a Mac or command on Windows and change to your working direc
 
 Type the following into the terminal
 
-``` bash
+```bash
 npm install -g @angular/cli
 ```
 
@@ -40,7 +36,7 @@ npm install -g @angular/cli
 
 To verify installation of Angular CLI, do the following in the terminal
 
-``` bash
+```bash
 ng new daily-planner
 ```
 
@@ -52,7 +48,7 @@ While generating the project with ng new, answer yes to routing and choose css a
 
 When complete, change into the daily-planner directory by typing
 
-``` bash
+```bash
 cd daily-planner
 ng serve --open
 ```
@@ -88,3 +84,4 @@ You can open Visual Studio Code in terminal window by typing `code .`.
 If you have issues, use `npm -v` and `ng version` to verify you have the right tools and right versions installed. Sometimes reinstalling NodeJS or AngularCLI helps.
 
 ![Outputting the versions of npm and AngularCLI](../.gitbook/assets/ng-version.png)
+
