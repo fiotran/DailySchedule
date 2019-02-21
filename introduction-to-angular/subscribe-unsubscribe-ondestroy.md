@@ -20,13 +20,13 @@ ngOnInit() {
   }
 ```
 
-Add Output and EventEmitter to the existing import statement to emit any changes from the form \(customise-form.component.ts\) back to the parent \(view-plan.component.ts\)
+Add an Output and EventEmitter to the existing import statement to emit any changes from the form \(customise-form.component.ts\) back to the parent \(activities.component.ts\)
 
 ```typescript
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 ```
 
-Add the output decorator to the app-customise-form selector in activities.component.html
+Add the output decorator to the customiseFormChanges property in customise-form.component.ts
 
 ```typescript
 @Output() customiseFormChanges: EventEmitter<any> = new EventEmitter<any>();
