@@ -30,9 +30,9 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 @Output() customiseFormChanges: EventEmitter<any> = new EventEmitter<any>();
 ```
 
-Add output parameters to the app-customise-form selector in view-plan.compnent.html
+Add output parameters to the app-customise-form selector in activities.component.html
 
-**...\daily-planner\src\app\activities\list-activities.component.html**
+**...\daily-planner\src\app\activities\activities.component.html**
 
 <!--
 TODO: This part doesn't seem to be in the live code.
@@ -43,14 +43,10 @@ Also, in live code it's in activities.component.html
 That one is correct, than bellow should be:
 -->
 
-
 ```markup
-<div>
-  <button id="btn-print">Print</button>
-  <button id="btn-reset" (click)="resetPlan()">
-    Reset
-  </button>
-</div>
+<app-view-plan [formValues]="customisedValues" (updateActivitiesList)="updateActivities($event)" (reloadActivities)="reload()"></app-view-plan>
+<app-customise-form (customiseFormChanges)="getPlanDetails($event)"></app-customise-form>
+<app-list-activities [activitiesList]="activities" (addItemPlan)="addToPlan($event)"></app-list-activities>
 ```
 
 Create getPlanDetails\(\) inside activities.component.ts
@@ -121,7 +117,7 @@ npm install rxjs-compat --save
 TODO: When checking the live code, the following code is down below.
 -->
 
-**...\daily-planner\src\app\activities\customise-form\customise-form.component.ts**
+**...\daily-planner\src\app\activities\view-plan\view-plan.component.ts**
 
 ```typescript
 import { Component, OnInit, Output, EventEmitter, OnDestroy } from '@angular/core';
