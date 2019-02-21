@@ -87,8 +87,11 @@ Add the selector app-customise-form to activities.component.html
 **...\daily-planner\src\app\activities\activities.component.html**
 
 ```markup
+<app-view-plan (updateActivitiesList)="updateActivities($event)" (reloadActivities)="reload()"></app-view-plan>
 <app-customise-form></app-customise-form>
+<app-list-activities [activitiesList]="activities" (addItemPlan)="addToPlan($event)"></app-list-activities>
 ```
 
-Completed [live code](https://stackblitz.com/edit/s7-reactive-forms) for this section.
+![Angular Reactive Forms Activities](../.gitbook/assets/angular-reactive-forms-activities-result.png)
 
+Completed [live code](https://stackblitz.com/edit/s7-reactive-forms) for this section.
