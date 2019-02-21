@@ -34,6 +34,8 @@ export interface PlanModel {
 
 ## Data
 
+Predefined list of activities for display
+
 **../daily-planner/src/app/data/activities.ts**
 
 ```typescript
