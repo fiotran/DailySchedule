@@ -73,5 +73,6 @@ updateActivities(item: ActivityModel) {
 }
 ```
 
-Completed [live code](https://stackblitz.com/edit/s6a-update-list-remove-button) for this section.
+![Update Activities List and remove from Daily Plan Button](../../.gitbook/assets/plan-view-update-activities.png)
 
+Completed [live code](https://stackblitz.com/edit/s6a-update-list-remove-button) for this section.

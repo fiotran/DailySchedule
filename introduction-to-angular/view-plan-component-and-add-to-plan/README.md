@@ -81,7 +81,7 @@ Add the app-view-plan selector to the activities.component.html above the existi
 
 ```markup
 <app-view-plan></app-view-plan>
+<app-list-activities [activitiesList]="activities" (addItemPlan)="addToPlan($event)"></app-list-activities>
 ```
 
 Completed [live code](https://stackblitz.com/edit/s6-view-plan-component) for this section.
-
