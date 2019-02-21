@@ -31,6 +31,9 @@ imports: [
   ]
 ```
 
+![activities.module.ts difference](../.gitbook/assets/angular-reactive-forms-activities-module-compare.png)
+Diff for activities.module.ts.
+
 **...\daily-planner\src\app\activities\customise-form\customise-form.component.ts**
 
 In the customise-form.component.ts page, add a modelForm variable with the type formGroup. Then inject formBuilder - making sure to import it from the @angular/forms node-module
