@@ -45,7 +45,7 @@ In the html file paste the following
 ```
 
 {% hint style="info" %}
-The css file here uses View Encapsulation to ensure the &lt;h1&gt; styles doesn't effect any other `<h1>` in our application. Without it, you will have to be very specific about which `<h1>` tag should be effected. In this case, only inside the header tag.
+The css file here uses View Encapsulation to ensure the `<h1>`styles doesn't effect any other `<h1>` in our application. Without it, you will have to be very specific about which `<h1>` tag should be effected. In this case, only inside the header tag.
 {% endhint %}
 
 **../daily-planner/src/app/shared/header/header.component.css**
