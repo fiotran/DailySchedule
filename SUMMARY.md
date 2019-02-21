@@ -14,7 +14,7 @@
 * [Routing and Lazy Loading](introduction-to-angular/routing-and-lazy-load.md)
 * [Angular Lifecycle](introduction-to-angular/angular-lifecycle.md)
 * [Dependency Injection](introduction-to-angular/dependency-injection.md)
-* [S1.5 Inputs, Outputs and EventEmitters](introduction-to-angular/inputs-outputs-and-eventemitters.md)
+* [Inputs, Outputs and EventEmitters](introduction-to-angular/inputs-outputs-and-eventemitters.md)
 * [View Plan Component and Add to Plan](introduction-to-angular/view-plan-component-and-add-to-plan/README.md)
   * [Update Activities List and remove from Daily Plan Button](introduction-to-angular/view-plan-component-and-add-to-plan/update-activities-list-and-remove-from-daily-plan-button.md)
   * [Reset Daily Plan and Activities List](introduction-to-angular/view-plan-component-and-add-to-plan/reset-daily-plan-and-activities-list.md)

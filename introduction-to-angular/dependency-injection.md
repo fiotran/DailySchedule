@@ -33,7 +33,6 @@ export class ActivitiesService {
         return this.activitiesList = ActivitiesConst;
     }
 }
-
 ```
 
 To use the service as a dependency, add the following to the constructor of the list-activities.component.ts page
@@ -91,7 +90,6 @@ export class ListActivitiesComponent implements OnInit {
     this.activitiesList = this.activitiesService.getActivities();
   }
 }
-
 ```
 
 Completed [live code](https://stackblitz.com/edit/s4-dependency-injection) for this section

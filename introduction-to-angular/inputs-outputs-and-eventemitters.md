@@ -1,4 +1,4 @@
-# S1.5 Inputs, Outputs and EventEmitters
+# Inputs, Outputs and EventEmitters
 
 [Live code](https://stackblitz.com/edit/s4-dependency-injection) to follow along for this section.
 
