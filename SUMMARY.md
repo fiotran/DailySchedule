@@ -26,5 +26,5 @@
 
 ## Resource LInks
 
-* [Angular reference websites](resource-links/angular-reference-websites.md)
+* [Angular References and Events](resource-links/angular-reference-websites.md)
 

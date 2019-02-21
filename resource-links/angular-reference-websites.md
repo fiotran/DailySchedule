@@ -1,4 +1,4 @@
-# Angular reference websites
+# Angular References and Events
 
 The official Angular documentation [https://angular.io/](https://angular.io/)
 
