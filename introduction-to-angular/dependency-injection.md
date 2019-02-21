@@ -1,5 +1,7 @@
 # Dependency Injection
 
+[Live code](https://stackblitz.com/edit/s3-lifecycle-hooks) to follow along from this section.
+
 > DI is a software design pattern in which a class declares dependencies to other services rather than creating them itself and is wired into the Angular framework. Dependencies are services or objects that a class needs to perform its function. Components consume services; that is, you can _inject_ a service into a component, giving the component access to that service class.
 
 [https://angular.io/guide/architecture-services\#dependency-injection-di](https://angular.io/guide/architecture-services#dependency-injection-di)
@@ -91,4 +93,6 @@ export class ListActivitiesComponent implements OnInit {
 }
 
 ```
+
+Completed [live code](https://stackblitz.com/edit/s4-dependency-injection) for this section
 

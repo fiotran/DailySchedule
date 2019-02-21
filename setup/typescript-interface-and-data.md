@@ -50,3 +50,5 @@ export const ActivitiesConst = [
 ];
 ```
 
+Completed [live code](https://stackblitz.com/edit/setup) at this point.
+

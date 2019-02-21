@@ -1,5 +1,7 @@
 # Routing and Lazy Loading
 
+[Live code](https://stackblitz.com/edit/s1-components-modules) to follow along from this section.
+
 Routes allow you to have friendly names in the path URL that map to specific parts of the page rather than to completely different HTML pages.
 
 Angular is a framework to build a single page application \(SPA\), and we have the ability to dynamically load different parts of the application only when requested. This is called lazy loading.
@@ -66,4 +68,6 @@ when working with routing always restart `ng serve`
 {% endhint %}
 
 ![Result](../.gitbook/assets/routing-result.png)
+
+Completed [live code](https://stackblitz.com/edit/s3-lifecycle-hooks) from this section.
 

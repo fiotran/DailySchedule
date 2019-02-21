@@ -1,5 +1,7 @@
 # Components and Modules
 
+[Live code](https://stackblitz.com/edit/setup) to follow along from this section.
+
 > Angular apps are modular and Angular has its own modularity system called NgModules. NgModules are containers for a cohesive block of code dedicated to an application domain, a workflow, or a closely related set of capabilities. They can contain components, service providers, and other code files whose scope is defined by the containing NgModule. [https://angular.io/guide/architecture-modules](https://angular.io/guide/architecture-modules)
 
 {% hint style="info" %}
@@ -136,4 +138,6 @@ The following creates **header.component.css**, **header.component.css** and **h
 Changes in **app.module.ts**
 
 ![Use ng generate to generate header component](../.gitbook/assets/ng-generate-header-app-module.png)
+
+Completed [live code](https://stackblitz.com/edit/s1-components-modules) from this section.
 

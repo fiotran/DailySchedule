@@ -1,5 +1,7 @@
 # Angular Lifecycle
 
+[Live code](https://stackblitz.com/edit/s1-components-modules) to follow along from the section.
+
 Every component has a lifecycle managed by Angular. We have access to key moments with predefined methods such as ngOnChanges\(\) or ngOnInit\(\). For more information, visit the official website
 
 [https://angular.io/guide/lifecycle-hooks](https://angular.io/guide/lifecycle-hooks)
@@ -69,4 +71,6 @@ Congratulations! Now you should see a list of activities on your simple app.
 {% endhint %}
 
 ![Result](../.gitbook/assets/angular-lifecycle-result.png)
+
+Completed [live code](https://stackblitz.com/edit/s3-lifecycle-hooks) for this section.
 
