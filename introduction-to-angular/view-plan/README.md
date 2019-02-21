@@ -1,5 +1,7 @@
 # View Plan Component and Add to Plan
 
+[Live code](https://stackblitz.com/edit/s5-inputs-outputs-eventemitter) to follow along from this section.
+
 Lets create a view-plan component
 
 ```bash
@@ -80,4 +82,6 @@ Add the app-view-plan selector to the activities.component.html above the existi
 ```markup
 <app-view-plan></app-view-plan>
 ```
+
+Completed [live code](https://stackblitz.com/edit/s6-view-plan-component) for this section.
 

@@ -1,5 +1,7 @@
 # Reset Daily Plan and Activities List
 
+[Live code](https://stackblitz.com/edit/s6a-update-list-remove-button) to follow along from this section.
+
 In this section, we will emit a message to the parent to clear/reset the daily schedule list
 
 Add \(click\)="resetPlan\(\)" to the reset button
@@ -58,4 +60,6 @@ reload() {
     this.activities = this.getList();
 }
 ```
+
+Completed [live code](https://stackblitz.com/edit/s6b-reset-plan-update-activities-list) for this section.
 

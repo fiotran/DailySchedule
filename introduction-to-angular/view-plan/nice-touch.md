@@ -1,5 +1,7 @@
 # Update Activities List and remove from Daily Plan Button
 
+[Live code](https://stackblitz.com/edit/s6-view-plan-component) to follow along from this section.
+
 After adding the activity to the dailyPlanList, we need logic to remove it from the activitiesList and if it's removed for the dailyPlanList, add it back to the activitiesList.
 
 Create a removeActivities\(\), updateActivitiesList\(\), delelePlanItem\(\) and addToDailyPlanList\(\) function
@@ -70,4 +72,6 @@ updateActivities(item: ActivityModel) {
    this.activitiesService.updateActvitiesList(item);
 }
 ```
+
+Completed [live code](https://stackblitz.com/edit/s6a-update-list-remove-button) for this section.
 
