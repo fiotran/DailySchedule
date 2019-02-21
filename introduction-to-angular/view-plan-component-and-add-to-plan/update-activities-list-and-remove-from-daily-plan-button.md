@@ -1,5 +1,7 @@
 # Update Activities List and remove from Daily Plan Button
 
+[Live code](https://stackblitz.com/edit/s6-view-plan-component) to follow along from this section.
+
 After adding the activity to the dailyPlanList, we need logic to remove it from the activitiesList and if it's removed for the dailyPlanList, add it back to the activitiesList.
 
 Create a removeActivities\(\), updateActivitiesList\(\), delelePlanItem\(\) and addToDailyPlanList\(\) function
@@ -8,22 +10,19 @@ Create a removeActivities\(\), updateActivitiesList\(\), delelePlanItem\(\) and 
 
 ```typescript
 public removeActivity(item: ActivityModel) {
- return this.activitiesList = this.activitiesList
-   .filter((activity: ActivityModel) => activity !== item);
+    return this.activitiesList = this.activitiesList
+      .filter((activity: ActivityModel) => activity !== item);
 }
 
 public updateActvitiesList(item: ActivityModel) {
- return this.activitiesList.push(item);
+    return this.activitiesList.push(item);
 }
 
 public deletePlanItem(item: ActivityModel) {
- return this.dailyPlanList = this.dailyPlanList
-    .filter((activity: ActivityModel) => activity !== item);
+    return this.dailyPlanList = this.dailyPlanList
+      .filter((activity: ActivityModel) => activity !== item);
 }
 
-public addToDailyPlanList(item: ActivityModel) {
- this.dailyPlanList.push(item);
-}
 ```
 
 Add a click event to call the method deleteFromDailyPlan\(\) and passing it the item that the use clicks to the delete button
@@ -39,10 +38,7 @@ Add a click event to call the method deleteFromDailyPlan\(\) and passing it the 
 **..\daily-planner\src\app\activities\view-plan\view-plan.component.ts**
 
 ```typescript
-import {
-  Output,
-  EventEmitter,
-} from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 ```
 
 ```typescript
@@ -76,4 +72,6 @@ updateActivities(item: ActivityModel) {
    this.activitiesService.updateActvitiesList(item);
 }
 ```
+
+Completed [live code](https://stackblitz.com/edit/s6a-update-list-remove-button) for this section.
 

@@ -1,5 +1,7 @@
 # View Plan Component and Add to Plan
 
+[Live code](https://stackblitz.com/edit/s5-inputs-outputs-eventemitter) to follow along from this section.
+
 Lets create a view-plan component
 
 ```bash
@@ -20,27 +22,30 @@ Inject the activities service into the view-plan.component.ts by adding it to th
 
 **...\daily-planner\src\app\activities\view-plan\view-plan.component.ts**
 
-```typescript
-import { ActivityModel } from 'src/app/data/activity.model';
-import { ActivitiesService } from 'src/app/services/activities.service';
-```
+Declare a variable planList of type ActivityModel array inside the opening brackets of the export class and in ngOnInit\(\) call the function getPlan\(\) and assign it to planList variable.
 
 ```typescript
-constructor(private activitiesService: ActivitiesService) { }
-```
+import { Component, OnInit } from '@angular/core';
+import { ActivityModel } from '../../data/activity.model';
+import { ActivitiesService } from '../../services/activities.service';
 
-Declare a variable planList of type ActivityModel array inside the opening brackets of the export class
 
-```typescript
-planList: ActivityModel[];
-```
+@Component({
+  selector: 'app-view-plan',
+  templateUrl: './view-plan.component.html',
+  styleUrls: ['./view-plan.component.css']
+})
+export class ViewPlanComponent implements OnInit {
+  planList: ActivityModel[];
 
-In ngOnInit\(\) call the function getPlan\(\) and assign it to planList variable.
+  constructor(private activitiesService: ActivitiesService) { }
 
-```typescript
   ngOnInit() {
     this.planList = this.activitiesService.getPlan();
   }
+
+}
+
 ```
 
 In the view-plan.component.html file add
@@ -67,6 +72,7 @@ In the view-plan.component.html file add
     Reset
   </button>
 </div>
+
 ```
 
 Add the app-view-plan selector to the activities.component.html above the existing code
@@ -76,4 +82,6 @@ Add the app-view-plan selector to the activities.component.html above the existi
 ```markup
 <app-view-plan></app-view-plan>
 ```
+
+Completed [live code](https://stackblitz.com/edit/s6-view-plan-component) for this section.
 

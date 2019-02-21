@@ -1,8 +1,14 @@
 # Angular Reactive Forms
 
+[Live code](https://stackblitz.com/edit/s6b-reset-plan-update-activities-list) to follow along from this section.
+
 > Reactive forms provide a model-driven approach to handling form inputs whose values change over time. [https://angular.io/guide/reactive-forms](https://angular.io/guide/reactive-forms)
 >
 > They are built on observable base API \(async data flow\) to read continuous stream of values inputted to the form. It enables more customisation on complex forms or ones with dynamically created inputs at run time and is also better with unit testing.
+
+{% hint style="info" %}
+Angular also offer Template Driven forms as an alternative but is is excepted best practice to use Reactive Forms.
+{% endhint %}
 
 Create a new customise-form component
 
@@ -18,31 +24,42 @@ Import FormModules and ReactiveFormsModule into the activities.modules.ts file
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 imports: [
+    CommonModule,
+    ActivitiesRoutingModule,
     FormsModule,
     ReactiveFormsModule,
   ]
 ```
 
-In the customise-form.component.ts page, add a modelForm variable with the type formGroup
-
 **...\daily-planner\src\app\activities\customise-form\customise-form.component.ts**
 
+In the customise-form.component.ts page, add a modelForm variable with the type formGroup. Then inject formBuilder - making sure to import it from the @angular/forms node-module
+
+Finally, in the customise-form.component.ts file, set the formGroup with the formControlName as per below
+
 ```typescript
+import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 
-modelForm: FormGroup;
-```
+@Component({
+  selector: 'app-customise-form',
+  templateUrl: './customise-form.component.html',
+  styleUrls: ['./customise-form.component.css']
+})
+export class CustomiseFormComponent implements OnInit {
+  modelForm: FormGroup;
 
-Inject formBuilder - making sure to import it from the @angular/forms node-module
-
-In the customise-form.component.ts file, set the formGroup with the formControlName
-
-```typescript
-constructor(private fb: FormBuilder) { 
+  constructor(private fb: FormBuilder) {
     this.modelForm = this.fb.group({
       name: ''
     });
   }
+
+  ngOnInit() {
+  }
+
+}
+
 ```
 
 Add the code to the customise-form.component.html file
@@ -62,11 +79,13 @@ Add the code to the customise-form.component.html file
 
 ```
 
-Add the selector app-customise-form to view-plan.component.html
+Add the selector app-customise-form to activities.component.html
 
-**...\daily-planner\src\app\activities\view-plan\view-plan.component.html**
+**...\daily-planner\src\app\activities\activities.component.html**
 
 ```markup
 <app-customise-form></app-customise-form>
 ```
+
+Completed [live code](https://stackblitz.com/edit/s7-reactive-forms) for this section.
 

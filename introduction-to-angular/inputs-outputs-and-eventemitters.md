@@ -1,5 +1,7 @@
 # S1.5 Inputs, Outputs and EventEmitters
 
+[Live code](https://stackblitz.com/edit/s4-dependency-injection) to follow along for this section.
+
 To communicate between parent and child components, Angular offers @Inputs\(\) and @Outputs\(\) decorators with the EventEmitter class.
 
 {% hint style="info" %}
@@ -15,7 +17,6 @@ import { Component, OnInit } from '@angular/core';
 import { ActivitiesService } from '../services/activities.service';
 import { ActivityModel } from '../data/activity.model';
 
-
 @Component({
   selector: 'app-activities',
   templateUrl: './activities.component.html'
@@ -23,7 +24,9 @@ import { ActivityModel } from '../data/activity.model';
 export class ActivitiesComponent implements OnInit {
   activities: ActivityModel[];
 
-  constructor(private activitiesService: ActivitiesService) { }
+  constructor(
+    private activitiesService: ActivitiesService
+  ) { }
 
   ngOnInit() {
     this.activities = this.getList();
@@ -37,7 +40,7 @@ export class ActivitiesComponent implements OnInit {
 
 Now that we have the activities variable in parent \(activities.component.ts\) we are going to send the data to the child component \(list-components.ts\) as a Input
 
-In the activities.component.html file, assign the local activities to the child prpperty activitiesList
+In the activities.component.html file, assign the local activities to the child property activitiesList
 
 **...\daily-planner\src\app\activities\activities.component.html**
 
@@ -64,6 +67,31 @@ just inside the export class add @Input\(\) to the beginning of the activitiesLi
 ```
 
 Remove the any references to ActivitiesService that we added previously as it is no longer needed at this level \(list-component.ts\) - serve the application and check the list is displaying as expected.
+
+**...\daily-planner\src\app\activities\list-activities\list-activities.component.ts**
+
+```typescript
+import { Component, OnInit, Input } from '@angular/core';
+import { ActivityModel } from 'src/app/data/activity.model';
+import { ActivitiesService } from 'src/app/services/activities.service';
+
+@Component({
+  selector: 'app-list-activities',
+  templateUrl: './list-activities.component.html',
+  styleUrls: ['./list-activities.component.css']
+})
+export class ListActivitiesComponent implements OnInit {
+  @Input() activitiesList: ActivityModel[];
+
+  constructor(
+    private activitiesService: ActivitiesService
+  ) {  }
+
+  ngOnInit() {
+    this.activitiesList = this.activitiesService.getActivities();
+  }
+}
+```
 
 ## Output Decorator
 
@@ -95,7 +123,7 @@ addToDailyPlan(activity: ActivityModel) {
 }
 ```
 
-In the activities.component.html file add round brackets around addItemPlan to indicate that we are sending activities out of the child component.
+In the activities.component.html file add \(addItemPlan\)="addToPlan\($event\)" to indicate that we are sending the event out of the child component.
 
 **...\daily-planner\src\app\activities\activities.component.html**
 
@@ -127,5 +155,5 @@ public addToDailyPlanList(item: ActivityModel) {
 }
 ```
 
-
+Completed [live code](https://stackblitz.com/edit/s5-inputs-outputs-eventemitter) from this section.
 

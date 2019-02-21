@@ -1,12 +1,18 @@
 # ViewChild and Print Button
 
+[Live code](https://stackblitz.com/edit/s10-material-design-drag-drop) to follow along from this section.
+
 Add a click event to call the method print\(\) on the print button to the view-plan.component.html
+
+**...\daily-planner\src\app\activities\view-plan\view-plan.component.html**
 
 ```typescript
 <button id="btn-print" (click)="print()">Print</button>
 ```
 
 In angular we use the @ViewChild decorator to get the content of an element. Add the @ViewChild decorator to the view-plan.component.ts page
+
+**...\daily-planner\src\app\activities\view-plan\view-plan.component.ts**
 
 ```typescript
 import{ ViewChild, ElementRef }from'@angular/core';
@@ -44,9 +50,13 @@ print() {
   }
 ```
 
-In the first div on the view-plan.component.html page, add the below anywhere inside the tag
+In the first div, on the view-plan.component.html page, add the below anywhere inside the tag
+
+**...\daily-planner\src\app\activities\view-plan\view-plan.component.html**
 
 ```typescript
 #dailySchedule
 ```
+
+Completed [live code](https://stackblitz.com/edit/s11-view-child-print-button) for this section.
 

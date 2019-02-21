@@ -1,10 +1,12 @@
 # Subscribe, Unsubscribe, OnDestroy
 
+[Live code](https://stackblitz.com/edit/s7-reactive-forms) to follow along from this section.
+
 > Observable is a way of managing streams of multiple values or data. It is not specific to Angular but a new standard included in the ES7 release. There are many operators to handle observables found here [https://rxjs-dev.firebaseapp.com/api](https://rxjs-dev.firebaseapp.com/api)
 >
 > [https://angular.io/guide/observables-in-angular](https://angular.io/guide/observables-in-angular)
 
-Subscribe is a method on an observable type that we will be using in this section to'subscribe' to any changes on the form.
+Subscribe is a method on an observable type that we will be using in this section to 'subscribe' to any changes on the form.
 
 **...\daily-planner\src\app\activities\customise-form\customise-form.component.ts**
 
@@ -21,7 +23,7 @@ ngOnInit() {
 Add Output and EventEmitter to the existing import statement to emit any changes from the form \(customise-form.component.ts\) back to the parent \(view-plan.component.ts\)
 
 ```typescript
-import { Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 ```
 
 ```typescript
@@ -36,15 +38,17 @@ Add output parameters to the app-customise-form selector in view-plan.compnent.h
 <app-customise-form (customiseFormChanges)="getPlanDetails($event)"></app-customise-form>
 ```
 
-Create getPlanDetails\(\) inside view-plan.component.ts
+Create getPlanDetails\(\) inside activities.component.ts
 
-**...\daily-planner\src\app\activities\view-plan\view-plan.component.ts**
+**...\daily-planner\src\app\activities\activities.component.ts**
 
 ```typescript
-import { PlanModel } from 'src/app/data/plan.model';
+import { PlanModel } from '../../data/plan.model';
 
 customisedValues: PlanModel;
 ```
+
+Create getPlanDetails\(\) passing in plan of type PlanModel
 
 ```typescript
 getPlanDetails(plan: PlanModel) {
@@ -52,16 +56,18 @@ getPlanDetails(plan: PlanModel) {
 }
 ```
 
-Create a plan.model.ts file in the data folder
-
-####  ../daily-planner/src/app/data/plan.model.ts
+**...\daily-planner\src\app\activities\customise-form\customise-form.component.ts**
 
 ```typescript
-export class PlanModel {
-     public id: number;
-     public name: string;
-     public selectedDate: string;
-}
+@Input() formValues: PlanModel;
+```
+
+add \[formValues\]="customiseValues" to app-view-plan to pass values to child component
+
+**...\daily-planner\src\app\activities\activities.component.html**
+
+```markup
+<app-view-plan [formValues]="customisedValues" (updateActivitiesList)="updateActivities($event)" (reloadActivities)="reload()"></app-view-plan>
 ```
 
 In the view-plan.components.html above the daily-schedule-list div class
@@ -69,16 +75,16 @@ In the view-plan.components.html above the daily-schedule-list div class
 **...\daily-planner\src\app\activities\view-plan\view-plan.component.html**
 
 ```markup
-<div *ngIf="customisedValues">
-  <h2>{{ customisedValues.name }} plan</h2>
-  <p>{{ customisedValues.selectedDate | date: 'MMMM d, y' }}</p>
+<div *ngIf="formValues">
+    <h2>{{ formValues.name }} plan</h2>
+    <p>{{ formValues.selectedDate | date: 'MMMM d, y' }}</p>
 </div>
 ```
 
 [https://angular.io/guide/pipes](https://angular.io/guide/pipes)
 
 {% hint style="info" %}
-Congratulations! You should be able to see the customise values inputted onto your form appear on the View plan area of the UI
+Congratulations! You should be able to see the form values inputted onto your form appear on the View plan area of the UI
 {% endhint %}
 
 ## Unsubscribe\(\) and OnDestroy\(\)
@@ -91,7 +97,7 @@ npm install rxjs-compat --save
 ```
 
 ```typescript
-import { ISubscription } from 'rxjs/Subscription';
+import { Subscription } from 'rxjs/Subscription';
 ```
 
 ```typescript
@@ -113,4 +119,6 @@ ngOnDestroy() {
     this.formSubscription.unsubscribe();
 }
 ```
+
+Completed [live code](https://stackblitz.com/edit/s8-subscribe-unsubscribe-ondestroy) for this section.
 

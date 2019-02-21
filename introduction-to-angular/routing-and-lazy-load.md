@@ -1,8 +1,12 @@
 # Routing and Lazy Loading
 
-Because Angular is a framework to build a single page application, we need to be able to dynamically load different parts of the application only when requested.
+[Live code](https://stackblitz.com/edit/s1-components-modules) to follow along from this section.
 
-Lazy loading is a technique used in Angular to load modules asynchronously when a specific route is activated. This speeds up the time it takes to initially load your application.
+Routes allow you to have friendly names in the path URL that map to specific parts of the page rather than to completely different HTML pages.
+
+Angular is a framework to build a single page application \(SPA\), and we have the ability to dynamically load different parts of the application only when requested. This is called lazy loading.
+
+Lazy loading is a technique used in Angular to download modules only when a specific route is activated. This speeds up the time it takes to initially load your application.
 
 Run the following commands in the command line \(CTRL + C for stop the serve\)
 
@@ -10,7 +14,7 @@ Run the following commands in the command line \(CTRL + C for stop the serve\)
 ng generate module activities --routing
 ```
 
-```text
+```bash
 ng generate component activities
 ```
 
@@ -31,11 +35,10 @@ const routes: Routes = [{
   exports: [RouterModule]
 })
 export class ActivitiesRoutingModule { }
-
 ```
 
 {% hint style="info" %}
-Here we insert the object with an empty path and importing the ActivitiesComponent
+Here we insert the object with an empty path and specify we want to use ActivitiesComponent
 {% endhint %}
 
 In the app-routing.module.ts file, update the constant routes with the object as follows.
@@ -56,12 +59,21 @@ const routes: Routes = [{
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-
 ```
 
- As you can see above, Angular routes accepts an array so you can specify as many routes as needed
+As you can see above, Angular routes accepts an array so you can specify as many routes as needed
 
-{% hint style="info" %}
-when working with routing always re serve
+{% hint style="warning" %}
+when working with routing always restart `ng serve`
 {% endhint %}
+
+## Expected outcome
+
+![Result](../.gitbook/assets/routing-result.png)
+
+## Code changed
+
+
+
+Completed [live code](https://stackblitz.com/edit/s2-routing-lazy-loading) from this section.
 

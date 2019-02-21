@@ -6,7 +6,7 @@
 
 * [Setup and Angular CLI](setup/angular-cli.md)
 * [Stylesheet and Font Awesome](setup/styling-and-font-awesome.md)
-* [Typescript, Interfaces and Data](setup/untitled.md)
+* [Typescript, Interfaces and Data](setup/typescript-interface-and-data.md)
 
 ## Introduction to Angular
 
@@ -15,9 +15,9 @@
 * [Angular Lifecycle](introduction-to-angular/angular-lifecycle.md)
 * [Dependency Injection](introduction-to-angular/dependency-injection.md)
 * [S1.5 Inputs, Outputs and EventEmitters](introduction-to-angular/inputs-outputs-and-eventemitters.md)
-* [View Plan Component and Add to Plan](introduction-to-angular/view-plan/README.md)
-  * [Update Activities List and remove from Daily Plan Button](introduction-to-angular/view-plan/nice-touch.md)
-  * [Reset Daily Schedule and Activities List](introduction-to-angular/view-plan/some-title-here.md)
+* [View Plan Component and Add to Plan](introduction-to-angular/view-plan-component-and-add-to-plan/README.md)
+  * [Update Activities List and remove from Daily Plan Button](introduction-to-angular/view-plan-component-and-add-to-plan/update-activities-list-and-remove-from-daily-plan-button.md)
+  * [Reset Daily Plan and Activities List](introduction-to-angular/view-plan-component-and-add-to-plan/reset-daily-plan-and-activities-list.md)
 * [Angular Reactive Forms](introduction-to-angular/angular-reactive-forms.md)
 * [Subscribe, Unsubscribe, OnDestroy](introduction-to-angular/subscribe-unsubscribe-ondestroy.md)
 * [Material Design Date Picker](introduction-to-angular/material-design-date-picker.md)
@@ -26,5 +26,5 @@
 
 ## Resource LInks
 
-* [Angular reference websites](resource-links/untitled.md)
+* [Angular References and Events](resource-links/angular-references-and-events.md)
 

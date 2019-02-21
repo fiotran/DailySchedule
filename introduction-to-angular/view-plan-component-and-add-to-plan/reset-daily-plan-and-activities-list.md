@@ -1,4 +1,6 @@
-# Reset Daily Schedule and Activities List
+# Reset Daily Plan and Activities List
+
+[Live code](https://stackblitz.com/edit/s6a-update-list-remove-button) to follow along from this section.
 
 In this section, we will emit a message to the parent to clear/reset the daily schedule list
 
@@ -46,7 +48,7 @@ Add output parameters to the app-view-plan selector in the activities.component.
 **..\daily-planner\src\app\activities\activities.component.html**
 
 ```markup
-<app-view-plan (reloadActivities)="reload()"></app-view-plan>
+<app-view-plan (updateActivitiesList)="updateActivities($event)" (reloadActivities)="reload()"></app-view-plan>
 ```
 
 In the activities.component.ts, create a reload function and call getList\(\)
@@ -58,4 +60,6 @@ reload() {
     this.activities = this.getList();
 }
 ```
+
+Completed [live code](https://stackblitz.com/edit/s6b-reset-plan-update-activities-list) for this section.
 
