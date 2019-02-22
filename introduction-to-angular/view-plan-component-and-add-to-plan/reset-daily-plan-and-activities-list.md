@@ -63,20 +63,15 @@ reload() {
 
 ## Code Changed
 
-Changes in **activities.component.html**
-![Result](../../.gitbook/assets/activitieshtml5.png) **Figure: Final activities.component.html code**
+Changes in **activities.component.html** ![Result](https://github.com/fiotran/DailySchedule/tree/323f8008fd63b419b92d135e08680909e9823d0a/.gitbook/assets/activitieshtml5.png) **Figure: Final activities.component.html code**
 
-Changes in **activities.component.ts**
-![Result](../../.gitbook/assets/activitiests3.png) **Figure: Final activities.component.ts code**
+Changes in **activities.component.ts** ![Result](https://github.com/fiotran/DailySchedule/tree/323f8008fd63b419b92d135e08680909e9823d0a/.gitbook/assets/activitiests3.png) **Figure: Final activities.component.ts code**
 
-Changes in **view-plan.component.ts**
-![Result](../../.gitbook/assets/viewplants3.png) **Figure: Final view-plan.component.ts code**
+Changes in **view-plan.component.ts** ![Result](../../.gitbook/assets/viewplants3.png) **Figure: Final view-plan.component.ts code**
 
-Changes in **view-plan.component.html**
-![Result](../../.gitbook/assets/viewplanhtml3.png) **Figure: Final view-plan.component.html code**
+Changes in **view-plan.component.html** ![Result](../../.gitbook/assets/viewplanhtml3.png) **Figure: Final view-plan.component.html code**
 
-Changes in **activities-service.ts**
-![Result](../../.gitbook/assets/activitiesservice5.png) **Figure: Final activities.service.ts code**
+Changes in **activities-service.ts** ![Result](https://github.com/fiotran/DailySchedule/tree/323f8008fd63b419b92d135e08680909e9823d0a/.gitbook/assets/activitiesservice5.png) **Figure: Final activities.service.ts code**
 
 Completed [live code](https://stackblitz.com/edit/s6b-reset-plan-update-activities-list) for this section.
 

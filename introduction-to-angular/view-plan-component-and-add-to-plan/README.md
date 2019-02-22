@@ -81,20 +81,16 @@ Add the app-view-plan selector to the activities.component.html above the existi
 <app-view-plan></app-view-plan>
 <app-list-activities [activitiesList]="activities" (addItemPlan)="addToPlan($event)"></app-list-activities>
 ```
+
 ## Code Changed
 
-Changes in **activities.component.html**
-![Result](../../.gitbook/assets/activitieshtml3.png) **Figure: Final activities.component.html code**
+Changes in **activities.component.html** ![Result](https://github.com/fiotran/DailySchedule/tree/323f8008fd63b419b92d135e08680909e9823d0a/.gitbook/assets/activitieshtml3.png) **Figure: Final activities.component.html code**
 
-Changes in **view-plan.component.ts**
-![Result](../../.gitbook/assets/viewplants.png) **Figure: Final view-plan.component.ts code**
+Changes in **view-plan.component.ts** ![Result](../../.gitbook/assets/viewplants.png) **Figure: Final view-plan.component.ts code**
 
-Changes in **view-plan.component.html**
-![Result](../../.gitbook/assets/viewplanhtml.png) **Figure: Final view-plan.component.html code**
+Changes in **view-plan.component.html** ![Result](../../.gitbook/assets/viewplanhtml.png) **Figure: Final view-plan.component.html code**
 
-Changes in **activities-service.ts**
-![Result](../../.gitbook/assets/activitiesservice3.png) **Figure: Final activities.service.ts code**
-
+Changes in **activities-service.ts** ![Result](https://github.com/fiotran/DailySchedule/tree/323f8008fd63b419b92d135e08680909e9823d0a/.gitbook/assets/activitiesservice3.png) **Figure: Final activities.service.ts code**
 
 Completed [live code](https://stackblitz.com/edit/s6-view-plan-component) for this section.
 

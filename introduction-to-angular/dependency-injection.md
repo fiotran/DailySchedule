@@ -61,7 +61,6 @@ constructor(
 
 To use this service call it from ngOnInit - replacing the old call to the removed ActivitiesConst with the new one below.
 
-
 ```typescript
 this.activitiesList = this.activitiesService.getActivities();
 ```
@@ -69,11 +68,12 @@ this.activitiesList = this.activitiesService.getActivities();
 ## Code Changed
 
 Changes in **activities.service.component.ts**
-![Result](../src/assets/activitiesservice.png) **Figure: Final list-activities.component.ts code**
 
+![Figure: Final list-activities.component.ts code](../.gitbook/assets/activitiesservice.PNG)
 
 Changes in **list-activities.component.ts**
-![Result](../src/assets/listactivities2.png) **Figure: Final list-activities.component.ts code**
+
+![Figure: Final list-activities.component.ts code](../.gitbook/assets/activitiesservice2.PNG)
 
 Completed [live code](https://stackblitz.com/edit/s4-dependency-injection) for this section
 

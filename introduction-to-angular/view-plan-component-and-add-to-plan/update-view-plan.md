@@ -76,21 +76,15 @@ updateActivities(item: ActivityModel) {
 
 ## Code Changed
 
-Changes in **activities.component.html**
-![Result](../../.gitbook/assets/activitieshtml4.png) **Figure: Final activities.component.html code**
+Changes in **activities.component.html** ![Result](https://github.com/fiotran/DailySchedule/tree/323f8008fd63b419b92d135e08680909e9823d0a/.gitbook/assets/activitieshtml4.png) **Figure: Final activities.component.html code**
 
-Changes in **activities.component.ts**
-![Result](../../.gitbook/assets/activitiests.png) **Figure: Final activities.component.ts code**
+Changes in **activities.component.ts** ![Result](https://github.com/fiotran/DailySchedule/tree/323f8008fd63b419b92d135e08680909e9823d0a/.gitbook/assets/activitiests.png) **Figure: Final activities.component.ts code**
 
-Changes in **view-plan.component.ts**
-![Result](../../.gitbook/assets/viewplants2.png) **Figure: Final view-plan.component.ts code**
+Changes in **view-plan.component.ts** ![Result](../../.gitbook/assets/viewplants2.png) **Figure: Final view-plan.component.ts code**
 
-Changes in **view-plan.component.html**
-![Result](../../.gitbook/assets/viewplanhtml2.png) **Figure: Final view-plan.component.html code**
+Changes in **view-plan.component.html** ![Result](../../.gitbook/assets/viewplanhtml2.png) **Figure: Final view-plan.component.html code**
 
-Changes in **activities-service.ts**
-![Result](../../.gitbook/assets/activitiesservice4.png) **Figure: Final activities.service.ts code**
-
+Changes in **activities-service.ts** ![Result](https://github.com/fiotran/DailySchedule/tree/323f8008fd63b419b92d135e08680909e9823d0a/.gitbook/assets/activitiesservice4.png) **Figure: Final activities.service.ts code**
 
 Completed [live code](https://stackblitz.com/edit/s6a-update-list-remove-button) for this section.
 

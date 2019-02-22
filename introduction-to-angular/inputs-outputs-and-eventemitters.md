@@ -39,6 +39,7 @@ export class ActivitiesComponent implements OnInit {
   }
 }
 ```
+
 ## Input decorator
 
 Now that we have the activities variable in parent \(activities.component.ts\) we are going to send the data to the child component \(list-components.ts\) as an Input
@@ -157,21 +158,15 @@ public addToDailyPlanList(item: ActivityModel) {
 
 ## Code Changed
 
-Changes in **activities.component.html**
-![Result](../.gitbook/assets/activitieshtml2.png) **Figure: Final activities.component.html code**
+Changes in **activities.component.html** ![Result](https://github.com/fiotran/DailySchedule/tree/323f8008fd63b419b92d135e08680909e9823d0a/.gitbook/assets/activitieshtml2.png) **Figure: Final activities.component.html code**
 
+Changes in **activities.component.ts** ![Result](https://github.com/fiotran/DailySchedule/tree/323f8008fd63b419b92d135e08680909e9823d0a/.gitbook/assets/activitiests2.png) **Figure: Final activities.component.ts code**
 
-Changes in **activities.component.ts**
-![Result](../.gitbook/assets/activitiests2.png) **Figure: Final activities.component.ts code**
+Changes in **list-activities.component.html** ![Result](https://github.com/fiotran/DailySchedule/tree/323f8008fd63b419b92d135e08680909e9823d0a/.gitbook/assets/listactivitieshtml2.png) **Figure: Final list-activities.component.html code**
 
-Changes in **list-activities.component.html**
-![Result](../.gitbook/assets/listactivitieshtml2.png) **Figure: Final list-activities.component.html code**
+Changes in **list-activities.component.ts** ![Result](https://github.com/fiotran/DailySchedule/tree/323f8008fd63b419b92d135e08680909e9823d0a/.gitbook/assets/listactivitiescomponent2.png) **Figure: Final list-activities.component.ts code**
 
-Changes in **list-activities.component.ts**
-![Result](../.gitbook/assets/listactivitiescomponent2.png) **Figure: Final list-activities.component.ts code**
-
-Changes in **activities-service.ts**
-![Result](../.gitbook/assets/activitiesservice2.png) **Figure: Final activities.service.ts code**
+Changes in **activities-service.ts** ![Result](https://github.com/fiotran/DailySchedule/tree/323f8008fd63b419b92d135e08680909e9823d0a/.gitbook/assets/activitiesservice2.png) **Figure: Final activities.service.ts code**
 
 Completed [live code](https://stackblitz.com/edit/s5-inputs-outputs-eventemitter) from this section.
 
