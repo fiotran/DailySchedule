@@ -8,9 +8,9 @@ Angular is a framework used to build a single page application \(SPA\), with the
 
 Lazy loading is a technique used in Angular to download modules only when a specific route is activated. This speeds up the time it takes to initially load your application.
 
-## AngularCLI generate command
+## Angular CLI generate command
 
-Now that we know how to create a component manually, we can use an AngularCLI command that simplifies this process
+Now that we know how to create a component manually, we can use an Angular CLI command that simplifies this process
 
 Run the following commands in the command line \(CTRL + C for stop the serve\)
 
