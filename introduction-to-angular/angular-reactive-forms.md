@@ -87,6 +87,8 @@ Add the selector app-customise-form to activities.component.html
 <app-list-activities [activitiesList]="activities" (addItemPlan)="addToPlan($event)"></app-list-activities>
 ```
 
+## Expected Outcome
+
 ![Angular Reactive Forms Activities](../.gitbook/assets/angular-reactive-forms-activities-result.png)
 
 ## Code Changed

@@ -141,7 +141,7 @@ ngOnDestroy() {
 }
 ```
 
-## **Expected Outcome**
+## Expected Outcome
 
 ![Expected Outcome](../.gitbook/assets/customiseform.PNG)
 
