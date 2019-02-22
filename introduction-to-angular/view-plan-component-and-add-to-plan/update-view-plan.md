@@ -72,19 +72,31 @@ updateActivities(item: ActivityModel) {
 }
 ```
 
+## Expected Outcome
+
 ![Update Activities List and remove from Daily Plan Button](../../.gitbook/assets/plan-view-update-activities.png)
 
 ## Code Changed
 
-Changes in **activities.component.html** ![Result](https://github.com/fiotran/DailySchedule/tree/323f8008fd63b419b92d135e08680909e9823d0a/.gitbook/assets/activitieshtml4.png) **Figure: Final activities.component.html code**
+Changes in **activities.component.html**
 
-Changes in **activities.component.ts** ![Result](https://github.com/fiotran/DailySchedule/tree/323f8008fd63b419b92d135e08680909e9823d0a/.gitbook/assets/activitiests.png) **Figure: Final activities.component.ts code**
+![Figure: Final activities.component.html code](../../.gitbook/assets/activitieshtml4.PNG)
 
-Changes in **view-plan.component.ts** ![Result](../../.gitbook/assets/viewplants2.png) **Figure: Final view-plan.component.ts code**
+Changes in **activities.component.ts**
 
-Changes in **view-plan.component.html** ![Result](../../.gitbook/assets/viewplanhtml2.png) **Figure: Final view-plan.component.html code**
+![Figure: Final activities.component.ts code](../../.gitbook/assets/activitiests.PNG)
 
-Changes in **activities-service.ts** ![Result](https://github.com/fiotran/DailySchedule/tree/323f8008fd63b419b92d135e08680909e9823d0a/.gitbook/assets/activitiesservice4.png) **Figure: Final activities.service.ts code**
+Changes in **view-plan.component.ts** 
+
+![Figure: Final view-plan.component.ts code](../../.gitbook/assets/viewplants2.png)
+
+Changes in **view-plan.component.html**
+
+![Figure: Final view-plan.component.html code](../../.gitbook/assets/viewplanhtml2.png)
+
+Changes in **activities-service.ts** 
+
+![Figure: Final activities.service.ts code](../../.gitbook/assets/activitiesservice4.PNG)
 
 Completed [live code](https://stackblitz.com/edit/s6a-update-list-remove-button) for this section.
 
