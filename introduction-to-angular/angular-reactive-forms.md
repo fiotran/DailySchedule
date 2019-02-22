@@ -31,7 +31,11 @@ imports: [
   ]
 ```
 
-![activities.module.ts difference](../.gitbook/assets/angular-reactive-forms-activities-module-compare.png) Diff for activities.module.ts.
+## Code Changed
+
+Changes in **activities.module.ts** 
+
+![activities.module.ts difference](../.gitbook/assets/angular-reactive-forms-activities-module-compare.png)
 
 **...\daily-planner\src\app\activities\customise-form\customise-form.component.ts**
 
