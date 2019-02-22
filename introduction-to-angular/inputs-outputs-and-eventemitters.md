@@ -156,6 +156,10 @@ public addToDailyPlanList(item: ActivityModel) {
 }
 ```
 
+## Expected Outcome
+
+Have just added inputs and outputs but will not see any changes until the next section.
+
 ## Code Changed
 
 Changes in **activities.component.html**
