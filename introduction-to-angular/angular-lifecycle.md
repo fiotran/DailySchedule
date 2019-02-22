@@ -74,11 +74,23 @@ Congratulations! Now you should see a list of activities on your simple app.
 
 ## Code changed
 
-Changes in **list-activities.component.ts** ![Result](https://github.com/fiotran/DailySchedule/tree/2755c9a803d13f9c1e144f0d9bfe1bffb999d2f5/.gitbook/assets/listactivitiescomponent.png) **Figure: Final list-activities.component.ts code**
+Changes in **list-activities.component.ts** 
 
-Changes in **list-activities.component.html** ![Result](https://github.com/fiotran/DailySchedule/tree/2755c9a803d13f9c1e144f0d9bfe1bffb999d2f5/.gitbook/assets/listactivitieshtml.png) **Figure: Final list-activities.component.html code**
+![Result](../.gitbook/assets/listactivitiescomponent.PNG)
 
-Changes in **activities.component.html** ![Result](https://github.com/fiotran/DailySchedule/tree/2755c9a803d13f9c1e144f0d9bfe1bffb999d2f5/.gitbook/assets/activitieshtml.png) **Figure: Final activities.component.html code**
+**Figure: Final list-activities.component.ts code**
+
+Changes in **list-activities.component.html**
+
+![Result](../.gitbook/assets/listactivitieshtml.PNG)
+
+**Figure: Final list-activities.component.html code**
+
+Changes in **activities.component.html**
+
+![Result](../.gitbook/assets/activitieshtml.PNG)
+
+**Figure: Final activities.component.html code**
 
 Completed [live code](https://stackblitz.com/edit/s3-lifecycle-hooks) for this section.
 
