@@ -80,6 +80,11 @@ Add \[formValues\]="customiseValues" to app-view-plan to pass values to child co
 **...\daily-planner\src\app\activities\customise-form\view-plan.component.ts**
 
 ```typescript
+import {
+  Component, OnInit, Output, Input
+} from '@angular/core';
+
+
 @Input() formValues: PlanModel;
 ```
 
