@@ -81,10 +81,6 @@ constructor(private fb: FormBuilder) {
 
 ## Expected Outcome
 
-![Expected Outcome](../.gitbook/assets/material-design-date-picker-result.png)
-
-**Date picker**
-
 ![Expected Outcome](../.gitbook/assets/material-design-date-picker.png)
 
 ## Code Changed
