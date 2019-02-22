@@ -58,6 +58,12 @@ In the first div, on the view-plan.component.html page, add the below anywhere i
 #dailySchedule
 ```
 
+## Expected Outcome
+
+On click of the print button, open the print screen.
+
+![](../.gitbook/assets/print.PNG)
+
 ## Code Changed
 
 Changes in **view-plan.component.ts**
