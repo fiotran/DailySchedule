@@ -79,13 +79,21 @@ constructor(private fb: FormBuilder) {
 
 ## Code Changed
 
-Changes in **app.module.ts** ![Result](../.gitbook/assets/appmodulets2.PNG) **Figure: Final app.module.ts code**
+Changes in **app.module.ts**
 
-Changes in **activities.module.ts** ![Result](../.gitbook/assets/activitiesmodule2.PNG) **Figure: Final activities.module.ts code**
+![Figure: Final app.module.ts code](../.gitbook/assets/appmodulets2.PNG)
 
-Changes in **customise-form.component.ts** ![Result](https://github.com/fiotran/DailySchedule/tree/329c5fccd11d6633e43a05180e829b9b4a27a127/.gitbook/assets/customisets3.png) **Figure: Final customise-form.component.ts code**
+Changes in **activities.module.ts**
 
-Changes in **customise-form.component.html** ![Result](../.gitbook/assets/customisehtml2.PNG) **Figure: Final customise-form.component.html code**
+![Figure: Final activities.module.ts code](../.gitbook/assets/activitiesmodule2.PNG)
+
+Changes in **customise-form.component.ts** 
+
+![Figure: Final customise-form.component.ts code](../.gitbook/assets/customisets3.PNG)
+
+Changes in **customise-form.component.html** 
+
+![Figure: Final customise-form.component.html code](../.gitbook/assets/customisehtml2.PNG)
 
 Completed [live code](https://stackblitz.com/edit/s9-material-design-date-picker) for this section.
 
