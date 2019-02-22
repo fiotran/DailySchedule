@@ -65,6 +65,10 @@ To use this service call it from ngOnInit - replacing the old call to the remove
 this.activitiesList = this.activitiesService.getActivities();
 ```
 
+## Expected Outcome
+
+The should still be displayed as per previous section.
+
 ## Code Changed
 
 Changes in **activities.service.component.ts**
