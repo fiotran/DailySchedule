@@ -26,9 +26,15 @@ The official Angular documentation [https://angular.io/](https://angular.io/)
 
 {% embed url="https://toddmotto.com/ngrx/" caption="" %}
 
-## Events in Australia this year 2019
+## Events in Australia
 
 {% embed url="https://www.componentsconf.com.au/" caption="" %}
 
 ![](../.gitbook/assets/mel-conference-ad.png)
+
+## Questions?
+
+{% embed url="https://www.linkedin.com/in/fionantran/" %}
+
+
 

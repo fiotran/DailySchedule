@@ -54,10 +54,18 @@ export class ViewPlanComponent implements OnInit {
     printWindow.document.open();
     printWindow.document.write(`
       <html>
-      <head>
-      <title>Print tab</title>
-      <style> button {display:none;} </style>
-      </head>
+        <head>
+          <title>Print tab</title>
+          <style>
+          //........Customized style.......
+          #content {  border: 5px solid red }
+          .screen-only {
+            display: none;
+            visibility: hidden;
+          }
+          button { display:none; }
+          </style>
+        </head>
     <body onload="window.print();window.close()">${printContent}</body>
       </html>`);
     printWindow.document.close();
