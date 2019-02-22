@@ -1,6 +1,6 @@
 import {
   Component, OnInit, Output,
-  EventEmitter, ViewChild, ElementRef
+  EventEmitter, ViewChild, ElementRef, Input
 } from '@angular/core';
 import { ActivityModel } from '../../data/activity.model';
 import { ActivitiesService } from '../../services/activities.service';
@@ -14,6 +14,7 @@ import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 export class ViewPlanComponent implements OnInit {
   planList: ActivityModel[];
   customisedValues: PlanModel;
+  @Input() formValues: PlanModel;
   @Output() updateActivitiesList: EventEmitter<ActivityModel> = new EventEmitter<ActivityModel>();
   @Output() reloadActivities: EventEmitter<boolean> = new EventEmitter<boolean>();
   @ViewChild('dailySchedule') dailySchedule: ElementRef;

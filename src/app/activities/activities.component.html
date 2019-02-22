@@ -1,2 +1,4 @@
-<app-view-plan (reloadActivities)="reload()" (updateActivitiesList)="updateActivities($event)"></app-view-plan>
+<app-view-plan [formValues]="customisedValues" (updateActivitiesList)="updateActivities($event)" (reloadActivities)="reload()"></app-view-plan>
+<app-customise-form (customiseFormChanges)="getPlanDetails($event)">
+</app-customise-form>
 <app-list-activities [activitiesList]="activities" (addItemPlan)="addToPlan($event)"></app-list-activities>
