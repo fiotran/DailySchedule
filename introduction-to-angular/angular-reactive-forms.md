@@ -91,18 +91,21 @@ Add the selector app-customise-form to activities.component.html
 
 ## Code Changed
 
-Changes in **activities.component.html**
-![Result](../.gitbook/assets/activitieshtml6.png) **Figure: Final activities.component.html code**
+Changes in **activities.component.html** 
 
-Changes in **activities.module.ts**
-![Result](../.gitbook/assets/activitiesmodule.png) **Figure: Final activities.module.ts code**
+![Figure: Final activities.component.html code](../.gitbook/assets/activitieshtml6.PNG)
 
-Changes in **customise-form.component.ts**
-![Result](../.gitbook/assets/customisets.png) **Figure: Final customise-form.component.ts code**
+Changes in **activities.module.ts** 
+
+![Figure: Final activities.module.ts code](../.gitbook/assets/activitiesmodule.PNG)
+
+Changes in **customise-form.component.ts** 
+
+![Figure: Final customise-form.component.ts code](../.gitbook/assets/customisets.PNG)
 
 Changes in **customise-form.component.html**
-![Result](../.gitbook/assets/customisehtml.png) **Figure: Final customise-form.component.html code**
 
+![Figure: Final customise-form.component.html code](../.gitbook/assets/customisehtml.PNG)
 
 Completed [live code](https://stackblitz.com/edit/s7-reactive-forms) for this section.
 

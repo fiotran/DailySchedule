@@ -49,18 +49,13 @@ drop(event: CdkDragDrop<any[]>) {
 
 Save your files and go test out your new drag and drop feature !!
 
-
 ## Code Changed
 
-Changes in **activities.module.ts**
-![Result](../.gitbook/assets/activitiesmodule3.PNG) **Figure: Final activities.module.ts code**
+Changes in **activities.module.ts** ![Result](../.gitbook/assets/activitiesmodule3.PNG) **Figure: Final activities.module.ts code**
 
-Changes in **view-plan.component.ts**
-![Result](../.gitbook/assets/viewplants5.png) **Figure: Final view-plan.component.ts code**
+Changes in **view-plan.component.ts** ![Result](../.gitbook/assets/viewplants5.png) **Figure: Final view-plan.component.ts code**
 
-Changes in **view-plan.component.html**
-![Result](../.gitbook/assets/viewplanhtml5.png) **Figure: Final view-plan.component.html code**
-
+Changes in **view-plan.component.html** ![Result](../.gitbook/assets/viewplanhtml5.png) **Figure: Final view-plan.component.html code**
 
 Completed [live code](https://stackblitz.com/edit/s10-material-design-drag-drop) for this section.
 
