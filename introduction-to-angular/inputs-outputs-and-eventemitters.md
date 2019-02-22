@@ -158,15 +158,25 @@ public addToDailyPlanList(item: ActivityModel) {
 
 ## Code Changed
 
-Changes in **activities.component.html** ![Result](https://github.com/fiotran/DailySchedule/tree/323f8008fd63b419b92d135e08680909e9823d0a/.gitbook/assets/activitieshtml2.png) **Figure: Final activities.component.html code**
+Changes in **activities.component.html**
 
-Changes in **activities.component.ts** ![Result](https://github.com/fiotran/DailySchedule/tree/323f8008fd63b419b92d135e08680909e9823d0a/.gitbook/assets/activitiests2.png) **Figure: Final activities.component.ts code**
+![Figure: Final activities.component.html code](../.gitbook/assets/activitieshtml2.PNG)
 
-Changes in **list-activities.component.html** ![Result](https://github.com/fiotran/DailySchedule/tree/323f8008fd63b419b92d135e08680909e9823d0a/.gitbook/assets/listactivitieshtml2.png) **Figure: Final list-activities.component.html code**
+Changes in **activities.component.ts** 
 
-Changes in **list-activities.component.ts** ![Result](https://github.com/fiotran/DailySchedule/tree/323f8008fd63b419b92d135e08680909e9823d0a/.gitbook/assets/listactivitiescomponent2.png) **Figure: Final list-activities.component.ts code**
+![Figure: Final activities.component.ts code](../.gitbook/assets/activitiests2.PNG)
 
-Changes in **activities-service.ts** ![Result](https://github.com/fiotran/DailySchedule/tree/323f8008fd63b419b92d135e08680909e9823d0a/.gitbook/assets/activitiesservice2.png) **Figure: Final activities.service.ts code**
+Changes in **list-activities.component.html**
+
+![Figure: Final list-activities.component.html code](../.gitbook/assets/listactivitieshtml2.PNG)
+
+Changes in **list-activities.component.ts**
+
+![Figure: Final list-activities.component.ts code](../.gitbook/assets/listactivitiescomponent2.PNG)
+
+Changes in **activities-service.ts** 
+
+![Figure: Final activities.service.ts code](../.gitbook/assets/activitiesservice2%20%281%29.PNG)
 
 Completed [live code](https://stackblitz.com/edit/s5-inputs-outputs-eventemitter) from this section.
 
