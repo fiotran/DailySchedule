@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivitiesService } from '../services/activities.service';
 import { ActivityModel } from '../data/activity.model';
-
+import { PlanModel } from '../data/plan.model';
 
 @Component({
   selector: 'app-activities',
@@ -9,6 +9,7 @@ import { ActivityModel } from '../data/activity.model';
 })
 export class ActivitiesComponent implements OnInit {
   activities: ActivityModel[];
+  customisedValues: PlanModel;
 
   constructor(private activitiesService: ActivitiesService) { }
 
@@ -31,5 +32,9 @@ export class ActivitiesComponent implements OnInit {
 
   reload() {
     this.activities = this.getList();
+  }
+
+  getPlanDetails(plan: PlanModel) {
+    this.customisedValues = plan;
   }
 }

@@ -131,23 +131,16 @@ export class AppRoutingModule { }
 
 ![Result](../.gitbook/assets/components-and-modules-result.png) **Figure: Result**
 
-## AngularCLI generate command
 
-Now that we know how to create a component manually, we can use an AngularCLI command that simplifies this process
+Changes in **app.component.html**
+![Result](../.gitbook/assets/appcomponentts.png) **Figure: Final app.component.html code**
 
-```bash
-ng generate component shared/header --skipTests
-```
-
-The following creates **header.component.css**, **header.component.css** and **header.component.css** in **app/shared/header** folder as well as modifies the **app.module.ts**.
-
-![Use ng generate to generate header component](../.gitbook/assets/ng-generate-header.png)
 
 ## Code Changed
 
 Changes in **app.module.ts**
+![Result](../.gitbook/assets/appmodulets.png) **Figure: Final app.module.ts code**
 
-![Use ng generate to generate header component](../.gitbook/assets/ng-generate-header-app-module.png)
 
 Completed [live code](https://stackblitz.com/edit/s1-components-modules) from this section.
 

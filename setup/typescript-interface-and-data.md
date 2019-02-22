@@ -4,11 +4,13 @@ Typescript is a superset of JavaScript used to write applications that is type s
 
 In this section, we will create a model for the main activities object so it can be used to type variables in our application at a later point. We will also bring in a predefined list of activities for display.
 
-Create a folder called data under src/app and under the **data** folder create a file called activity.model.ts with the following interface
+
 
 ## Interfaces
 
 > One of TypeScript’s core principles is that type-checking focuses on the _shape_ that values have. This is sometimes called “duck typing” or “structural subtyping”. In TypeScript, interfaces fill the role of naming these types, and are a powerful way of defining contracts within your code as well as contracts with code outside of your project. [https://www.typescriptlang.org/docs/handbook/interfaces.html](https://www.typescriptlang.org/docs/handbook/interfaces.html)
+
+Create a folder called data under src/app and under the **data** folder create a file called activity.model.ts with the following interface
 
 **../daily-planner/src/app/data/activity.model.ts**
 
@@ -19,8 +21,7 @@ export interface ActivityModel {
     image: string;
 }
 ```
-
-Now, create a new file in the data folder named activities.ts and assign data to the constant variable ActivitiesConst
+Also create a file called plan.model.ts with the following code
 
 **../daily-planner/src/app/data/plan.model.ts**
 
@@ -33,6 +34,8 @@ export interface PlanModel {
 ```
 
 ## Data
+
+Now, create a new file in the data folder named activities.ts and assign data to the constant variable ActivitiesConst
 
 Predefined list of activities for display
 

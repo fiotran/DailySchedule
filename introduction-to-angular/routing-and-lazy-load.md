@@ -4,18 +4,21 @@
 
 Routes allow you to have friendly names in the path URL that map to specific parts of the page rather than to completely different HTML pages.
 
-Angular is a framework to build a single page application \(SPA\), and we have the ability to dynamically load different parts of the application only when requested. This is called lazy loading.
+Angular is a framework used to build a single page application \(SPA\), with the ability to dynamically load different parts of the application only when requested. This is called lazy loading.
 
 Lazy loading is a technique used in Angular to download modules only when a specific route is activated. This speeds up the time it takes to initially load your application.
+
+Now that we know how to create a component manually, we can use an AngularCLI command that simplifies this process
 
 Run the following commands in the command line \(CTRL + C for stop the serve\)
 
 ```bash
 ng generate module activities --routing
 ```
+The following creates activities.component.css, activities.component.css and activities.component.css in the app/activities folder as well as modifies the app.module.ts.
 
 ```bash
-ng generate component activities
+ng generate component activities --skipTests
 ```
 
 .**..\daily-planner\src\app\activities\activities-routing.module.ts** add the following code.
@@ -72,6 +75,13 @@ when working with routing always restart `ng serve`
 ![Result](../.gitbook/assets/routing-result.png)
 
 ## Code changed
+
+Changes in **activities-routing.module.ts**
+![Result](../.gitbook/assets/activitiesroutingts.png) **Figure: Final activities-routing.module.ts code**
+
+
+Changes in **app-routing.module.ts**
+![Result](../.gitbook/assets/approutingmodulets.png) **Figure: Final app-routing.module.ts code**
 
 
 

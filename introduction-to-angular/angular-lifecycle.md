@@ -15,7 +15,7 @@ In this section, we are going to use ngOnInit\(\) to set the list of activities 
 Generate the list-activities components
 
 ```bash
-ng generate component activities/list-activities
+ng generate component activities/list-activities --skipTests
 ```
 
 In list-activities.component.ts add the following code
@@ -71,6 +71,18 @@ Congratulations! Now you should see a list of activities on your simple app.
 {% endhint %}
 
 ![Result](../.gitbook/assets/angular-lifecycle-result.png)
+
+## Code changed
+
+Changes in **list-activities.component.ts**
+![Result](../.gitbook/assets/listactivitiescomponent.png) **Figure: Final list-activities.component.ts code**
+
+
+Changes in **list-activities.component.html**
+![Result](../.gitbook/assets/listactivitieshtml.png) **Figure: Final list-activities.component.html code**
+
+Changes in **activities.component.html**
+![Result](../.gitbook/assets/activitieshtml.png) **Figure: Final activities.component.html code**
 
 Completed [live code](https://stackblitz.com/edit/s3-lifecycle-hooks) for this section.
 
