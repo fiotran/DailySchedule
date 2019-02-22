@@ -15,6 +15,7 @@ Run the following commands in the command line \(CTRL + C for stop the serve\)
 ```bash
 ng generate module activities --routing
 ```
+
 The following creates activities.component.css, activities.component.css and activities.component.css in the app/activities folder as well as modifies the app.module.ts.
 
 ```bash
@@ -77,13 +78,16 @@ when working with routing always restart `ng serve`
 ## Code changed
 
 Changes in **activities-routing.module.ts**
-![Result](../.gitbook/assets/activitiesroutingts.png) **Figure: Final activities-routing.module.ts code**
 
+![Result](../.gitbook/assets/activitiesroutingts.PNG)
 
-Changes in **app-routing.module.ts**
-![Result](../.gitbook/assets/approutingmodulets.png) **Figure: Final app-routing.module.ts code**
+**Figure: Final activities-routing.module.ts code**
 
+Changes in **app-routing.module.ts** 
 
+![Result](../.gitbook/assets/approutingmodulets.PNG)
+
+**Figure: Final app-routing.module.ts code**
 
 Completed [live code](https://stackblitz.com/edit/s2-routing-lazy-loading) from this section.
 

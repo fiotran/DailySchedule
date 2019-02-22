@@ -4,8 +4,6 @@ Typescript is a superset of JavaScript used to write applications that is type s
 
 In this section, we will create a model for the main activities object so it can be used to type variables in our application at a later point. We will also bring in a predefined list of activities for display.
 
-
-
 ## Interfaces
 
 > One of TypeScript’s core principles is that type-checking focuses on the _shape_ that values have. This is sometimes called “duck typing” or “structural subtyping”. In TypeScript, interfaces fill the role of naming these types, and are a powerful way of defining contracts within your code as well as contracts with code outside of your project. [https://www.typescriptlang.org/docs/handbook/interfaces.html](https://www.typescriptlang.org/docs/handbook/interfaces.html)
@@ -21,6 +19,7 @@ export interface ActivityModel {
     image: string;
 }
 ```
+
 Also create a file called plan.model.ts with the following code
 
 **../daily-planner/src/app/data/plan.model.ts**

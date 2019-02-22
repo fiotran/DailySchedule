@@ -275,8 +275,5 @@ Now add the following link to Font Awesome into the index.html on the root direc
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 ```
 
-![Result](../.gitbook/assets/CSS.png) **Figure: Result**
-
-
-
+![Result](https://github.com/fiotran/DailySchedule/tree/2755c9a803d13f9c1e144f0d9bfe1bffb999d2f5/.gitbook/assets/CSS.png) **Figure: Result**
 

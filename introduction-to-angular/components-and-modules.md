@@ -129,18 +129,19 @@ export class AppRoutingModule { }
 
 ## Expected Outcome
 
-![Result](../.gitbook/assets/components-and-modules-result.png) **Figure: Result**
-
-
 Changes in **app.component.html**
-![Result](../.gitbook/assets/appcomponentts.png) **Figure: Final app.component.html code**
 
+ ![Result](../.gitbook/assets/components-and-modules-result.png) 
+
+**Figure: Final app.component.html code**
 
 ## Code Changed
 
 Changes in **app.module.ts**
-![Result](../.gitbook/assets/appmodulets.png) **Figure: Final app.module.ts code**
 
+![Result](../.gitbook/assets/appmodulets.PNG)
+
+**Figure: Final app.module.ts code**
 
 Completed [live code](https://stackblitz.com/edit/s1-components-modules) from this section.
 
