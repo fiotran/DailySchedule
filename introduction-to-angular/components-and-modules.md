@@ -129,13 +129,15 @@ export class AppRoutingModule { }
 
 ## Expected Outcome
 
-Changes in **app.component.html**
+The Title of the application is displayed. We will look into the link in the next section.
 
- ![Result](../.gitbook/assets/components-and-modules-result.png) 
-
-**Figure: Final app.component.html code**
+![Result](../.gitbook/assets/components-and-modules-result.png)
 
 ## Code Changed
+
+Changes in **app.component.html**
+
+![Figure: Final app.component.html code](../.gitbook/assets/appcomponentts.PNG)
 
 Changes in **app.module.ts**
 
