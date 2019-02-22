@@ -84,7 +84,9 @@ Add the app-view-plan selector to the activities.component.html above the existi
 
 ## Code Changed
 
-Changes in **activities.component.html** ![Result](https://github.com/fiotran/DailySchedule/tree/323f8008fd63b419b92d135e08680909e9823d0a/.gitbook/assets/activitieshtml3.png) **Figure: Final activities.component.html code**
+Changes in **activities.component.html** 
+
+![Figure: Final activities.component.html code](../../.gitbook/assets/activitieshtml3.PNG)
 
 Changes in **view-plan.component.ts**
 
