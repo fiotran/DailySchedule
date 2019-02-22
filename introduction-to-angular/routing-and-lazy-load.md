@@ -81,15 +81,11 @@ when working with routing always restart `ng serve`
 
 Changes in **activities-routing.module.ts**
 
-![Result](../.gitbook/assets/activitiesroutingts.PNG)
-
-**Figure: Final activities-routing.module.ts code**
+![Figure: Final activities-routing.module.ts code](../.gitbook/assets/activitiesroutingts.PNG)
 
 Changes in **app-routing.module.ts** 
 
-![Result](../.gitbook/assets/approutingmodulets.PNG)
-
-**Figure: Final app-routing.module.ts code**
+![Figure: Final app-routing.module.ts code](../.gitbook/assets/approutingmodulets.PNG)
 
 Completed [live code](https://stackblitz.com/edit/s2-routing-lazy-loading) from this section.
 

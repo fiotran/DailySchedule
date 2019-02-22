@@ -139,9 +139,7 @@ Changes in **app.component.html**
 
 Changes in **app.module.ts**
 
-![Result](../.gitbook/assets/appmodulets.PNG)
-
-**Figure: Final app.module.ts code**
+![Figure: Final app.module.ts code](../.gitbook/assets/appmodulets.PNG)
 
 Completed [live code](https://stackblitz.com/edit/s1-components-modules) from this section.
 
