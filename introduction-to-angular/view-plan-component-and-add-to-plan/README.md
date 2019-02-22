@@ -82,6 +82,12 @@ Add the app-view-plan selector to the activities.component.html above the existi
 <app-list-activities [activitiesList]="activities" (addItemPlan)="addToPlan($event)"></app-list-activities>
 ```
 
+## Expected Outcome
+
+You can now add activities to the plan
+
+![Add to Plan](../../.gitbook/assets/addtoplan.PNG)
+
 ## Code Changed
 
 Changes in **activities.component.html** 
