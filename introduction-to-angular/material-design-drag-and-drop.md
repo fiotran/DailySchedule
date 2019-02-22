@@ -49,6 +49,12 @@ drop(event: CdkDragDrop<any[]>) {
 
 Save your files and go test out your new drag and drop feature !!
 
+## Expected Outcome
+
+The should still be displayed as per previous section but now we can drag and drop activities in the schedule plan.
+
+![Expected Outcome](../.gitbook/assets/material-design-drag-and-drop.md.png)
+
 ## Code Changed
 
 Changes in **activities.module.ts** 

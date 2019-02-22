@@ -26,13 +26,15 @@ imports: [
 
 We can now uncomment out the line in the css file - this is a pre-built Angular Material theme that includes all of the styles for core Angular Material components
 
+**...\daily-planner\src\styles.css**
+
 ```css
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
 ```
 
 Import the MatDatepickerModule and the MatNativeDateModule in the activities.module.ts page
 
-**...\daily-planner\src\app\activities\activities.modules.ts**
+**...\daily-planner\src\app\activities\activities.module.ts**
 
 ```typescript
 import {
@@ -77,7 +79,15 @@ constructor(private fb: FormBuilder) {
   }
 ```
 
+## Expected Outcome
+
+![Expected Outcome](../.gitbook/assets/material-design-date-picker.png)
+
 ## Code Changed
+
+Changes in **styles.css**
+
+![Figure: Final app.module.ts code](../.gitbook/assets/styles1.PNG)
 
 Changes in **app.module.ts**
 
@@ -96,4 +106,3 @@ Changes in **customise-form.component.html**
 ![Figure: Final customise-form.component.html code](../.gitbook/assets/customisehtml2.PNG)
 
 Completed [live code](https://stackblitz.com/edit/s9-material-design-date-picker) for this section.
-
