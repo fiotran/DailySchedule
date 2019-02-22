@@ -77,7 +77,7 @@ Add \[formValues\]="customiseValues" to app-view-plan to pass values to child co
 <app-list-activities [activitiesList]="activities" (addItemPlan)="addToPlan($event)"></app-list-activities>
 ```
 
-**...\daily-planner\src\app\activities\customise-form\customise-form.component.ts**
+**...\daily-planner\src\app\activities\customise-form\view-plan.component.ts**
 
 ```typescript
 @Input() formValues: PlanModel;
@@ -142,6 +142,24 @@ ngOnDestroy() {
 ```
 
 ![subscribe-unsubscribe-ondestroy](../.gitbook/assets/subscribe-unsubscribe-ondestroy-result.png)
+
+
+## Code Changed
+
+Changes in **activities.component.html**
+![Result](../.gitbook/assets/activitieshtml7.png) **Figure: Final activities.component.html code**
+
+Changes in **activities.component.ts**
+![Result](../.gitbook/assets/activitiests4.PNG) **Figure: Final activities.component.ts code**
+
+Changes in **customise-form.component.ts**
+![Result](../.gitbook/assets/customisets2.png) **Figure: Final customise-form.component.ts code**
+
+Changes in **view-plan.component.html**
+![Result](../.gitbook/assets/viewplanhtml4.png) **Figure: Final view-plan.component.html code**
+
+Changes in **view-plan.component.ts**
+![Result](../.gitbook/assets/viewplants4.png) **Figure: Final view-plan.component.ts code**
 
 Completed [live code](https://stackblitz.com/edit/s8-subscribe-unsubscribe-ondestroy) for this section.
 

@@ -13,7 +13,7 @@ Angular also offers Template Driven forms as an alternative but it is considered
 Create a new customise-form component
 
 ```bash
-ng g c activities/customise-form
+ng g c activities/customise-form  --skipTests
 ```
 
 Import FormModules and ReactiveFormsModule into the activities.modules.ts file
@@ -30,12 +30,6 @@ imports: [
     ReactiveFormsModule,
   ]
 ```
-
-## Code Changed
-
-Changes in **activities.module.ts** 
-
-![activities.module.ts difference](../.gitbook/assets/angular-reactive-forms-activities-module-compare.png)
 
 **...\daily-planner\src\app\activities\customise-form\customise-form.component.ts**
 
@@ -94,6 +88,21 @@ Add the selector app-customise-form to activities.component.html
 ```
 
 ![Angular Reactive Forms Activities](../.gitbook/assets/angular-reactive-forms-activities-result.png)
+
+## Code Changed
+
+Changes in **activities.component.html**
+![Result](../.gitbook/assets/activitieshtml6.png) **Figure: Final activities.component.html code**
+
+Changes in **activities.module.ts**
+![Result](../.gitbook/assets/activitiesmodule.png) **Figure: Final activities.module.ts code**
+
+Changes in **customise-form.component.ts**
+![Result](../.gitbook/assets/customisets.png) **Figure: Final customise-form.component.ts code**
+
+Changes in **customise-form.component.html**
+![Result](../.gitbook/assets/customisehtml.png) **Figure: Final customise-form.component.html code**
+
 
 Completed [live code](https://stackblitz.com/edit/s7-reactive-forms) for this section.
 

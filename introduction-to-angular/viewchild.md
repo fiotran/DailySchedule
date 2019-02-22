@@ -58,5 +58,14 @@ In the first div, on the view-plan.component.html page, add the below anywhere i
 #dailySchedule
 ```
 
+## Code Changed
+
+Changes in **view-plan.component.ts**
+![Result](../.gitbook/assets/viewplants6.png) **Figure: Final view-plan.component.ts code**
+
+Changes in **view-plan.component.html**
+![Result](../.gitbook/assets/viewplanhtml6.png) **Figure: Final view-plan.component.html code**
+
+
 Completed [live code](https://stackblitz.com/edit/s11-view-child-print-button) for this section.
 
