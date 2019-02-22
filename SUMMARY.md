@@ -16,7 +16,7 @@
 * [Dependency Injection](introduction-to-angular/dependency-injection.md)
 * [Inputs, Outputs and EventEmitters](introduction-to-angular/inputs-outputs-and-eventemitters.md)
 * [View Plan Component and Add to Plan](introduction-to-angular/view-plan-component-and-add-to-plan/README.md)
-  * [Update Activities List and remove from Daily Plan Button](introduction-to-angular/view-plan-component-and-add-to-plan/update-activities-list-and-remove-from-daily-plan-button.md)
+  * [Update View Plan](introduction-to-angular/view-plan-component-and-add-to-plan/update-view-plan.md)
   * [Reset Daily Plan and Activities List](introduction-to-angular/view-plan-component-and-add-to-plan/reset-daily-plan-and-activities-list.md)
 * [Angular Reactive Forms](introduction-to-angular/angular-reactive-forms.md)
 * [Subscribe, Unsubscribe, OnDestroy](introduction-to-angular/subscribe-unsubscribe-ondestroy.md)
