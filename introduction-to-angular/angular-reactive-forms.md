@@ -7,7 +7,7 @@
 > They are built on observable base APIs \(async data flow\) to read continuous streams of values inputted to the form. It enables more customisation on complex forms and can use dynamically created inputs at run time. Reactive Forms also work well with unit testing.
 
 {% hint style="info" %}
-Angular also offer Template Driven forms as an alternative but is is excepted best practice to use Reactive Forms.
+Angular also offers Template Driven forms as an alternative but it is considered best practice to use Reactive Forms.
 {% endhint %}
 
 Create a new customise-form component
