@@ -79,8 +79,6 @@ Changes in **view-plan.component.html**
 
 ![Figure: Final view-plan.component.html code](../../.gitbook/assets/viewplanhtml3.png)
 
-**Figure: Final view-plan.component.html code**
-
 Changes in **activities-service.ts** 
 
 ![Figure: Final activities.service.ts code](../../.gitbook/assets/activitiesservice5.PNG)
