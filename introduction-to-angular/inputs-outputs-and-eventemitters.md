@@ -8,7 +8,9 @@ To communicate between parent and child components, Angular offers @Inputs\(\) a
 It is generally a good idea for the parent component be responsible for making service calls and only sending a child component what it needs to do their job. In this section, we will move the service call to the Parent Activities component and the list to the List-activities component for display and when the add button is clicked we will end that information back to the parent
 {% endhint %}
 
-## Input decorator
+## Parent Component
+
+Move the code that calls the service from the child activities.list component to the parent activities component as listed below.
 
 **...\daily-planner\src\app\activities\activities.component.ts**
 
@@ -37,8 +39,9 @@ export class ActivitiesComponent implements OnInit {
   }
 }
 ```
+## Input decorator
 
-Now that we have the activities variable in parent \(activities.component.ts\) we are going to send the data to the child component \(list-components.ts\) as a Input
+Now that we have the activities variable in parent \(activities.component.ts\) we are going to send the data to the child component \(list-components.ts\) as an Input
 
 In the activities.component.html file, assign the local activities to the child property activitiesList
 
@@ -73,7 +76,7 @@ Remove the any references to ActivitiesService that we added previously as it is
 ```typescript
 import { Component, OnInit, Input } from '@angular/core';
 import { ActivityModel } from '../../data/activity.model';
-import { ActivitiesService } from '../../services/activities.service';
+
 
 @Component({
   selector: 'app-list-activities',
@@ -83,12 +86,9 @@ import { ActivitiesService } from '../../services/activities.service';
 export class ListActivitiesComponent implements OnInit {
   @Input() activitiesList: ActivityModel[];
 
-  constructor(
-    private activitiesService: ActivitiesService
-  ) {  }
+  constructor() { }
 
   ngOnInit() {
-    this.activitiesList = this.activitiesService.getActivities();
   }
 }
 ```
@@ -154,6 +154,24 @@ public addToDailyPlanList(item: ActivityModel) {
     this.dailyPlanList.push(item);
 }
 ```
+
+## Code Changed
+
+Changes in **activities.component.html**
+![Result](../.gitbook/assets/activitieshtml2.png) **Figure: Final activities.component.html code**
+
+
+Changes in **activities.component.ts**
+![Result](../.gitbook/assets/activitiests2.png) **Figure: Final activities.component.ts code**
+
+Changes in **list-activities.component.html**
+![Result](../.gitbook/assets/listactivitieshtml2.png) **Figure: Final list-activities.component.html code**
+
+Changes in **list-activities.component.ts**
+![Result](../.gitbook/assets/listactivitiescomponent2.png) **Figure: Final list-activities.component.ts code**
+
+Changes in **activities-service.ts**
+![Result](../.gitbook/assets/activitiesservice2.png) **Figure: Final activities.service.ts code**
 
 Completed [live code](https://stackblitz.com/edit/s5-inputs-outputs-eventemitter) from this section.
 
