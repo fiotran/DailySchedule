@@ -70,6 +70,8 @@ Now add the &lt;app-list-activities&gt; selector to the activities.component.htm
 Congratulations! Now you should see a list of activities on your simple app.
 {% endhint %}
 
+## Expected Outcome
+
 ![Result](../.gitbook/assets/angular-lifecycle-result.png)
 
 ## Code changed
