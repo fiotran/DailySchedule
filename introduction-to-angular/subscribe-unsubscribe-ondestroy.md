@@ -63,7 +63,7 @@ getPlanDetails(plan: PlanModel) {
 
 ## Send values to child component
 
-Add \[formValues\]="customiseValues" to app-view-plan to pass values to child component
+Add \[formValues\]="customiseValues" to app-view-plan to pass values to the child component
 
 **...\daily-planner\src\app\activities\activities.component.html**
 
