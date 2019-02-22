@@ -61,6 +61,10 @@ reload() {
 }
 ```
 
+## Expected Outcome
+
+You can now reset the plan. It will also add the activity back to the activities list.
+
 ## Code Changed
 
 Changes in **activities.component.html** 
