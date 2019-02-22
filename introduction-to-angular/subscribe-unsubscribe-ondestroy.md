@@ -37,7 +37,7 @@ Add the output decorator to the customiseFormChanges property in customise-form.
 **...\daily-planner\src\app\activities\activities.component.html**
 
 ```markup
-<app-view-plan [formValues]="customisedValues" (updateActivitiesList)="updateActivities($event)" (reloadActivities)="reload()"></app-view-plan>
+<app-view-plan (updateActivitiesList)="updateActivities($event)" (reloadActivities)="reload()"></app-view-plan>
 <app-customise-form 
 (customiseFormChanges)="getPlanDetails($event)">
 </app-customise-form>
@@ -141,9 +141,9 @@ ngOnDestroy() {
 }
 ```
 
-## Expected Outcome
+## **Expected Outcome**
 
-![Expected Outcome](../.gitbook/assets/customiseform.PNG)
+![](../.gitbook/assets/customiseform.PNG)
 
 ## Code Changed
 

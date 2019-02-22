@@ -15,7 +15,7 @@ In angular we use the @ViewChild decorator to get the content of an element. Add
 **...\daily-planner\src\app\activities\view-plan\view-plan.component.ts**
 
 ```typescript
-import { ViewChild, ElementRef } from '@angular/core';
+import{ ViewChild, ElementRef }from'@angular/core';
 
 @ViewChild('dailySchedule') dailySchedule: ElementRef;
 ```
@@ -42,7 +42,6 @@ print() {
             display: none;
             visibility: hidden;
           }
-          button { display:none; }
           </style>
         </head>
     <body onload="window.print();window.close()">${printContent}</body>
